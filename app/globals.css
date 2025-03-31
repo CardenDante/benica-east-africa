@@ -20,6 +20,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Utility classes */
 @layer components {
   .container-custom {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
@@ -47,5 +48,143 @@ body {
   
   .heading-sm {
     @apply text-lg md:text-xl lg:text-2xl font-bold font-heading;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .service-card-delay-1,
+  .service-card-delay-2,
+  .service-card-delay-3 {
+    opacity: 0;
+    animation: slideIn 0.6s ease-out forwards;
+  }
+  
+  .service-card-delay-1 {
+    animation-delay: 0.1s;
+  }
+  
+  .service-card-delay-2 {
+    animation-delay: 0.3s;
+  }
+  
+  .service-card-delay-3 {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .partner-logo {
+    opacity: 0;
+    animation: fadeInScale 0.5s ease-out forwards;
+    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+  }
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Top padding for pages to account for fixed header */
+main {
+  padding-top: 70px;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #F16A23;
+  outline-offset: 2px;
+}
+
+/* Adjust the margin when anchor links are clicked to account for fixed header */
+:target {
+  scroll-margin-top: 80px;
+}
+.service-card-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.service-card-delay-2 {
+  animation-delay: 0.3s;
+}
+
+.service-card-delay-3 {
+  animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .service-card-delay-1,
+  .service-card-delay-2,
+  .service-card-delay-3 {
+    opacity: 0;
+    animation: slideIn 0.6s ease-out forwards;
   }
 }
