@@ -3889,6 +3889,822 @@ export interface Product {
       'Gradeability': '65%',
       'Working Speed': '0-6 km/h (0-3.7 mph)'
     }
+  },
+  {
+    id: 'fluke-multimeter',
+    title: 'Fluke 87V Industrial Digital Multimeter',
+    category: 'Repair and Servicing',
+    description: 'Professional-grade digital multimeter designed for troubleshooting and repair of electrical equipment and complex machinery. Features high accuracy measurements and advanced diagnostic capabilities for industrial applications.',
+    image: '/images/products/fluke-multimeter.jpg',
+    features: [
+      'True-RMS AC voltage and current for accurate readings on non-linear signals',
+      'Frequency measurement to 200 kHz with 0.01 Hz resolution',
+      'Temperature measurement from -200°C to +1090°C',
+      'Peak min-max mode to capture intermittent signals',
+      'CAT III 1000V and CAT IV 600V safety ratings'
+    ],
+    specifications: {
+      'DC Voltage Accuracy': '±0.05% + 1 digit',
+      'AC Voltage Range': '0.1 mV to 1000V',
+      'DC/AC Current Range': '0.1 μA to 10A',
+      'Resistance Range': '0.1Ω to 50MΩ',
+      'Display': 'Dual display with 19,999 counts and 3¾-digit 1999 counts',
+      'Battery Life': 'Typically 400 hours with alkaline batteries',
+      'Operating Temperature': '-20°C to +55°C',
+      'Dimensions': '201 × 98 × 52 mm (7.9 × 3.8 × 2.0 in)'
+    }
+  },
+  {
+    id: 'megger-insulation-tester',
+    title: 'Megger MIT1025 10 kV Insulation Resistance Tester',
+    category: 'Repair and Servicing',
+    description: 'High-voltage insulation tester for preventive maintenance and troubleshooting of high-voltage electrical equipment. Features multiple test modes and advanced diagnostics for comprehensive insulation health assessment.',
+    image: '/images/products/megger-insulation.jpg',
+    features: [
+      'CAT IV 600 V safety rating for industrial environments',
+      'Diagnostic tests including PI, DAR, DD, SV and ramp test',
+      'Test voltage range from 100 V to 10 kV',
+      'Li-ion rechargeable battery with 4.5-hour fast charge',
+      'Advanced memory with time/date stamped results storage'
+    ],
+    specifications: {
+      'Insulation Range': '10 kΩ to 20 TΩ',
+      'Test Voltage': '100 V to 10 kV in 10 V steps',
+      'Test Voltage Accuracy': '±3% of nominal test voltage',
+      'Display': 'Large backlit LCD, digital and analog display',
+      'Memory Capacity': '32 MB (approx. 1000 test results)',
+      'Interface': 'USB Type B interface for PC connectivity',
+      'Battery Life': 'Typical 6 hours continuous testing at 10 kV',
+      'Weight': '4.5 kg (9.9 lbs)'
+    }
+  },
+  {
+    id: 'tektronix-oscilloscope',
+    title: 'Tektronix MDO3104 Mixed Domain Oscilloscope',
+    category: 'Repair and Servicing',
+    description: 'Advanced 4-channel mixed domain oscilloscope with integrated spectrum analyzer for comprehensive troubleshooting of electronic systems. Features multiple instrument functions in a single device for efficient diagnostics.',
+    image: '/images/products/tektronix-oscilloscope.jpg',
+    features: [
+      'Six instruments in one: oscilloscope, spectrum analyzer, logic analyzer, protocol analyzer, arbitrary function generator, and digital voltmeter',
+      'Bandwidth of 1 GHz with 5 GS/s sample rate',
+      'Spectrum analyzer with frequency range up to 3 GHz',
+      'Advanced triggering capability for complex signal analysis',
+      'Wave Inspector® controls for efficient waveform navigation'
+    ],
+    specifications: {
+      'Analog Channels': '4',
+      'Bandwidth': '1 GHz',
+      'Sample Rate': '5 GS/s',
+      'Record Length': '10M points per channel',
+      'Vertical Resolution': '8 bits (11 bits with Hi-Res mode)',
+      'Spectrum Analyzer Range': '9 kHz – 3 GHz',
+      'Display': '11.6" capacitive touchscreen',
+      'Dimensions': '206 × 416 × 147 mm (8.12 × 16.4 × 5.8 in)'
+    }
+  },
+  {
+    id: 'snap-on-torque-wrench',
+    title: 'Snap-on TECH3FR250 Digital Flex-Head Torque Wrench',
+    category: 'Repair and Servicing',
+    description: 'Professional electronic torque wrench with flexible head design for precision fastening in mechanical repair applications. Features digital readout with multiple measurement units and memory functions.',
+    image: '/images/products/snapon-torque.jpg',
+    features: [
+      'Digital LED display with multiple measurement units (ft-lb, in-lb, Nm, kg-cm)',
+      'Flex-head design allows access to difficult fasteners',
+      'Programmable target torque with visual and audible alerts',
+      'Memory function stores up to 10 preset torque values',
+      'Accuracy of ±2% clockwise and ±3% counterclockwise from 20% to 100% of full scale'
+    ],
+    specifications: {
+      'Drive Size': '1/2 inch',
+      'Torque Range': '10-250 ft-lb (13.6-339 Nm)',
+      'Length': '17.62 inches (447.5 mm)',
+      'Display': 'Digital LED with backlight',
+      'Resolution': '0.1 ft-lb / 0.1 Nm',
+      'Battery Type': 'CR123 3V lithium (included)',
+      'Battery Life': 'Approximately 80 hours of continuous use',
+      'Construction': 'All-metal handle with sealed electronics'
+    }
+  },
+  {
+    id: 'flir-thermal-camera',
+    title: 'FLIR E86 Advanced Thermal Imaging Camera',
+    category: 'Repair and Servicing',
+    description: 'Professional thermal imaging camera for predictive maintenance and troubleshooting of electrical and mechanical systems. Features high thermal sensitivity and advanced measurement capabilities for detecting temperature anomalies.',
+    image: '/images/products/flir-camera.jpg',
+    features: [
+      'High resolution 464 × 348 (161,472) pixel infrared detector',
+      'MSX® image enhancement for improved detail',
+      'Temperature range from -20°C to 1500°C (-4°F to 2732°F)',
+      '1-Touch Level/Span feature for instant contrast optimization',
+      'Built-in voice annotation and GPS for comprehensive reporting'
+    ],
+    specifications: {
+      'Thermal Resolution': '464 × 348 pixels',
+      'Thermal Sensitivity': '< 0.03°C at 30°C',
+      'Temperature Range': '-20°C to 1500°C (-4°F to 2732°F)',
+      'Accuracy': '±2°C (±3.6°F) or ±2% of reading',
+      'Digital Camera Resolution': '5 MP with LED light',
+      'Display': '4" touchscreen with 640 × 480 resolution',
+      'Storage': 'Removable SD card',
+      'Battery Life': 'Approximately 2.5 hours of continuous use'
+    }
+  },
+  {
+    id: 'bosch-tool-set',
+    title: 'Bosch Professional GSR 18V-85 C Drill/Driver Kit',
+    category: 'Repair and Servicing',
+    description: 'Professional cordless drill/driver set for industrial maintenance and equipment repair. Features high-performance brushless motor and intelligent electronic control for versatile applications in equipment servicing.',
+    image: '/images/products/bosch-drill.jpg',
+    features: [
+      'EC brushless motor for extended runtime and longer life',
+      'Connected-ready with Bluetooth module for customized settings',
+      'Electronic Motor Protection (EMP) against overload',
+      'Electronic Precision Control for sensitive applications',
+      'KickBack Control for improved user protection'
+    ],
+    specifications: {
+      'Voltage': '18V Li-Ion',
+      'Maximum Torque': '85 Nm (hard) / 47 Nm (soft)',
+      'No-load Speed': '0-480 / 0-2,100 rpm (2-speed)',
+      'Chuck Capacity': '1.5-13 mm',
+      'Drilling Diameter Max': 'Wood: 82 mm, Steel: 13 mm',
+      'Weight with Battery': '2.1 kg (4.6 lbs)',
+      'Battery Capacity': '2 × 5.0 Ah ProCORE18V batteries',
+      'Charging Time': 'Approximately 68 minutes with included charger'
+    }
+  },
+  {
+    id: 'hilti-concrete-scanner',
+    title: 'Hilti PS 300 Ferroscan Concrete Scanner',
+    category: 'Repair and Servicing',
+    description: 'Advanced concrete scanning system for non-destructive detection and analysis of reinforcement bars, metallic pipes, and post-tension cables in concrete structures. Essential for safe drilling and cutting during equipment installation and servicing.',
+    image: '/images/products/hilti-scanner.jpg',
+    features: [
+      'Detection of rebar location, diameter estimation, and concrete cover measurement',
+      'On-site data analysis with color-coded visualization',
+      'QuickScan mode for rapid assessment of reinforcement positioning',
+      'ImagerScan mode for detailed reinforcement mapping',
+      'PC software for comprehensive documentation and reporting'
+    ],
+    specifications: {
+      'Maximum Detection Depth': 'Up to 300 mm (12 in) for rebar',
+      'Detection Accuracy': 'Position: ±3 mm, Depth: ±3 mm',
+      'Diameter Estimation': 'Effective for bars 6-36 mm diameter',
+      'Display': '5.7" color TFT screen',
+      'Memory': 'Internal 2 GB flash memory',
+      'Battery Type': 'Li-ion rechargeable',
+      'Operating Time': 'Up to 4 hours continuous use',
+      'Weight': '2.6 kg (5.7 lbs) including battery'
+    }
+  },
+  {
+    id: 'parker-hydraulic-tester',
+    title: 'Parker ServiceJunior Hydraulic Diagnostic System',
+    category: 'Repair and Servicing',
+    description: 'Comprehensive hydraulic diagnostic system for troubleshooting and maintaining hydraulic systems in industrial machinery. Features digital pressure, temperature, and flow measurement capabilities for accurate system analysis.',
+    image: '/images/products/parker-hydraulic.jpg',
+    features: [
+      'Simultaneous measurement of pressure, temperature, and flow',
+      'Peak and hold function for capturing pressure spikes',
+      'Digital display with analog bar graph for trend visualization',
+      'USB interface for data transfer and documentation',
+      'Integrated volume flow calculator for system evaluation'
+    ],
+    specifications: {
+      'Pressure Range': '0-600 bar (0-8,700 psi)',
+      'Pressure Accuracy': '±0.5% of full scale',
+      'Flow Range': '10-300 L/min (2.6-79 gpm)',
+      'Temperature Range': '-20°C to +105°C (-4°F to +221°F)',
+      'Display': 'Digital LCD with backlight',
+      'Hydraulic Connections': 'High-pressure test hoses with quick-connect couplings',
+      'Software': 'SensoWin PC software for data analysis',
+      'Case Dimensions': '470 × 370 × 150 mm (18.5 × 14.6 × 5.9 in)'
+    }
+  },
+  {
+    id: 'rohde-schwarz-analyzer',
+    title: 'Rohde & Schwarz FPC1500 Spectrum Analyzer',
+    category: 'Repair and Servicing',
+    description: 'Compact spectrum analyzer for RF diagnostics and maintenance of communication equipment and electronic systems. Features multiple instrument modes and high sensitivity for efficient troubleshooting in the field.',
+    image: '/images/products/rs-analyzer.jpg',
+    features: [
+      '3-in-1 instrument: spectrum analyzer, vector network analyzer, signal generator',
+      'Frequency range from 5 kHz to 3 GHz (upgradeable via software)',
+      'High sensitivity with -150 dBm displayed average noise level (DANL)',
+      'Remote control via Wi-Fi or LAN and PC/mobile app',
+      'Investment protection with software-upgradeable bandwidth and features'
+    ],
+    specifications: {
+      'Frequency Range': '5 kHz to 3 GHz',
+      'Resolution Bandwidth': '1 Hz to 3 MHz',
+      'Phase Noise': '< -100 dBc/Hz at 100 kHz offset',
+      'DANL (Displayed Average Noise Level)': '-150 dBm with preamplifier',
+      'Sweep Time': '20 ms to 1000 s',
+      'Display': '10.1" WXGA (1366 × 768 pixel) touchscreen',
+      'Dimensions': '396 × 178 × 147 mm (15.6 × 7 × 5.8 in)',
+      'Weight': '3 kg (6.6 lbs)'
+    }
+  },
+  {
+    id: 'skf-bearing-kit',
+    title: 'SKF TKBA 40 Laser Shaft Alignment Tool',
+    category: 'Repair and Servicing',
+    description: 'Precision laser alignment system for correct alignment of rotating machinery shafts. Features intuitive operation and real-time measurements for extending equipment life and reducing energy consumption through proper alignment.',
+    image: '/images/products/skf-alignment.jpg',
+    features: [
+      'Dual laser technology for precise alignment measurement',
+      'Wireless measurement units with integrated displays',
+      'Live adjustment feature showing correction in real time',
+      'Three position measurement for comprehensive alignment diagnosis',
+      'Soft foot detection and correction functionality'
+    ],
+    specifications: {
+      'Measurement Distance': 'Up to 4 m (13 ft)',
+      'Measurement Accuracy': 'Better than 0.5% ± 5 μm',
+      'Display Type': 'Illuminated LCD displays on each unit',
+      'Communication': 'Wireless communication between units',
+      'Battery Type': '2 × AAA Alkaline batteries per unit',
+      'Operating Time': 'Up to 20 hours continuous operation',
+      'Housing Material': 'Anodized aluminum with glass-filled polycarbonate components',
+      'Carrying Case Dimensions': '355 × 260 × 110 mm (14 × 10.2 × 4.3 in)'
+    }
+  },
+  {
+    id: 'lincoln-welder',
+    title: 'Lincoln Electric Power Wave S500 Advanced Process Welder',
+    category: 'Repair and Servicing',
+    description: 'Industrial multi-process welding system for repair and maintenance of critical equipment components. Features advanced waveform control technology and network connectivity for precision welding across various materials.',
+    image: '/images/products/lincoln-welder.jpg',
+    features: [
+      'Waveform Control Technology for optimized arc performance',
+      'Multi-process capability: MIG, Flux-Cored, Stick, TIG, and Pulse modes',
+      'Production monitoring via integrated Power Wave Manager software',
+      'Advanced aluminum pulse processes for precision repairs',
+      'Ethernet connectivity for firmware updates and monitoring'
+    ],
+    specifications: {
+      'Rated Output': '450A at 38V, 100% duty cycle',
+      'Input Power': '380-415V / 3-phase / 50/60Hz',
+      'Input Current': '55A @ 380V, 50A @ 415V',
+      'Output Range': '5-550A DC',
+      'Weight': '68 kg (149 lbs)',
+      'Dimensions': '589 × 336 × 620 mm (23.2 × 13.2 × 24.4 in)',
+      'Protection Class': 'IP23',
+      'Operating Temperature': '-20°C to +40°C (-4°F to +104°F)'
+    }
+  },
+  {
+    id: 'mitutoyo-micrometer',
+    title: 'Mitutoyo 293-340-30 Digital Micrometer Set',
+    category: 'Repair and Servicing',
+    description: 'High-precision digital outside micrometer set for accurate dimensional measurement during equipment maintenance and repair. Features IP65 protection against coolant, water, and dust for reliable operation in workshop environments.',
+    image: '/images/products/mitutoyo-micrometer.jpg',
+    features: [
+      'IP65 protection against coolant, water, and dust',
+      'Ratchet thimble for consistent measuring force',
+      'Data output function for statistical process control',
+      'Hold function to retain measurements',
+      'Carbide-tipped measuring faces for durability'
+    ],
+    specifications: {
+      'Range': '0-100 mm (0-4 in) in 4 micrometers (0-25, 25-50, 50-75, 75-100 mm)',
+      'Resolution': '0.001 mm (0.00005 in)',
+      'Accuracy': '±0.002 mm (±0.0001 in)',
+      'Measuring Force': '5-10 N',
+      'Display': 'LCD with 6.5 mm character height',
+      'Battery': 'SR44 silver oxide cell (1 per micrometer)',
+      'Battery Life': 'Approximately 2.4 years under normal use',
+      'Set Contents': '4 micrometers, standard bars, operation manual, inspection certificate'
+    }
+  },
+  {
+    id: 'omega-temperature-calibrator',
+    title: 'Omega CL3515R Dry Block Temperature Calibrator',
+    category: 'Repair and Servicing',
+    description: 'High-accuracy portable temperature calibrator for verifying and calibrating temperature measurement instruments in process control and maintenance applications. Features wide temperature range and precise stability for reliable calibration.',
+    image: '/images/products/omega-calibrator.jpg',
+    features: [
+      'Wide temperature range capability for diverse calibration requirements',
+      'Excellent temperature stability of ±0.05°C for precise calibration',
+      'On-board programmable controller with auto-tuning',
+      'Multiple insert options for various sensor sizes',
+      'RS232 interface for computer control and documentation'
+    ],
+    specifications: {
+      'Temperature Range': '-35°C to 700°C (-31°F to 1292°F)',
+      'Display Accuracy': '±0.25°C (±0.45°F)',
+      'Stability': '±0.05°C (±0.09°F)',
+      'Heating/Cooling Time': '30 minutes from ambient to 700°C / 30 minutes from ambient to -35°C',
+      'Well Depth': '124 mm (4.9 in)',
+      'Insert Diameter': '26 mm (1.02 in)',
+      'Power Requirements': '115/230 VAC, 50/60 Hz, 400 W',
+      'Dimensions': '260 × 170 × 340 mm (10.2 × 6.7 × 13.4 in)'
+    }
+  },
+  {
+    id: 'maintenance-software',
+    title: 'ProMaint Advanced CMMS Maintenance Management Software',
+    category: 'Repair and Servicing',
+    description: 'Comprehensive computerized maintenance management system (CMMS) for planning, tracking, and optimizing equipment maintenance operations. Features cloud-based architecture and mobile functionality for efficient maintenance workflow management.',
+    image: '/images/products/promaint-software.jpg',
+    features: [
+      'Asset management with comprehensive equipment history',
+      'Preventive maintenance scheduling with automated work orders',
+      'Inventory control for spare parts management',
+      'Mobile application for technicians with offline capability',
+      'Advanced reporting and KPI dashboard for maintenance analytics'
+    ],
+    specifications: {
+      'Deployment Options': 'Cloud-based or on-premises installation',
+      'User Interface': 'Web-based HTML5 interface',
+      'Mobile Support': 'iOS and Android applications',
+      'Integration Capabilities': 'ERP, accounting, and procurement systems',
+      'Document Management': 'Attachment of manuals, procedures, and images',
+      'Security': 'Role-based access control with audit trail',
+      'Reporting': 'Custom report builder with exportable formats',
+      'API Access': 'RESTful API for third-party integration'
+    }
+  },
+  {
+    id: 'laser-alignment-system',
+    title: 'Easy-Laser E720 Shaft Alignment System',
+    category: 'Repair and Servicing',
+    description: 'Comprehensive laser-based alignment system for rotating machinery, featuring wireless measurement units and intuitive software for fast, accurate alignment procedures. Essential for preventive maintenance and optimal machine performance.',
+    image: '/images/products/easy-laser.jpg',
+    features: [
+      'Wireless Bluetooth® measurement units for unrestricted movement',
+      'Dual laser technology with CCD detectors for superior accuracy',
+      'TruePSD technology with unlimited resolution',
+      'Multi-machine train alignment capability',
+      'EasyTrend vibration monitoring for condition assessment'
+    ],
+    specifications: {
+      'Measurement Distance': 'Up to 20 m (66 ft)',
+      'Measurement Accuracy': '±0.001 mm (±0.00004 in)',
+      'Display Unit': '5.7" color touch screen (640×480 pixels)',
+      'Operating Time': 'Up to 30 hours (extended mode)',
+      'Environmental Protection': 'IP65 (dust-tight and protected against water jets)',
+      'Operating Temperature': '-10°C to +50°C (14°F to 122°F)',
+      'Data Storage': 'Internal memory + USB support',
+      'Weight (complete system)': '7.2 kg (15.9 lbs)'
+    }
+  },
+  {
+    id: 'vwr-ultrasonic-cleaner',
+    title: 'VWR USC2600D Advanced Ultrasonic Cleaner',
+    category: 'Repair and Servicing',
+    description: 'Professional ultrasonic cleaning system for precision cleaning of laboratory and industrial components during maintenance and repair. Features digital control and multiple cleaning modes for optimal results across various applications.',
+    image: '/images/products/vwr-ultrasonic.jpg',
+    features: [
+      'Digital control panel with LED display for precise parameter setting',
+      'Sweep mode for uniform cleaning throughout the tank',
+      'Degas function for efficient removal of dissolved gases',
+      'Memory function for storing common cleaning protocols',
+      'Drain valve for convenient solution changes'
+    ],
+    specifications: {
+      'Tank Capacity': '26 liters (6.9 gallons)',
+      'Tank Dimensions': '500 × 300 × 200 mm (19.7 × 11.8 × 7.9 in)',
+      'Ultrasonic Frequency': '37 kHz',
+      'Ultrasonic Power': '600W',
+      'Heating Power': '1000W',
+      'Temperature Range': 'Ambient to 80°C (176°F)',
+      'Timer Range': '1-99 minutes or continuous operation',
+      'External Dimensions': '575 × 345 × 360 mm (22.6 × 13.6 × 14.2 in)'
+    }
+  },
+  {
+    id: 'norbar-torque-calibrator',
+    title: 'Norbar T-Box XL 2 Professional Torque Calibration System',
+    category: 'Repair and Servicing',
+    description: 'Advanced torque measurement and calibration system for verifying and certifying torque tools used in critical maintenance operations. Features high accuracy transducers and comprehensive software for traceable calibration records.',
+    image: '/images/products/norbar-calibrator.jpg',
+    features: [
+      'Multi-channel capability for simultaneous testing of multiple tools',
+      'Compatible with all torque transducers in the Norbar SMART range',
+      'Automatic recognition of transducer parameters',
+      'Advanced graph mode for detailed torque analysis',
+      'Comprehensive calibration and statistical reporting'
+    ],
+    specifications: {
+      'Torque Range': 'Dependent on connected transducer (0.1 N·m to 10,000 N·m)',
+      'Accuracy': '±0.5% of reading (when used with Norbar SMART transducers)',
+      'Sampling Rate': 'Up to 5,000 readings per second',
+      'Data Storage': 'Internal memory for 10,000 test results',
+      'Display': '7" color touchscreen',
+      'Interface': 'USB, Ethernet, RS232, ancillary port',
+      'Operating System': 'Embedded Windows',
+      'Power Requirements': '100-240 VAC, 50-60 Hz'
+    }
+  },
+  {
+    id: 'olympus-videoscope',
+    title: 'Olympus IPLEX GX Industrial Videoscope',
+    category: 'Repair and Servicing',
+    description: 'Advanced video borescope system for remote visual inspection of inaccessible areas in machinery and equipment. Features high-resolution imaging and articulation control for thorough internal component inspection without disassembly.',
+    image: '/images/products/olympus-videoscope.jpg',
+    features: [
+      'TrueFeel precise articulation control for accurate probe positioning',
+      'PulsarPic image processor for clear images in harsh conditions',
+      'Interchangeable insertion tubes for various application requirements',
+      'Stereo measurement capability for defect sizing and analysis',
+      'WiDER image processing for enhanced detail in dark areas'
+    ],
+    specifications: {
+      'Insertion Tube Diameter': '4.0 mm to 6.0 mm options',
+      'Insertion Tube Length': '2.0 m to 10.0 m options',
+      'Articulation Range': 'All-Way 130° or 150° (depending on model)',
+      'Display': '8.4-inch daylight-readable LCD touchscreen',
+      'Image Sensor': '1/6-inch CCD with 470,000 pixels',
+      'Illumination': 'High-intensity LED',
+      'Battery Operation': 'Up to 120 minutes continuous use',
+      'Environmental Rating': 'IP65 dust & water resistance'
+    }
+  },
+  {
+    id: 'agilent-leak-detector',
+    title: 'Agilent HLD PD03 Refrigerant Leak Detector',
+    category: 'Repair and Servicing',
+    description: 'High-sensitivity portable leak detector for locating refrigerant leaks in HVAC systems and cooling equipment. Features advanced sensor technology and multiple sensitivity settings for efficient troubleshooting.',
+    image: '/images/products/agilent-leak-detector.jpg',
+    features: [
+      'Infrared absorption sensor technology for high sensitivity',
+      'Detection of all common HFC, HCFC, and HFO refrigerants',
+      'Adjustable sensitivity with visual and audible indicators',
+      'Long-life sensor with minimal interference from other gases',
+      'One-hand operation with tactile feedback buttons'
+    ],
+    specifications: {
+      'Sensitivity': '3 g/year (0.1 oz/year) for R-134a',
+      'Detection Method': 'Infrared absorption',
+      'Response Time': 'Less than 1 second',
+      'Sensor Life': '10+ years under normal operating conditions',
+      'Battery Type': 'Rechargeable Li-ion',
+      'Operating Time': 'Up to 8 hours per charge',
+      'Warm-up Time': '< 30 seconds',
+      'Weight': '0.54 kg (1.19 lbs)'
+    }
+  },
+  {
+    id: 'hioki-power-analyzer',
+    title: 'Hioki PW6001 Power Analyzer',
+    category: 'Repair and Servicing',
+    description: 'High-precision power measurement instrument for analysis and troubleshooting of electrical systems and power electronics. Features multiple channels and advanced harmonics analysis for comprehensive electrical diagnostics.',
+    image: '/images/products/hioki-analyzer.jpg',
+    features: [
+      'Basic accuracy of ±0.02% for precise power measurements',
+      'Wideband measurement DC to 2 MHz for power electronics analysis',
+      'Built-in harmonic analysis up to the 100th order',
+      'Synchronized acquisition across all channels',
+      'Motor analysis function for efficiency evaluation'
+    ],
+    specifications: {
+      'Input Channels': '1 to 6 (selectable)',
+      'Voltage Range': '6 V to 1500 V',
+      'Current Range': 'Depends on current sensor (10 mA to 2000 A)',
+      'Power Range': '0.1 W to 4.5 MW',
+      'Sampling Rate': '5 MS/s',
+      'Frequency Range': 'DC, 0.1 Hz to 2 MHz',
+      'Data Storage': 'Internal 64 MWord memory + SD card + USB flash drive',
+      'Display': '10.1" WXGA color TFT with capacitive touch panel'
+    }
+  },
+  {
+    id: 'proto-toolbox',
+    title: 'Proto J99700 Intermediate Technician\'s Set with Tool Box',
+    category: 'Repair and Servicing',
+    description: 'Comprehensive professional-grade tool set for industrial maintenance and equipment repair applications. Features 181 tools with premium quality construction and organized storage system for efficient service operations.',
+    image: '/images/products/proto-toolbox.jpg',
+    features: [
+      'Full polish chrome vanadium tools with lifetime warranty',
+      'Dual 90-tooth ratchets with 4° arc swing for tight spaces',
+      'Combination wrenches with full polish finish and 15° offset',
+      'Multi-drive sockets for compatibility with various fasteners',
+      'Heavy-duty tool chest with ball-bearing drawer slides'
+    ],
+    specifications: {
+      'Number of Tools': '181 pieces',
+      'Socket Sizes': '1/4", 3/8", and 1/2" drive (metric and SAE)',
+      'Wrench Sizes': '1/4" to 1-1/4" and 8 mm to 24 mm combination wrenches',
+      'Screwdrivers': '12 precision screwdrivers with various tips',
+      'Tool Chest': '7-drawer unit with 2,800 in³ storage capacity',
+      'Pliers': '5 types including diagonal, slip-joint, needle-nose',
+      'Tool Material': 'Chrome vanadium steel with corrosion-resistant finish',
+      'Tool Box Dimensions': '520 × 220 × 305 mm (20.5 × 8.7 × 12 in)'
+    }
+  },
+  {
+    id: 'extech-meter',
+    title: 'Extech EX540 True RMS Industrial Multimeter/Datalogger',
+    category: 'Repair and Servicing',
+    description: 'Professional multimeter with built-in datalogger for electrical maintenance and troubleshooting applications. Features wireless PC interface and multiple measurement functions for comprehensive electrical diagnostics.',
+    image: '/images/products/extech-meter.jpg',
+    features: [
+      '20,000 count display with high accuracy measurements',
+      'Built-in datalogger with 99 sets of readings and timestamp',
+      'Wireless data transmission to PC up to 10m (33 ft)',
+      'True RMS measurements for accurate readings on non-linear loads',
+      'Type K temperature measurement capability'
+    ],
+    specifications: {
+      'DC Voltage Range': '0.1 mV to 1000V',
+      'AC Voltage Range': '0.1 mV to 1000V',
+      'DC/AC Current': '0.1 μA to 20A',
+      'Resistance': '0.1Ω to 40MΩ',
+      'Capacitance': '0.01 nF to 40 mF',
+      'Frequency': '0.001 Hz to 40 MHz',
+      'Temperature': '-50°C to 1300°C (-58°F to 2372°F)',
+      'Safety Category': 'CAT III 1000V, CAT IV 600V'
+    }
+  },
+  {
+    id: 'ridgid-camera',
+    title: 'RIDGID SeeSnake Compact2 Camera System',
+    category: 'Repair and Servicing',
+    description: 'Professional pipe inspection camera system for diagnostics of plumbing, HVAC, and utility infrastructure. Features high-resolution imaging and flexible push cable for navigating complex pipe configurations during maintenance procedures.',
+    image: '/images/products/ridgid-camera.jpg',
+    features: [
+      'Self-leveling camera head maintains upright image',
+      'High-resolution color imaging with LED illumination',
+      'TruSense technology with HDR image sensor',
+      'FleXmitter sonde for precise camera locating',
+      'Compatible with multiple RIDGID monitors and recording devices'
+    ],
+    specifications: {
+      'Cable Length': '30 m (100 ft)',
+      'Cable Diameter': '6.7 mm (0.265 in)',
+      'Camera Head': '25 mm (1 in) self-leveling',
+      'Lighting': '6 high-intensity LEDs',
+      'Resolution': '720 × 576 PAL (720 × 480 NTSC)',
+      'Sonde Frequency': '512 Hz',
+      'Frame Material': 'Powder-coated tubular steel',
+      'Weight': '9.8 kg (21.6 lbs)'
+    }
+  },
+  {
+    id: 'hioki-insulation-tester',
+    title: 'Hioki IR4058-20 Insulation Tester',
+    category: 'Repair and Servicing',
+    description: 'Digital insulation resistance tester for maintenance and troubleshooting of electrical installations and equipment. Features multiple test voltages and weatherproof design for reliable field operation.',
+    image: '/images/products/hioki-insulation.jpg',
+    features: [
+      'Five test voltage ranges (50V to 1000V) for diverse applications',
+      'Fast response with 0.3 second measurement speed',
+      'IP67 dustproof and waterproof design',
+      'Built-in comparator with visual and audible pass/fail indication',
+      'Low-battery warning and automatic discharge function'
+    ],
+    specifications: {
+      'Insulation Resistance Range': '0.00 MΩ to 2000 MΩ',
+      'Test Voltages': '50V/100V/250V/500V/1000V',
+      'Basic Accuracy': '±2% rdg. ±2 dgt.',
+      'Low Resistance Measurement': '0.0Ω to 600Ω',
+      'Live Circuit Detection': 'AC/DC 600V warning function',
+      'Power Supply': 'LR6 (AA) alkaline battery × 4',
+      'Battery Life': 'Approx. 20 hours (continuous use at 500V)',
+      'Dimensions': '159 × 177 × 53 mm (6.3 × 7.0 × 2.1 in)'
+    }
+  },
+  {
+    id: 'optris-infrared-camera',
+    title: 'Optris PI 640 Thermal Imaging Camera',
+    category: 'Repair and Servicing',
+    description: 'High-resolution thermal imaging camera for preventive maintenance, equipment diagnostics, and process monitoring. Features real-time thermal analysis capabilities for identifying potential failures before they occur.',
+    image: '/images/products/optris-thermal.jpg',
+    features: [
+      'High-resolution thermal detector with 640 × 480 pixels',
+      'Real-time thermal video at up to 125 Hz frame rate',
+      'Temperature range up to 1500°C with various calibrations',
+      'Small size for integration into confined spaces',
+      'Process interface with digital I/O for automated monitoring'
+    ],
+    specifications: {
+      'Optical Resolution': '640 × 480 pixels',
+      'Spectral Range': '7.5 to 13 μm',
+      'Temperature Range': '-20°C to 1500°C (depending on model)',
+      'Thermal Sensitivity': '75 mK',
+      'Accuracy': '±2°C or ±2%',
+      'Frame Rate': 'Up to 125 Hz',
+      'Lens Options': '33° × 25°, 60° × 45°, 90° × 69°',
+      'Dimensions': '46 × 56 × 90 mm (1.8 × 2.2 × 3.5 in)'
+    }
+  },
+  {
+    id: 'beta-tools-set',
+    title: 'Beta Tools 2056E/I Advanced Mechanical Maintenance Kit',
+    category: 'Repair and Servicing',
+    description: 'Professional tool set for industrial mechanical maintenance tasks. Features comprehensive selection of high-quality hand tools in a rugged aluminum case for on-site equipment repair and servicing.',
+    image: '/images/products/beta-tools.jpg',
+    features: [
+      'Premium chrome-vanadium steel tools with ergonomic design',
+      'Comprehensive selection for various mechanical applications',
+      'Dual-material handles for comfort and grip on select tools',
+      'Aluminum case with customized tool organization layout',
+      'Tools secured with foam inserts for inventory management'
+    ],
+    specifications: {
+      'Number of Tools': '108 pieces',
+      'Socket Sets': '1/4" and 1/2" drive with metric and inch sizes',
+      'Wrench Range': '6-32 mm combination and adjustable wrenches',
+      'Pliers': 'Combination, diagonal, needle nose, and adjustable',
+      'Screwdrivers': 'Slotted, Phillips, and Torx in multiple sizes',
+      'Hammers': 'Ball peen and dead blow hammers',
+      'Case Dimensions': '470 × 360 × 170 mm (18.5 × 14.2 × 6.7 in)',
+      'Weight': '14.5 kg (32 lbs)'
+    }
+  },
+  {
+    id: 'leica-laser-distance',
+    title: 'Leica DISTO X4 Laser Distance Meter',
+    category: 'Repair and Servicing',
+    description: 'Professional laser distance measuring tool with digital pointfinder for accurate measurements in maintenance, facility management, and equipment installation. Features robust design for reliable operation in industrial environments.',
+    image: '/images/products/leica-disto.jpg',
+    features: [
+      'Digital point finder with 4x zoom for outdoor targeting',
+      'Point-to-point measurement capability for complex dimensions',
+      'Smart Room function for automatic floor plan creation',
+      'Bluetooth® connectivity for data transfer to mobile devices',
+      'IP65 water and dust protection for harsh environments'
+    ],
+    specifications: {
+      'Measuring Range': '0.05 to 150 m (0.16 to 500 ft)',
+      'Measuring Accuracy': '±1.0 mm (±0.04 in)',
+      'Display': '2.4" high-resolution color screen',
+      'Digital Pointfinder': '4× zoom with camera function',
+      'Tilt Sensor Range': '360°',
+      'Protection Class': 'IP65 (water and dust resistant)',
+      'Battery Life': 'Up to 4,000 measurements',
+      'Dimensions': '132 × 56 × 29 mm (5.2 × 2.2 × 1.1 in)'
+    }
+  },
+  {
+    id: 'gearwrench-socket-set',
+    title: 'GearWrench 83001 Master Socket Set (1/4", 3/8" & 1/2" Drive)',
+    category: 'Repair and Servicing',
+    description: 'Comprehensive socket set for professional mechanical repair and maintenance operations. Features high-quality chrome molybdenum construction and innovative ratchet designs for efficient fastener access in equipment servicing.',
+    image: '/images/products/gearwrench-sockets.jpg',
+    features: [
+      '120XP ratchets with 3° swing arc for confined spaces',
+      'Surface Drive® technology to reduce fastener rounding',
+      'Full-polish chrome finish for corrosion resistance',
+      'Complete range of standard, deep, and impact sockets',
+      'Universal joint and extension accessories for versatility'
+    ],
+    specifications: {
+      'Total Pieces': '243 pieces',
+      'Drive Sizes': '1/4", 3/8", and 1/2" drive',
+      'Socket Types': 'Standard, deep, impact, universal',
+      'Socket Sizes': 'SAE: 5/32" to 1-1/2", Metric: 4mm to 38mm',
+      'Ratchet Design': '120-tooth gear with 3° swing arc',
+      'Construction Material': 'Chrome molybdenum alloy steel',
+      'Torque Rating': 'Exceeds ASME standards',
+      'Case Dimensions': '650 × 450 × 200 mm (25.6 × 17.7 × 7.9 in)'
+    }
+  },
+  {
+    id: 'fluke-vibration-tester',
+    title: 'Fluke 805 FC Vibration Meter',
+    category: 'Repair and Servicing',
+    description: 'Professional vibration meter for predictive maintenance and machinery health assessment. Features Crest Factor+ and high-frequency measurement technologies for early detection of mechanical issues in rotating equipment.',
+    image: '/images/products/fluke-vibration.jpg',
+    features: [
+      'Innovative sensor design with force and vibration measurement',
+      'Crest Factor+ algorithm for precise bearing assessment',
+      'Wireless connectivity to Fluke Connect mobile app',
+      'Built-in temperature sensor for complete machine assessment',
+      'On-device vibration severity scales for immediate evaluation'
+    ],
+    specifications: {
+      'Vibration Range': '0.01 to 65.00 g RMS (0.98 to 637.64 m/s²)',
+      'Frequency Range': '10 to 1,000 Hz (overall), 4,000 to 20,000 Hz (high frequency)',
+      'Temperature Measurement': '-20°C to +80°C (-4°F to +176°F)',
+      'Sensor Tip': 'Rugged industrial accelerometer with 1.5" diameter',
+      'Memory Capacity': 'Up to 3,500 measurements',
+      'Battery Type': 'AA alkaline batteries (2)',
+      'Battery Life': 'Approximately 250 measurements per day',
+      'IP Rating': 'IP54 (dust and splash resistant)'
+    }
+  },
+  {
+    id: 'weller-soldering-station',
+    title: 'Weller WX2021 Digital Soldering Station',
+    category: 'Repair and Servicing',
+    description: 'Professional digital soldering station for precision electronics repair and maintenance. Features advanced temperature control and ergonomic design for accurate and efficient soldering work on sensitive components.',
+    image: '/images/products/weller-soldering.jpg',
+    features: [
+      'Intelligent temperature control with ±2°C (±3.6°F) accuracy',
+      'Motion sensor for standby mode activation',
+      'Intuitive navigation with digital display and touch pad',
+      'Compatible with various Weller soldering tools',
+      'Password protection for temperature range setting'
+    ],
+    specifications: {
+      'Temperature Range': '100°C to 450°C (212°F to 842°F)',
+      'Temperature Stability': '±2°C (±3.6°F)',
+      'Temperature Accuracy': '±9°C (±17°F)',
+      'Heating Power': '200 W',
+      'Warm-up Time': 'Approximately 10 seconds to 350°C',
+      'Included Tools': 'WXP 120 soldering pencil with RT soldering tip',
+      'Display': 'LCD with multilingual interface',
+      'Dimensions': '170 × 151 × 130 mm (6.7 × 5.9 × 5.1 in)'
+    }
+  },
+  {
+    id: 'dewalt-impact-driver',
+    title: 'DeWALT DCF888P2 20V MAX XR Brushless Impact Driver Kit',
+    category: 'Repair and Servicing',
+    description: 'Professional cordless impact driver for mechanical assembly and maintenance applications. Features brushless motor technology and precision control for optimal fastening performance in equipment repair scenarios.',
+    image: '/images/products/dewalt-impact.jpg',
+    features: [
+      'Brushless motor for extended runtime and durability',
+      'Precision Drive™ in-handle control for delicate fastening tasks',
+      'Tool Connect™ tag ready for inventory tracking',
+      '3 LED lights with 20-second delay for improved visibility',
+      '3-speed settings for application-specific control'
+    ],
+    specifications: {
+      'Voltage': '20V MAX',
+      'No-Load Speed': '0-1,000/0-2,800/0-3,250 RPM',
+      'Impact Rate': '0-3,600 IPM',
+      'Maximum Torque': '1,825 in-lbs (205 Nm)',
+      'Chuck Size': '1/4" hex quick release',
+      'Battery': '2 × 5.0Ah lithium-ion batteries',
+      'Charging Time': 'Approximately A75 minutes',
+      'Weight': '1.8 kg (3.9 lbs) with battery'
+    }
+  },
+  {
+    id: 'stahlwille-torque-wrench',
+    title: 'Stahlwille 730D/10 Digital Torque Wrench',
+    category: 'Repair and Servicing',
+    description: 'High-precision digital torque wrench for critical fastening applications in equipment maintenance and repair. Features electronic measurement system and data recording capabilities for documented quality assurance.',
+    image: '/images/products/stahlwille-torque.jpg',
+    features: [
+      'Digital display with precise torque readout in multiple units',
+      'Integrated angle measurement for torque-angle tightening',
+      'Five selectable operating modes for different applications',
+      'Memory function for storing 7,500 tightening results',
+      'USB interface for documentation and calibration'
+    ],
+    specifications: {
+      'Drive Size': '3/8 inch square drive',
+      'Torque Range': '10-100 Nm (7.4-73.8 ft-lb)',
+      'Accuracy': '±2% of reading from 20% to 100% of range',
+      'Length': '382 mm (15 in)',
+      'Display': 'Backlit LCD with 5-digit readout',
+      'Units': 'Nm, ft-lb, in-lb, kg-cm, degrees',
+      'Battery Type': '1.5V AA battery (2)',
+      'Battery Life': 'Approximately 55 hours continuous use'
+    }
+  },
+  {
+    id: 'biddle-insulation-tester',
+    title: 'Megger MIT515 5 kV Insulation Resistance Tester',
+    category: 'Repair and Servicing',
+    description: 'Industrial-grade insulation resistance tester for preventive maintenance of high-voltage electrical equipment. Features multiple test modes and high accuracy for reliable assessment of insulation integrity.',
+    image: '/images/products/megger-mit515.jpg',
+    features: [
+      'Test voltages from 250 V to 5 kV in 25 V steps',
+      'Polarization Index (PI) and Dielectric Absorption Ratio (DAR) tests',
+      'Rapid charge battery with 6-hour continuous testing capability',
+      'Large backlit display with analog/digital readings',
+      'Noise filter to eliminate electrical interference effects'
+    ],
+    specifications: {
+      'Insulation Range': '10 kΩ to 10 TΩ',
+      'Test Voltage': '250 V to 5 kV (adjustable in 25 V steps)',
+      'Test Voltage Accuracy': '±5% of nominal test voltage (1 mA load)',
+      'Short Circuit Current': '3 mA nominal',
+      'Noise Rejection': '1 mA at 600 V (50/60 Hz)',
+      'Memory Storage': 'Stores 32 test results and logs',
+      'Battery Type': 'Rechargeable Li-ion battery',
+      'Dimensions': '315 × 285 × 181 mm (12.4 × 11.2 × 7.1 in)'
+    }
+  },
+  {
+    id: 'service-contract-premium',
+    title: 'TechCare Premium Service Contract',
+    category: 'Repair and Servicing',
+    description: 'Comprehensive service agreement for preventive maintenance and repair of laboratory and industrial equipment. Features scheduled maintenance visits, priority emergency response, and parts coverage for optimal equipment performance and reduced downtime.',
+    image: '/images/products/service-contract.jpg',
+    features: [
+      'Scheduled preventive maintenance visits (4 per year)',
+      'Priority emergency response within 24 hours',
+      'Genuine parts replacement coverage',
+      'Dedicated service engineer assignment',
+      'Calibration and validation services included'
+    ],
+    specifications: {
+      'Contract Duration': '12, 24, or 36 month options',
+      'Response Time': 'Within 24 hours for emergency service',
+      'Preventive Maintenance': '4 scheduled visits per year',
+      'Parts Coverage': '100% coverage on approved parts',
+      'Labor Coverage': 'All repair labor included',
+      'Documentation': 'Complete service reports and certificates',
+      'Equipment Eligibility': 'Laboratory and industrial equipment under 10 years old',
+      'Customization': 'Tailored options for specific industry requirements'
+    }
   }
     
   ];
