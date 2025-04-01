@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import Button from '@/components/ui/Button';
 
@@ -21,7 +22,7 @@ const InteractiveFeature: React.FC = () => {
     {
       title: "Healthcare Supplies",
       description: "Discover our comprehensive range of quality healthcare supplies designed for modern medical facilities across Eastern Africa.",
-      image: "/images/heroes/healthcare.jpg",
+      image: "/images/heroes/healthcare.avif",
     },
     {
       title: "Training & Support",
@@ -84,9 +85,19 @@ const InteractiveFeature: React.FC = () => {
                   activeTab === index ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                {/* Replace with actual images */}
-                <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center text-white">
-                  {feature.title}
+                {/* Using proper Image component with fill property */}
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw" 
+                  className="object-cover"
+                  priority={index === 0}
+                />
+                
+                {/* Overlay with gradient for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                  <h4 className="text-white text-xl font-bold">{feature.title}</h4>
                 </div>
               </div>
             ))}

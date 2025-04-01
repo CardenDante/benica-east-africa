@@ -1,16 +1,52 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ContactForm from '@/components/ui/ContactForm';
 
 const ContactPage: React.FC = () => {
+  // State for FAQ accordion
+  const [openFAQ, setOpenFAQ] = useState<number | null>(0);
+  
+  // FAQ data
+  const faqs = [
+    {
+      question: "What areas do you serve?",
+      answer: "Benica East Africa Limited serves clients throughout Eastern Africa, with a primary focus on Kenya, Uganda, and neighboring countries."
+    },
+    {
+      question: "Do you provide installation and training?",
+      answer: "Yes, our expert engineers offer comprehensive installation services and user training for all equipment we supply, ensuring your team can operate and maintain it with confidence."
+    },
+    {
+      question: "What kind of after-sales support do you offer?",
+      answer: "We provide quarterly diagnostic services to ensure the longevity and optimal performance of all equipment we supply. Our technical support team is also available to address any issues that may arise."
+    },
+    {
+      question: "How can I request a product demonstration?",
+      answer: "You can request a product demonstration by filling out our contact form, calling our office, or sending us an email. Our team will arrange a suitable time for the demonstration."
+    }
+  ];
+  
+  // Toggle FAQ
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 md:pb-24 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-        <div className="absolute inset-0 z-0 opacity-20" style={{ 
-          backgroundImage: 'url("/images/pattern.png")', 
-          backgroundSize: '100px' 
-        }} />
+      <section className="relative pt-24 pb-16 md:pb-24 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/heroes/default-bg.jpeg" 
+            alt="Contact Us" 
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
@@ -32,13 +68,13 @@ const ContactPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
               <div className="w-20 h-1 bg-primary mb-8"></div>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-600 mb-8 text-lg">
                 We'd love to hear from you. Please feel free to contact us using the information below or by filling out the contact form.
               </p>
 
-              <div className="space-y-6 mb-8">
+              <div className="space-y-8 mb-10">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full text-primary">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,8 +83,8 @@ const ContactPage: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Our Location</h3>
-                    <p className="text-gray-600">Mezzanine Floor, International Life House, Mama Ngina Street, Nairobi</p>
+                    <h3 className="text-xl font-semibold mb-2">Our Location</h3>
+                    <p className="text-gray-600 text-base">International House Ltd, International House, Mama Ngina St, Nairobi</p>
                   </div>
                 </div>
 
@@ -59,9 +95,9 @@ const ContactPage: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Phone Numbers</h3>
-                    <p className="text-gray-600">+254 723 526 211</p>
-                    <p className="text-gray-600">+254 720 976 613</p>
+                    <h3 className="text-xl font-semibold mb-2">Phone Numbers</h3>
+                    <p className="text-gray-600 text-base">+254 723 526 211</p>
+                    <p className="text-gray-600 text-base">+254 720 976 613</p>
                   </div>
                 </div>
 
@@ -72,8 +108,8 @@ const ContactPage: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Email Address</h3>
-                    <p className="text-gray-600">info@benicaea.com</p>
+                    <h3 className="text-xl font-semibold mb-2">Email Address</h3>
+                    <p className="text-gray-600 text-base">info@benicaea.com</p>
                   </div>
                 </div>
 
@@ -84,21 +120,21 @@ const ContactPage: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">Working Hours</h3>
-                    <p className="text-gray-600">Monday to Friday: 8:00 AM - 5:00 PM</p>
-                    <p className="text-gray-600">Saturday & Sunday: Closed</p>
+                    <h3 className="text-xl font-semibold mb-2">Working Hours</h3>
+                    <p className="text-gray-600 text-base">Monday to Friday: 8:00 AM - 5:00 PM</p>
+                    <p className="text-gray-600 text-base">Saturday & Sunday: Closed</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8">
-                <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+              <div className="mt-10">
+                <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
                 <div className="flex space-x-4">
                   <a 
                     href="https://facebook.com" 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="bg-primary/10 p-3 rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+                    className="bg-primary/10 p-3 rounded-full text-primary hover:bg-primary hover:text-white transition-all duration-300 transform hover:-translate-y-1"
                     aria-label="Facebook"
                   >
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -109,7 +145,7 @@ const ContactPage: React.FC = () => {
                     href="https://twitter.com" 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="bg-primary/10 p-3 rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+                    className="bg-primary/10 p-3 rounded-full text-primary hover:bg-primary hover:text-white transition-all duration-300 transform hover:-translate-y-1"
                     aria-label="Twitter"
                   >
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -120,7 +156,7 @@ const ContactPage: React.FC = () => {
                     href="https://linkedin.com" 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="bg-primary/10 p-3 rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+                    className="bg-primary/10 p-3 rounded-full text-primary hover:bg-primary hover:text-white transition-all duration-300 transform hover:-translate-y-1"
                     aria-label="LinkedIn"
                   >
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -132,7 +168,7 @@ const ContactPage: React.FC = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-50 rounded-lg p-8 shadow-md">
+            <div className="bg-white rounded-lg p-8 shadow-lg border border-gray-100">
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
               <ContactForm />
             </div>
@@ -144,102 +180,95 @@ const ContactPage: React.FC = () => {
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Location</h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Visit our headquarters in Nairobi's Central Business District. We're conveniently located at International Life House on Mama Ngina Street.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Location</h2>
+            <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg mb-8">
+              Visit our headquarters in Nairobi's Central Business District. We're conveniently located at International House on Mama Ngina Street.
             </p>
           </div>
           
-          <div className="h-96 bg-gray-200 rounded-lg overflow-hidden shadow-md">
-            {/* Replace with actual Google Maps embed */}
-            <div className="w-full h-full flex items-center justify-center bg-gray-300 text-gray-600">
-              <div className="text-center">
-                <svg className="w-12 h-12 mx-auto mb-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-lg font-medium">Google Maps Embed Will Appear Here</p>
-                <p className="text-sm">International Life House, Mama Ngina Street, Nairobi</p>
-              </div>
-            </div>
+          <div className="h-96 bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+            {/* Google Maps Embed */}
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8198680933097!2d36.818841!3d-1.283332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d16de8d76d%3A0xb85797f364233814!2sInternational%20House%2C%20Mama%20Ngina%20St%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1682912678071!5m2!1sen!2ske" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Benica East Africa Limited Location"
+              className="w-full h-full"
+            />
           </div>
         </div>
       </section>
       
-      {/* FAQ Section */}
+      {/* FAQ Section - Redesigned with accordion */}
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg mb-8">
               Find answers to common questions about our products and services.
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto">
-            <div className="space-y-6">
-              <div className="border border-gray-200 rounded-lg overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4">
-                  <h3 className="text-lg font-semibold">What areas do you serve?</h3>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div 
+                  key={index} 
+                  className={`border rounded-lg overflow-hidden transition-all duration-300 ${
+                    openFAQ === index ? 'border-primary shadow-md' : 'border-gray-200'
+                  }`}
+                >
+                  <button
+                    className={`w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none ${
+                      openFAQ === index ? 'bg-primary/5' : 'bg-gray-50'
+                    }`}
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    <h3 className={`text-lg font-semibold ${openFAQ === index ? 'text-primary' : 'text-gray-800'}`}>
+                      {faq.question}
+                    </h3>
+                    <span className={`transform transition-transform duration-300 ${openFAQ === index ? 'rotate-180' : ''}`}>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div 
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      openFAQ === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="px-6 py-4">
+                      <p className="text-gray-600 text-base">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="px-6 py-4">
-                  <p className="text-gray-600">
-                    Benica East Africa Limited serves clients throughout Eastern Africa, with a primary focus on Kenya, Uganda, and neighboring countries.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="border border-gray-200 rounded-lg overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4">
-                  <h3 className="text-lg font-semibold">Do you provide installation and training?</h3>
-                </div>
-                <div className="px-6 py-4">
-                  <p className="text-gray-600">
-                    Yes, our expert engineers offer comprehensive installation services and user training for all equipment we supply, ensuring your team can operate and maintain it with confidence.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="border border-gray-200 rounded-lg overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4">
-                  <h3 className="text-lg font-semibold">What kind of after-sales support do you offer?</h3>
-                </div>
-                <div className="px-6 py-4">
-                  <p className="text-gray-600">
-                    We provide quarterly diagnostic services to ensure the longevity and optimal performance of all equipment we supply. Our technical support team is also available to address any issues that may arise.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="border border-gray-200 rounded-lg overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4">
-                  <h3 className="text-lg font-semibold">How can I request a product demonstration?</h3>
-                </div>
-                <div className="px-6 py-4">
-                  <p className="text-gray-600">
-                    You can request a product demonstration by filling out our contact form, calling our office, or sending us an email. Our team will arrange a suitable time for the demonstration.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 bg-gradient-to-r from-primary to-primary/80 text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Partner With Us?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Partner With Us?</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
             Take the first step towards advancing your scientific and healthcare capabilities with Benica East Africa Limited.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+254723526211" className="bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-medium transition duration-200">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="tel:+254723526211" className="bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
               Call Us Now
             </a>
-            <Link href="/products" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-md font-medium transition duration-200">
+            <Link href="/products" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1">
               Browse Products
             </Link>
           </div>

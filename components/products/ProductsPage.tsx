@@ -53,10 +53,15 @@ const ProductsPage: React.FC<ProductsProps> = ({ initialCategory = 'all' }) => {
     <>
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 md:pb-24 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-        <div className="absolute inset-0 z-0 opacity-20" style={{ 
-          backgroundImage: 'url("/images/pattern.png")', 
-          backgroundSize: '100px' 
-        }} />
+        <div className="absolute inset-0 z-0">
+                  <Image 
+                    src="/images/heroes/default-bg.jpeg" 
+                    alt="Contact Us" 
+                    fill
+                    className="object-cover opacity-20"
+                    priority
+                  />
+                </div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Products</h1>
