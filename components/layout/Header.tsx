@@ -64,6 +64,7 @@ const Header = () => {
               src="/images/banicaea-logo.png" 
               alt="BENICA EA Logo" 
               fill
+              sizes="(max-width: 768px) 160px, 160px"
               style={{ objectFit: 'contain' }}
               priority
             />
@@ -133,6 +134,7 @@ const Header = () => {
                   src="/images/banicaea-logo.png" 
                   alt="BENICA EA Logo" 
                   fill
+                  sizes="128px"
                   style={{ objectFit: 'contain' }}
                   priority
                 />
