@@ -27,7 +27,48 @@ module.exports = {
         sans: ['Inter', 'sans-serif'],
         heading: ['Poppins', 'sans-serif'],
       },
+      keyframes: {
+        // Smooth horizontal sliding
+        slidePartners: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        // Optional bounce effect
+        partnerBounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      animation: {
+        // Infinite smooth sliding
+        'partners-slide': 'slidePartners 20s linear infinite',
+        // Optional bouncing effect
+        'partners-bounce': 'partnerBounce 2s ease-in-out infinite',
+      },
+      // Custom scrollbar styles (optional)
+      scrollbar: {
+        hide: {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        }
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    // Optional: Custom scrollbar plugin
+    function({ addUtilities }) {
+      addUtilities({
+        '.no-scrollbar': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        }
+      })
+    }
+  ],
 }

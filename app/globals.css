@@ -336,3 +336,21 @@ main {
     scroll-behavior: auto !important;
   }
 }
+
+@keyframes slidePartners {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.partners-slider-container {
+  display: inline-flex;
+  animation: slidePartners 60s linear infinite; /* Increased to 60 seconds */
+}
+
+.partners-slider-container:hover {
+  animation-play-state: paused;
+}
