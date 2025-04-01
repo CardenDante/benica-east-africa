@@ -1,31 +1,28 @@
+// app/products/[category]/[product]/page.tsx
 import React from 'react';
-import { notFound } from 'next/navigation';
-import { getProductById } from '@/lib/data/products';
 import ProductDetail from '@/components/products/ProductDetail';
+import { getProductById } from '@/lib/data/products';
+import { notFound } from 'next/navigation';
 
-interface ProductDetailPageProps {
+interface PageProps {
   params: {
     category: string;
     product: string;
   };
 }
 
-export function generateMetadata({ params }: ProductDetailPageProps) {
-  const product = getProductById(params.product);
-  if (!product) return { title: 'Product Not Found' };
-  
+// Metadata generator
+export async function generateMetadata({ params }: PageProps) {
+  // Pass the params directly without trying to fetch the product here
   return {
-    title: `${product.title} | Benica East Africa Limited`,
-    description: product.description,
+    title: `Product Details | Your Company Name`,
+    description: 'View our product details',
   };
 }
 
-export default function Page({ params }: ProductDetailPageProps) {
-  const product = getProductById(params.product);
-  
-  if (!product) {
-    notFound();
-  }
-  
-  return <ProductDetail params={params} />;
+// Page component
+export default function Page({ params }: PageProps) {
+  // Simply render the ProductDetail component with the params
+  // Let ProductDetail handle the data fetching
+  return <ProductDetail category={params.category} productId={params.product} />;
 }
