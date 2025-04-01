@@ -55,7 +55,7 @@ export interface Product {
       title: 'Philips Digital Microscope PD-2000',
       category: 'Laboratory Equipment',
       description: 'High-resolution digital microscope with advanced imaging capabilities for research and clinical applications. Features automated slide scanning and digital image analysis.',
-      image: '/images/products/digital-microscope.jpg',
+      image: '/images/products/digital-microscope.webp',
       features: [
         '40-1000x magnification range',
         'HD camera with 20MP resolution',
