@@ -1,20 +1,34 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center pt-20">
+    <section className="relative w-full min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
-          {/* Replace with your actual hero image */}
+          {/* Background image with overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 z-10" />
-          <div className="w-full h-full bg-gray-200">
-            {/* Placeholder for actual image */}
-            <div className="w-full h-full bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 flex items-center justify-center">
-              <span className="text-gray-400 text-lg">Hero Background</span>
-            </div>
+          {/* Background Image */}
+          <div className="w-full h-full relative">
+            <Image 
+              src="/images/heroes/bg-hero.jpg" 
+              alt="Hero Background" 
+              fill 
+              className="object-cover"
+              sizes="100vw"
+              priority
+              style={{
+                objectPosition: 'center 30%', // Adjust this value to control vertical positioning
+                width: '100%',
+                height: '100%',
+                minHeight: '100vh',
+                minWidth: '100%'
+              }}
+            />
           </div>
         </div>
       </div>
@@ -29,12 +43,12 @@ const Hero = () => {
             Your Trusted Partner in Precision Research and Quality Healthcare Supplies
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in-delay-2">
-            <Link href="/contact">
+            <Link href="/contact" className="inline-block">
               <button className="btn-primary text-lg px-8 py-3">
                 Contact Us
               </button>
             </Link>
-            <Link href="/products">
+            <Link href="/products" className="inline-block">
               <button className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-md transition duration-200 text-lg">
                 Explore Products
               </button>
