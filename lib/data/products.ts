@@ -2592,7 +2592,1305 @@ export interface Product {
         'Dimensions': '30" × 31" × 35" (760 × 790 × 890 mm)',
         'Weight': '220 lbs (100 kg)'
       }
+    },
+  {
+    id: 'john-deere-tractor',
+    title: 'John Deere 8R 410 Row Crop Tractor',
+    category: 'Agricultural Engineering',
+    description: 'Advanced large-frame row crop tractor with intelligent technology integration for precision farming applications. Features industry-leading power, fuel efficiency, and operator comfort for maximum productivity.',
+    image: '/images/products/john-deere-tractor.jpg',
+    features: [
+      'PowerTech 9.0L engine with 410 hp output',
+      'e23 PowerShift transmission with Efficiency Manager',
+      'CommandView III cab with CommandARM controls',
+      'JDLink connectivity with wireless data transfer',
+      'AutoTrac precision guidance system'
+    ],
+    specifications: {
+      'Engine': 'PowerTech 9.0L, 6 cylinder',
+      'Rated Power': '410 hp (306 kW)',
+      'Transmission': 'e23 PowerShift, 23 forward/11 reverse',
+      'Hydraulic Flow': 'Up to 85 gpm (321 L/min)',
+      'Lift Capacity': '19,900 lbs (9,026 kg) at 24" behind link arms',
+      'Wheelbase': '120" (3,050 mm)',
+      'Weight': '29,300 lbs (13,290 kg)',
+      'Fuel Capacity': '190 gal (720 L)'
     }
+  },
+  {
+    id: 'case-combine-harvester',
+    title: 'Case IH Axial-Flow 9250 Combine Harvester',
+    category: 'Agricultural Engineering',
+    description: 'High-capacity combine harvester with advanced threshing technology for efficient grain harvesting. Features cutting-edge automation systems and powerful engine for maximizing productivity in all crop conditions.',
+    image: '/images/products/case-combine.jpg',
+    features: [
+      'Single rotor Axial-Flow technology for gentle threshing',
+      'AFS Harvest Command automated crop settings',
+      'Cross-Flow cleaning system for sloped terrain operations',
+      'Residue management system with integrated chopper',
+      'Advanced telematics for fleet management and performance tracking'
+    ],
+    specifications: {
+      'Engine': 'FPT Cursor 16, 15.9L',
+      'Rated Power': '625 hp (466 kW)',
+      'Grain Tank Capacity': '485 bushels (17,100 L)',
+      'Unloading Rate': '4.5 bushels/second (159 L/sec)',
+      'Rotor Diameter': '30" (762 mm)',
+      'Rotor Length': '104" (2,638 mm)',
+      'Total Cleaning Area': '10,710 in² (6.9 m²)',
+      'Weight': '42,000 lbs (19,050 kg)'
+    }
+  },
+  {
+    id: 'new-holland-sprayer',
+    title: 'New Holland Guardian SP.400F Front Boom Sprayer',
+    category: 'Agricultural Engineering',
+    description: 'Advanced self-propelled crop sprayer with front-mounted boom design for improved visibility and precision application. Features automated rate control and section management for optimal chemical efficiency.',
+    image: '/images/products/nh-sprayer.jpg',
+    features: [
+      'Front boom design for improved visibility and reduced crop damage',
+      'IntelliSpray system with pulse width modulation',
+      'IntelliSteer auto-guidance with RTK accuracy',
+      'Four-wheel independent suspension for smooth field operation',
+      'IntelliView IV display for comprehensive operation control'
+    ],
+    specifications: {
+      'Engine': 'NEF 6-cylinder, 8.7L',
+      'Rated Power': '380 hp (283 kW)',
+      'Boom Width Options': '90-140 ft (27.4-42.7 m)',
+      'Tank Capacity': '1,600 gal (6,057 L)',
+      'Spray Pump Capacity': '75 gpm (284 L/min)',
+      'Ground Clearance': '60" (1,524 mm)',
+      'Spray Nozzle Spacing': '15-30" (38-76 cm)',
+      'Weight': '35,500 lbs (16,103 kg)'
+    }
+  },
+  {
+    id: 'precision-planting-system',
+    title: 'Precision Planting vSet 2 with SpeedTube Planting System',
+    category: 'Agricultural Engineering',
+    description: 'High-speed precision planting system for accurate seed placement even at increased field speeds. Features vacuum meter technology and advanced seed delivery system for consistent plant spacing and emergence.',
+    image: '/images/products/precision-planting.jpg',
+    features: [
+      'vSet 2 vacuum meter for accurate singulation at high speeds',
+      'SpeedTube controlled seed delivery system',
+      'DeltaForce hydraulic downforce control',
+      '20|20 display for real-time monitoring and control',
+      'SmartFirmer seed trench sensor for soil mapping'
+    ],
+    specifications: {
+      'Planting Speed': 'Up to 12 mph (19 km/h)',
+      'Seed Singulation': '>99.5% accuracy at high speeds',
+      'Row Unit Compatibility': 'Major planter brands and models',
+      'Down Force Range': '0-1,200 lbs (0-544 kg) per row',
+      'Vacuum Range': '5-60 inH₂O (1.2-15 kPa)',
+      'Control System': '20|20 SeedSense monitor',
+      'Power Requirement': '12V system with hydraulic support',
+      'Data Connectivity': 'Wireless cloud upload capability'
+    }
+  },
+  {
+    id: 'valley-irrigation-pivot',
+    title: 'Valley 8000 Series Center Pivot Irrigation System',
+    category: 'Agricultural Engineering',
+    description: 'Heavy-duty center pivot irrigation system designed for reliability and longevity in diverse agricultural environments. Features smart control technology for water conservation and remote management capabilities.',
+    image: '/images/products/valley-pivot.jpg',
+    features: [
+      'Durable structure with hot-dipped galvanized steel',
+      'Valley X-Tec DC drive motor with high-speed capability',
+      'Valley ICON smart panels with touchscreen interface',
+      'Variable rate irrigation for prescription water application',
+      'Remote management through AgSense or BaseStation3'
+    ],
+    specifications: {
+      'Maximum Length': 'Up to 1,500 ft (457 m) radius',
+      'Pivot Point Options': '6 5/8", 8", or 10" (168, 203, or 254 mm)',
+      'Drive Units': '3 HP (2.24 kW) standard, 7.5 HP (5.6 kW) Valley X-Tec',
+      'Span Length Options': '115-225 ft (35-69 m)',
+      'Sprinkler Options': 'Low pressure, drop nozzles, LEPA, VRI',
+      'Control Options': 'ICON5, ICON1, ICONX panels',
+      'Tire Options': '11.2-38 to 16.9-24 flotation',
+      'Maximum Grade': 'Up to 30% slope capability'
+    }
+  },
+  {
+    id: 'trimble-gps-guidance',
+    title: 'Trimble GFX-1060 Display with NAV-900 Guidance Controller',
+    category: 'Agricultural Engineering',
+    description: 'Advanced GPS guidance and precision farming display system for agricultural applications. Features intuitive interface, multi-function capability, and scalable accuracy options for various field operations.',
+    image: '/images/products/trimble-guidance.jpg',
+    features: [
+      '10.1" high-brightness touchscreen display',
+      'ISOBUS compatible virtual terminal functionality',
+      'Precision-IQ software for field planning and operation',
+      'NavController III for automated steering implementation',
+      'Multi-constellation GNSS support with scalable accuracy'
+    ],
+    specifications: {
+      'Display Size': '10.1" (25.6 cm) diagonal',
+      'Resolution': '1280 × 800 pixels',
+      'Accuracy Options': 'WAAS (6"), RangePoint RTX (2"), CenterPoint RTX (1"), RTK (0.4")',
+      'Processing Power': 'Quad-core processor',
+      'Memory': '32 GB internal with USB expansion',
+      'Connectivity': 'Wi-Fi, Bluetooth, Ethernet, CAN',
+      'Input Voltage': '9-16 VDC',
+      'Operating Temperature': '-20°C to +70°C'
+    }
+  },
+  {
+    id: 'agco-fendt-ideal-combine',
+    title: 'AGCO Fendt IDEAL 10T Combine Harvester',
+    category: 'Agricultural Engineering',
+    description: 'Revolutionary large-class combine harvester with dual helix rotors for ultimate threshing capacity. Features automation systems and the industry\'s largest grain tank for maximum harvest efficiency.',
+    image: '/images/products/fendt-combine.jpg',
+    features: [
+      'Dual Helix 4.84 m rotors for massive threshing capacity',
+      'IDEALharvest automatic machine optimization system',
+      'Largest grain tank capacity in industry at 17,100 L',
+      'DriveCenter with dry sump lubrication for operation on slopes',
+      'VisionCab with 180° swivel seat and panoramic visibility'
+    ],
+    specifications: {
+      'Engine': 'MAN 16.2L',
+      'Rated Power': '790 hp (589 kW)',
+      'Rotor Length': '4.84 m (16 ft)',
+      'Grain Tank Capacity': '17,100 L (485 bushels)',
+      'Unloading Speed': '210 L/sec (6 bushels/sec)',
+      'Total Separation Area': '4.9 m² (52.7 ft²)',
+      'Cleaning System Area': '7.45 m² (80.2 ft²)',
+      'Weight': '22,500 kg (49,600 lbs)'
+    }
+  },
+  {
+    id: 'claas-xerion-tractor',
+    title: 'CLAAS XERION 5000 TRAC VC Tractor',
+    category: 'Agricultural Engineering',
+    description: 'High-performance system tractor with unique rotating cab design for versatile applications. Features equal-sized wheels, continuous power transmission, and integrated implement mounting for specialized agricultural operations.',
+    image: '/images/products/claas-xerion.jpg',
+    features: [
+      'TRAC VC rotating cab design for bi-directional operation',
+      'Continuously variable CMATIC transmission',
+      'Full-frame design with equal-sized wheels',
+      'CEBIS operating system with touchscreen control',
+      'Four steering modes for maximum maneuverability'
+    ],
+    specifications: {
+      'Engine': 'Mercedes-Benz 6-cylinder, 12.8L',
+      'Rated Power': '530 hp (390 kW)',
+      'Transmission': 'ZF Eccom 5.0 CVT',
+      'Hydraulic System': 'Load-sensing, 250 L/min',
+      'Lift Capacity': 'Front: 8,100 kg, Rear: 13,600 kg',
+      'Wheelbase': '3.6 m (142")',
+      'Weight': '17,500 kg (38,580 lbs)',
+      'Fuel Capacity': '700 L (185 gal)'
+    }
+  },
+  {
+    id: 'kubota-compact-tractor',
+    title: 'Kubota M7-172 Premium KVT Compact Tractor',
+    category: 'Agricultural Engineering',
+    description: 'Versatile mid-size agricultural tractor with advanced technology in a compact design. Features powerful engine, premium cab ergonomics, and precision farming capabilities for diverse farming operations.',
+    image: '/images/products/kubota-tractor.jpg',
+    features: [
+      'V6108 DOHC 24-valve engine with SCR technology',
+      'KVT continuously variable transmission',
+      'K-Monitor Pro 12" touchscreen with ISOBUS compatibility',
+      'Premium cab with integrated climate control',
+      'Front loader capability with electronic joystick control'
+    ],
+    specifications: {
+      'Engine': 'V6108 4-cylinder, 6.1L',
+      'Rated Power': '170 hp (126 kW)',
+      'Transmission': 'KVT variable with 4 programmable speed ranges',
+      'Hydraulic Capacity': '110 L/min',
+      'Rear Lift Capacity': '9,400 kg (20,725 lbs)',
+      'Wheelbase': '2.72 m (107")',
+      'Weight': '7,500 kg (16,535 lbs)',
+      'Fuel Capacity': '330 L (87 gal)'
+    }
+  },
+  {
+    id: 'lindsay-zimmatic-pivot',
+    title: 'Lindsay Zimmatic 9500P Center Pivot Irrigation System',
+    category: 'Agricultural Engineering',
+    description: 'Durable center pivot irrigation system designed for longevity and reliability in various field conditions. Features smart control technology and corrosion-resistant design for long service life.',
+    image: '/images/products/zimmatic-pivot.jpg',
+    features: [
+      'Heavy-duty structure with galvanized construction',
+      'FieldNET remote management and monitoring system',
+      'Center-Drive gearbox with high-torque capacity',
+      'Uni-Knuckle span connection for durability',
+      'Watertight tower boxes with stainless steel baffles'
+    ],
+    specifications: {
+      'Maximum Length': 'Up to 1,500 ft (457 m) radius',
+      'Pivot Point Size': '5.9", 8", or 10" (150, 203, or 254 mm)',
+      'Drive Motors': '1/2 to 1.75 HP (0.37 to 1.3 kW)',
+      'Span Length Options': '105-218 ft (32-66.5 m)',
+      'Sprinkler Packages': 'Custom designed for specific needs',
+      'Control Panels': 'VISION, BASIC, BOSS, TAP',
+      'Tire Options': '11.2-24 to 14.9-24',
+      'Maximum Slope': 'Up to 15% standard (30% with options)'
+    }
+  },
+  {
+    id: 'vaderstad-rapid-drill',
+    title: 'Väderstad Rapid A 800S Seed Drill',
+    category: 'Agricultural Engineering',
+    description: 'High-speed precision seed drill for efficient crop establishment. Features innovative seed placement technology and versatile capabilities for multiple seeding applications from fine seeds to beans.',
+    image: '/images/products/vaderstad-drill.jpg',
+    features: [
+      'Single disc system with seed placement wheel',
+      'Active hydraulic pressure system for consistent seed depth',
+      'Interactive Control System with iPad interface',
+      'BioDrill capability for small seeds and cover crops',
+      'Hydraulic row shutoff for controlled traffic farming'
+    ],
+    specifications: {
+      'Working Width': '8 m (26.3 ft)',
+      'Transport Width': '3 m (9.8 ft)',
+      'Seed Hopper Capacity': '3,100 L (87.9 bushels)',
+      'Fertilizer Hopper Capacity': '2,300 L (65.2 bushels)',
+      'Row Spacing': '12.5 cm (4.9")',
+      'Number of Coulters': '64',
+      'Working Speed': '12-14 km/h (7.5-8.7 mph)',
+      'Power Requirement': '270-350 hp'
+    }
+  },
+  {
+    id: 'bourgault-air-seeder',
+    title: 'Bourgault 3320 XTC Paralink Hoe Drill and 7950 Air Seeder',
+    category: 'Agricultural Engineering',
+    description: 'High-capacity air seeding system for precision placement of seed and fertilizer. Features parallelogram row units for consistent depth control and large-capacity cart for maximum productivity.',
+    image: '/images/products/bourgault-seeder.jpg',
+    features: [
+      'ParaLink Hoe Drill system with hydraulic trip design',
+      'Mid Row Banding fertilizer placement technology',
+      'Dual fan air system for separate seed and fertilizer delivery',
+      'X30 Apollo controller with sectional control capability',
+      'Five-tank metering system for multiple product application'
+    ],
+    specifications: {
+      'Working Width': '60-100 ft (18.3-30.5 m)',
+      'Transport Width': '18-24 ft (5.5-7.3 m)',
+      'Row Spacing Options': '9.8", 10", or 12" (25, 25.4, or 30.5 cm)',
+      'Trip Force': 'Up to 950 lbs (431 kg)',
+      'Tank Capacity': '950 bushels (33,500 L) total',
+      'Max Working Speed': '5-6 mph (8-9.6 km/h)',
+      'Hydraulic Requirements': '55-80 gpm (208-303 L/min)',
+      'Weight': '94,000 lbs (42,638 kg) combined'
+    }
+  },
+  {
+    id: 'krone-big-x-forage-harvester',
+    title: 'Krone BiG X 1180 Self-Propelled Forage Harvester',
+    category: 'Agricultural Engineering',
+    description: 'High-performance forage harvester with exceptional throughput capacity for silage production. Features powerful engine, advanced crop processing, and intelligent control systems for optimal forage quality.',
+    image: '/images/products/krone-harvester.jpg',
+    features: [
+      'Liebherr V12 engine with 1,156 hp maximum power',
+      'MaxFlow 40-knife cutterhead with 800mm diameter',
+      'StreamControl adjustable crop flow system',
+      'AutoScan yield and moisture sensing technology',
+      'XtraPower engine boost system for demanding conditions'
+    ],
+    specifications: {
+      'Engine': 'Liebherr D9512, 24L V12',
+      'Power Rating': '1,156 hp (862 kW)',
+      'Chopping Cylinder': '800mm diameter, 40 knives',
+      'Crop Processor': 'Disc with 105 or 123 teeth',
+      'Feed Roll Width': '970 mm (38.2")',
+      'Header Options': '12-row corn or 13-meter grass pickup',
+      'Fuel Tank': '1,400 L (370 gal)',
+      'Weight': '18,700 kg (41,226 lbs)'
+    }
+  },
+  {
+    id: 'grimme-potato-harvester',
+    title: 'Grimme VARITRON 470 Platinum Self-Propelled Potato Harvester',
+    category: 'Agricultural Engineering',
+    description: 'Advanced self-propelled potato harvester with four-ton bunker capacity. Features innovative cleaning systems and gentle crop handling for maximum harvest quality and minimum damage.',
+    image: '/images/products/grimme-harvester.jpg',
+    features: [
+      'Four separation systems for optimal cleaning in all conditions',
+      'CCI 1200 ISOBUS terminal with intuitive control',
+      'Visual Protect monitoring system for all machine functions',
+      'Double MultiSep for intensive but gentle separation',
+      'Hydraulic ground pressure relief system'
+    ],
+    specifications: {
+      'Engine': 'Mercedes-Benz OM936, 7.7L',
+      'Power Rating': '381 hp (280 kW)',
+      'Bunker Capacity': '7,000 kg (15,432 lbs)',
+      'Harvesting Width': '75-90 cm rows',
+      'Output Capacity': 'Up to 200 t/h',
+      'Cleaning Area': '11.4 m² (122.7 ft²)',
+      'Transport Width': '3.5 m (11.5 ft)',
+      'Weight': '25,000 kg (55,115 lbs)'
+    }
+  },
+  {
+    id: 'horsch-joker-rt-disc-harrow',
+    title: 'Horsch Joker 12 RT Compact Disc Harrow',
+    category: 'Agricultural Engineering',
+    description: 'High-speed compact disc harrow for stubble cultivation and seedbed preparation. Features aggressive disc angle for thorough soil mixing and consolidation rollers for optimal seedbed finishing.',
+    image: '/images/products/horsch-joker.jpg',
+    features: [
+      'Conical disc design with 52cm diameter',
+      'TerraGrip 3 tines with 5-spring protection system',
+      'RollPack packer system with steel rings',
+      'ContourFrame for ground contour following',
+      'Low draft requirement for high-speed operation'
+    ],
+    specifications: {
+      'Working Width': '12 m (39.4 ft)',
+      'Transport Width': '3 m (9.8 ft)',
+      'Transport Height': '4 m (13.1 ft)',
+      'Disc Diameter': '52 cm (20.5")',
+      'Number of Discs': '96',
+      'Working Depth': '3-15 cm (1.2-5.9")',
+      'Working Speed': '10-20 km/h (6.2-12.4 mph)',
+      'Power Requirement': '400-550 hp'
+    }
+  },
+  {
+    id: 'lemken-diamant-plow',
+    title: 'Lemken Diamant 16 Semi-Mounted Reversible Plow',
+    category: 'Agricultural Engineering',
+    description: 'High-performance semi-mounted reversible plow for primary tillage operations. Features hydraulic stone protection and automated turnover sequence for efficient field operation.',
+    image: '/images/products/lemken-plow.jpg',
+    features: [
+      'OptiLine adjustable pull point for reduced side draft',
+      'Hydromatic automatic furrow width adjustment',
+      'Hydraulic stone protection system for each body',
+      'DuraMaxx moldboard design for reduced pulling force',
+      'Memory control cylinder with automatic setting'
+    ],
+    specifications: {
+      'Number of Furrows': '5-9',
+      'Working Width': 'Hydraulically adjustable 33-55 cm (13-21.7") per body',
+      'Under-beam Clearance': '80/85 cm (31.5/33.5")',
+      'Working Depth': 'Up to 35 cm (13.8")',
+      'Point-to-Point Distance': '100 cm (39.4")',
+      'Frame Section': '160 × 160 × 10 mm',
+      'Power Requirement': '240-450 hp',
+      'Weight': '4,500-6,600 kg (9,920-14,550 lbs)'
+    }
+  },
+  {
+    id: 'amazone-spreader',
+    title: 'Amazone ZA-TS 4200 Ultra Profis Hydro Fertilizer Spreader',
+    category: 'Agricultural Engineering',
+    description: 'High-precision fertilizer spreader with intelligent boundary spreading system. Features advanced weighing technology and hydraulic drive for accurate application across the full working width.',
+    image: '/images/products/amazone-spreader.jpg',
+    features: [
+      'AutoTS boundary spreading system with integrated limiter',
+      'ArgusConnect automatic spread pattern monitoring',
+      'ProfisPro 200Hz online weighing system',
+      'Hydraulic drive with individual disc control',
+      'HeadlandControl for automatic border area management'
+    ],
+    specifications: {
+      'Hopper Capacity': '4,200 L (expandable to 5,700 L)',
+      'Working Width': '15-36 m (49-118 ft)',
+      'Spread Rate': '50-400 kg/ha',
+      'Maximum Output': 'Up to 10.8 kg/sec',
+      'Disc Speed': '700-1,500 rpm, infinitely adjustable',
+      'Weighing System': '200Hz dynamic measurement',
+      'ISOBUS Compatible': 'Yes, with section control capability',
+      'Weight': '790 kg (1,742 lbs) empty'
+    }
+  },
+  {
+    id: 'lely-robotic-feeder',
+    title: 'Lely Vector Automatic Feeding System',
+    category: 'Agricultural Engineering',
+    description: 'Autonomous livestock feeding system for 24/7 fresh feed delivery. Features self-learning feed schedule adaptation and precise ration formulation for improved feed efficiency and animal health.',
+    image: '/images/products/lely-vector.jpg',
+    features: [
+      'Fully autonomous operation with battery power',
+      'Mixing and feeding robot with 600 kg capacity',
+      'Feed kitchen with 3-day storage capacity',
+      'Silage detection system with 3D camera technology',
+      'Self-learning system that adapts to feeding patterns'
+    ],
+    specifications: {
+      'Capacity': '600 kg (1,323 lbs) mixed feed',
+      'Feeding Height': '2 m (6.6 ft) maximum',
+      'Push-up Height': '1.1 m (3.6 ft) maximum',
+      'Battery': 'LiFePO4, 55 Ah',
+      'Charging Time': '3 hours for full charge',
+      'Operating Time': '1 hour per charge',
+      'Feeding Capacity': 'Up to 250-300 cows per system',
+      'Dimensions': '278 × 162 × 155 cm (mixer)'
+    }
+  },
+  {
+    id: 'gea-milking-parlor',
+    title: 'GEA DairyRotor T8900 Rotary Milking Parlor',
+    category: 'Agricultural Engineering',
+    description: 'High-throughput rotary milking system for large dairy operations. Features advanced automation for efficient milking process and integrated animal management capabilities.',
+    image: '/images/products/gea-milking.jpg',
+    features: [
+      'Individual stall indexing for optimal cow positioning',
+      'DemaTron 70 milk meter with cow identification',
+      'AutoDip spray system for teat disinfection',
+      'SwivelFlo cabinet positioning for ergonomic operation',
+      'CowScout individual animal monitoring system'
+    ],
+    specifications: {
+      'Platform Size': '40-120 stalls',
+      'Throughput': 'Up to 400 cows per hour',
+      'Platform Speed': 'Variable 4-12 minutes rotation',
+      'Stall Size': '110 cm (43.3") wide',
+      'Milk Line': '76 mm (3") diameter',
+      'Vacuum Requirement': '50-55 kPa',
+      'Power Requirement': '30-50 kW depending on size',
+      'Platform Diameter': '14.5-31.3 m (48-103 ft)'
+    }
+  },
+  {
+    id: 'pottinger-jumbo-wagon',
+    title: 'Pöttinger JUMBO 8000 Silage Wagon',
+    category: 'Agricultural Engineering',
+    description: 'High-capacity forage wagon for efficient silage harvesting and transport. Features wide pickup, powerful cutting system, and intelligent loading automation for maximum productivity.',
+    image: '/images/products/pottinger-wagon.jpg',
+    features: [
+      'POWERMATIC PLUS intake system with 7-row pickup',
+      'AUTOCUT automatic knife sharpening system',
+      'INTELLIGENT LOADING SYSTEM with torque-based automation',
+      'Hydraulic front panel for increased capacity',
+      '80 knife chopping system for 34mm theoretical cut length'
+    ],
+    specifications: {
+      'Loading Volume': '80 m³ (2,825 ft³) DIN',
+      'Pickup Width': '2.3 m (7.5 ft)',
+      'Number of Knives': '80',
+      'Theoretical Cut Length': '34 mm (1.34")',
+      'Power Requirement': '220-400 hp',
+      'Load Capacity': '24,000 kg (52,911 lbs)',
+      'Transport Speed': 'Up to 40 km/h (25 mph)',
+      'Weight': '12,985 kg (28,626 lbs)'
+    }
+  },
+  {
+    id: 'agrimeter-moisture-analyzer',
+    title: 'AgriMeter GrainVision Pro In-Line Grain Analyzer',
+    category: 'Agricultural Engineering',
+    description: 'Advanced in-line grain quality monitoring system for continuous measurement during harvest or processing. Features multi-parameter analysis and cloud data integration for comprehensive quality management.',
+    image: '/images/products/agrimeter-analyzer.jpg',
+    features: [
+      'Real-time moisture, protein, and oil content measurement',
+      'Multi-grain calibration for all major crop types',
+      'Automatic temperature compensation',
+      'Cloud-based data management with mobile app interface',
+      'Integrates with yield mapping systems'
+    ],
+    specifications: {
+      'Measurement Parameters': 'Moisture, protein, oil, starch, test weight',
+      'Accuracy': '±0.15% for moisture, ±0.3% for protein',
+      'Measurement Speed': 'Continuous, up to 20 tons/hour',
+      'Grain Types': '30+ crop types with automatic recognition',
+      'Power Supply': '12VDC (mobile) or 110-220VAC',
+      'Data Connectivity': 'Wi-Fi, Bluetooth, USB, CAN-bus',
+      'Operating Temperature': '-5°C to +45°C (23°F to 113°F)',
+      'Dimensions': '40 × 35 × 25 cm'
+    }
+  },
+  {
+    id: 'delaval-voluntary-milking',
+    title: 'DeLaval VMS V310 Voluntary Milking System',
+    category: 'Agricultural Engineering',
+    description: 'Automated robotic milking system for modern dairy operations. Features integrated cow monitoring technology and adaptive milking process for improved milk quality and animal welfare.',
+    image: '/images/products/delaval-milking.jpg',
+    features: [
+      'InSight™ advanced camera-based teat detection system',
+      'DeLaval PureFlow™ preparation system with separate cup',
+      'DeLaval InControl™ remote management interface',
+      'DeLaval RePro™ integrated reproduction monitoring',
+      'DeLaval Smart Filters for highest milk quality'
+    ],
+    specifications: {
+      'Milking Capacity': 'Up to 3,500 kg milk/day',
+      'Cow Visits': '70+ milkings per day',
+      'Teat Detection Time': '< 1 second on 99.8% of cows',
+      'Attachment Time': 'Average < 45 seconds',
+      'Milk Flow Measurement': 'Real-time with sampling capability',
+      'Air Consumption': '56 cfm (1,600 L/min)',
+      'Power Requirement': '20 kW service',
+      'Dimensions': '3.9 × 3.0 × 2.1 m'
+    }
+  },
+
+  {
+    id: 'caterpillar-excavator',
+    title: 'Caterpillar 336 Hydraulic Excavator',
+    category: 'Civil Engineering',
+    description: 'Heavy-duty hydraulic excavator designed for large-scale earthmoving and construction projects. Features advanced hydraulic system and operator-assistance technology for improved fuel efficiency and productivity.',
+    image: '/images/products/cat-336-excavator.jpg',
+    features: [
+      'Dual-pipe drill string system for increased torque and rotational speed',
+      'Load-sensing hydraulic system for improved efficiency',
+      'Automated pipe loader and makeup system',
+      'Wireless remote for tramming and setup functions',
+      'Full color LCD display with advanced electronic controls'
+    ],
+    specifications: {
+      'Pullback': '445 kN (100,000 lbs)',
+      'Rotational Torque': '16,270 Nm (12,000 ft-lb)',
+      'Maximum Spindle Speed': '225 rpm',
+      'Maximum Carriage Speed': '30 m/min (100 ft/min)',
+      'Drilling Fluid Flow': '1,140 L/min (300 gpm)',
+      'Engine Power': '268 hp (200 kW)',
+      'Entry Angle': '10-16 degrees',
+      'Weight': '30,390 kg (67,000 lbs)'
+    }
+  },
+  {
+    id: 'atlas-copco-compressor',
+    title: 'Atlas Copco XATS 1200 Portable Air Compressor',
+    category: 'Civil Engineering',
+    description: 'High-capacity portable air compressor for construction applications including drilling, sandblasting, and pneumatic tool operation. Features intelligent control system and energy-efficient design for reduced operational costs.',
+    image: '/images/products/atlas-copco-compressor.jpg',
+    features: [
+      'PACE system (Pressure Adjusted through Cognitive Electronics) for adjustable pressure',
+      'Kubota V3800 Tier 4 Final engine with DOC-DPF aftertreatment',
+      'Electronically controlled inlet valve for improved fuel efficiency',
+      'Corrosion-resistant C3-rated canopy for harsh environments',
+      'SCADA monitoring capability for remote control and diagnostics'
+    ],
+    specifications: {
+      'Free Air Delivery': '1,200 cfm (34 m³/min)',
+      'Working Pressure Range': '5-12 bar (72.5-174 psi)',
+      'Engine Power': '242 hp (180 kW)',
+      'Fuel Tank Capacity': '280 L (74 gal)',
+      'Operational Weight': '4,370 kg (9,634 lbs)',
+      'Sound Pressure Level': '76 dB(A) at 7 m',
+      'Dimensions (L×W×H)': '4.9 × 2.2 × 2.5 m (193 × 86 × 98 in)',
+      'Ambient Temperature Range': '-10°C to +50°C (14°F to 122°F)'
+    }
+  },
+  {
+    id: 'genie-boom-lift',
+    title: 'Genie SX-180 Self-Propelled Telescopic Boom Lift',
+    category: 'Civil Engineering',
+    description: 'Ultra-high reach telescopic boom lift for construction and maintenance applications requiring exceptional working height. Features extend-retract jib with 360° continuous rotation for excellent positioning capabilities.',
+    image: '/images/products/genie-boom.jpg',
+    features: [
+      'Self-leveling platform with 160° hydraulic platform rotation',
+      'Jib with 180° horizontal motion for precise positioning',
+      'X-chassis design for stability with compact footprint',
+      'Four-wheel drive with full-time active oscillating axle',
+      'Virtual pivot boom design for reduced tail swing'
+    ],
+    specifications: {
+      'Working Height': '56.9 m (186 ft)',
+      'Horizontal Reach': '24.4 m (80 ft)',
+      'Platform Capacity': '340 kg (750 lbs)',
+      'Platform Size': '2.44 × 0.91 m (8 × 3 ft)',
+      'Stowed Dimensions (L×W×H)': '14.3 × 2.5 × 3.1 m (47 × 8.2 × 10 ft)',
+      'Transport Weight': '24,948 kg (55,000 lbs)',
+      'Power Source': 'Deutz diesel engine, 74.4 hp (55.5 kW)',
+      'Maximum Travel Speed': '4.8 km/h (3 mph)'
+    }
+  },
+  {
+    id: 'multiquip-concrete-pump',
+    title: 'Multiquip MQP50 Concrete Trailer Pump',
+    category: 'Civil Engineering',
+    description: 'High-volume concrete trailer pump for efficient concrete placement in commercial and residential construction projects. Features hydraulic circuit design for smooth pumping operation and reduced wear.',
+    image: '/images/products/multiquip-pump.jpg',
+    features: [
+      'Hydraulic piston-side pumping with S-valve system',
+      'Hydraulically operated hopper agitator',
+      'Remote control operation with emergency stop function',
+      'Automatic pressure relief system for safety',
+      'Heavy-duty trailer chassis with DOT lighting and brakes'
+    ],
+    specifications: {
+      'Maximum Output': '50 m³/hr (65 yd³/hr)',
+      'Maximum Pressure': '76 bar (1,100 psi)',
+      'Maximum Aggregate Size': '38 mm (1.5 in)',
+      'Hopper Capacity': '0.4 m³ (14 ft³)',
+      'Horizontal Pumping Distance': 'Up to 305 m (1,000 ft)',
+      'Vertical Pumping Distance': 'Up to 91 m (300 ft)',
+      'Engine': 'Deutz F4L2011, 64 hp (48 kW) diesel',
+      'Weight': '3,200 kg (7,050 lbs)'
+    }
+  },
+  {
+    id: 'bauer-drilling-rig',
+    title: 'Bauer BG 36 H Rotary Drilling Rig',
+    category: 'Civil Engineering',
+    description: 'Heavy-duty rotary drilling rig for large-diameter foundation construction including bored piles, diaphragm walls, and soil mixing applications. Features innovative kinematics for enhanced flexibility.',
+    image: '/images/products/bauer-rig.jpg',
+    features: [
+      'Energy-efficient hydraulic system with power management',
+      'B-Tronic system for rig control and monitoring',
+      'Adaptive crowd system for optimal drilling pressure',
+      'KDK 375K main winch with high line pull',
+      'Cummins X15 engine with advanced emission control'
+    ],
+    specifications: {
+      'Maximum Drilling Depth': '80 m (262 ft)',
+      'Maximum Drilling Diameter': '3,000 mm (118 in)',
+      'Maximum Torque': '375 kNm (276,500 ft-lbs)',
+      'Engine Power': '563 kW (755 hp)',
+      'Main Winch Pull Force': '375 kN (84,300 lbs)',
+      'Mast Height': '26.8 m (88 ft)',
+      'Operating Weight': '115,000 kg (253,530 lbs)',
+      'Transport Width': '3.5 m (11.5 ft)'
+    }
+  },
+  {
+    id: 'potain-tower-crane',
+    title: 'Potain MDT 389 L16 Tower Crane',
+    category: 'Civil Engineering',
+    description: 'Topless tower crane for construction of high-rise buildings and large structures. Features modular design for flexible configuration and advanced control systems for precise load handling.',
+    image: '/images/products/potain-crane.jpg',
+    features: [
+      'Topless design for reduced assembly height and multiple crane overlap',
+      'CCS intelligent control system with diagnostic capability',
+      'Variable frequency drives for precise movement control',
+      'Ultra View cabin with enhanced visibility and ergonomics',
+      'Remote data monitoring system for fleet management'
+    ],
+    specifications: {
+      'Maximum Load Capacity': '16,000 kg (35,274 lbs)',
+      'Maximum Jib Length': '75 m (246 ft)',
+      'Maximum Tip Load': '3,700 kg (8,157 lbs) at 75 m',
+      'Hoist Speed': 'Up to 100 m/min (328 ft/min)',
+      'Trolley Speed': 'Up to 57 m/min (187 ft/min)',
+      'Slewing Speed': '0.7 rpm',
+      'Height Under Hook': 'User-configurable with tower system',
+      'Power Requirements': '400V/50Hz, 81 kVA at 60% ED'
+    }
+  },
+  {
+    id: 'deere-dump-truck',
+    title: 'John Deere 410E Articulated Dump Truck',
+    category: 'Civil Engineering',
+    description: 'Articulated dump truck for efficient material transport in challenging off-road conditions. Features adaptive suspension and intelligent power management for improved productivity and fuel economy.',
+    image: '/images/products/deere-dump-truck.jpg',
+    features: [
+      'Adaptive suspension control for loaded and unloaded operation',
+      'On-demand differential locks for optimal traction',
+      'Onboard weighing system with productivity tracking',
+      'Comfort-engineered operator station with climate control',
+      'Integrated payload monitoring and management system'
+    ],
+    specifications: {
+      'Rated Payload': '37,000 kg (81,570 lbs)',
+      'Heaped Capacity': '23 m³ (30 yd³)',
+      'Engine Power': '443 hp (330 kW)',
+      'Maximum Speed': '53.6 km/h (33.3 mph)',
+      'Body Up Cycle Time': '12 seconds',
+      'Empty Weight': '31,340 kg (69,093 lbs)',
+      'Turning Radius': '8.1 m (26.6 ft)',
+      'Fuel Capacity': '496 L (131 gal)'
+    }
+  },
+  {
+    id: 'putzmeister-concrete-pump',
+    title: 'Putzmeister BSF 63-5.16H Truck-Mounted Concrete Pump',
+    category: 'Civil Engineering',
+    description: 'Large truck-mounted concrete pump with 5-section boom for efficient concrete placement in high-rise construction and large infrastructure projects. Features advanced control system and high-pressure pumping technology.',
+    image: '/images/products/putzmeister-pump.jpg',
+    features: [
+      'Ergonic Pump System (EPS) for optimal pumping performance',
+      'Five-section boom with Z-fold configuration',
+      'Radio remote control with diagnostic functions',
+      'One-sided support system (OSS) for confined setup spaces',
+      'Automatic frequency-controlled water pump'
+    ],
+    specifications: {
+      'Vertical Reach': '62.1 m (203 ft 9 in)',
+      'Horizontal Reach': '58.1 m (190 ft 7 in)',
+      'Unfolding Height': '17.7 m (58 ft 1 in)',
+      'Maximum Pumping Output': '162 m³/h (212 yd³/h)',
+      'Maximum Pressure on Concrete': '85 bar (1,233 psi)',
+      'Number of Boom Sections': '5',
+      'End Hose Length': '3 m (10 ft)',
+      'Outrigger Spread': '12.1/12.1 m (39 ft 8 in/39 ft 8 in)'
+    }
+  },
+  {
+    id: 'sunward-pile-driver',
+    title: 'Sunward SWDM25 Hydraulic Pile Driver',
+    category: 'Civil Engineering',
+    description: 'Hydraulic pile driving rig for installation of precast concrete piles and steel pipes in foundation construction. Features telescopic leader system and advanced monitoring technology for precise pile installation.',
+    image: '/images/products/sunward-pile-driver.jpg',
+    features: [
+      'Adjustable telescopic leader for flexible pile positioning',
+      'Electric torque monitoring system for pile integrity',
+      'Automatic vertical alignment with inclinometer feedback',
+      'Remote wireless control with data logging capability',
+      'Rapid leader deployment system for increased productivity'
+    ],
+    specifications: {
+      'Maximum Pile Length': '25 m (82 ft)',
+      'Maximum Pile Diameter': '600 mm (24 in)',
+      'Hammer Weight': '5,000-10,000 kg (11,023-22,046 lbs)',
+      'Maximum Hammer Height': '1.5 m (4.9 ft)',
+      'Maximum Hammer Energy': '147 kJ',
+      'Engine Power': '257 hp (192 kW)',
+      'Crawling Speed': '1.8 km/h (1.1 mph)',
+      'Transport Weight': '69,000 kg (152,119 lbs)'
+    }
+  },
+  {
+    id: 'kobelco-crawler-crane',
+    title: 'Kobelco CK2750G-2 Lattice Boom Crawler Crane',
+    category: 'Civil Engineering',
+    description: 'Heavy-duty lattice boom crawler crane for lifting operations in construction, infrastructure, and industrial applications. Features advanced safety systems and eco-friendly operation.',
+    image: '/images/products/kobelco-crane.jpg',
+    features: [
+      'KCross remote monitoring system for fleet management',
+      'G-Mode economy operating system for fuel efficiency',
+      'Auto-idle stop function for reduced emissions',
+      'K-Wave lift planning system for lift management',
+      'Wet-type disk brake system for reliable load control'
+    ],
+    specifications: {
+      'Maximum Lifting Capacity': '275 tonnes (303 US tons)',
+      'Maximum Boom Length': '91.4 m (300 ft)',
+      'Maximum Boom + Jib Length': '91.4 + 30.5 m (300 + 100 ft)',
+      'Crawler Width': '6.1-8.4 m (20-27.6 ft) extendable',
+      'Travel Speed': '1.3 km/h (0.8 mph)',
+      'Engine Output': '350 hp (261 kW)',
+      'Transport Width': '3.8 m (12.5 ft)',
+      'Operating Weight': '280,000 kg (617,300 lbs)'
+    }
+  },
+  {
+    id: 'wirtgen-concrete-paver',
+    title: 'Wirtgen SP 154i Slipform Paver',
+    category: 'Civil Engineering',
+    description: 'Track-mounted slipform paver for construction of concrete highways, airport runways, and industrial floors. Features advanced auto-pilot system and modular design for various paving applications.',
+    image: '/images/products/wirtgen-paver.jpg',
+    features: [
+      'AutoPilot 2.0 3D control system for stringless operation',
+      'Telescopic machine frame for variable paving widths',
+      'Eco Mode engine control for fuel economy',
+      'TeleMatic system for remote machine management',
+      'Vibration monitoring and control system for optimal concrete consolidation'
+    ],
+    specifications: {
+      'Paving Width': '4.5-16 m (14 ft 9 in-52 ft 6 in)',
+      'Paving Thickness': 'Up to 450 mm (17.7 in)',
+      'Machine Length': '7.0 m (23 ft)',
+      'Machine Width': '4.4 m (14 ft 5 in) transport, variable working',
+      'Machine Height': '3.9 m (12 ft 9 in)',
+      'Engine Power': '321 hp (239 kW)',
+      'Working Speed': 'Up to 6 m/min (19 ft 8 in/min)',
+      'Weight': 'From 48,600 kg (107,145 lbs)'
+    }
+  },
+  {
+    id: 'schwing-stationary-pump',
+    title: 'Schwing SP 8800 Stationary Concrete Pump',
+    category: 'Civil Engineering',
+    description: 'High-performance stationary concrete pump for large volume concrete placement in high-rise buildings, tunnels, and major infrastructure projects. Features rock valve technology for reliable pumping of harsh mixes.',
+    image: '/images/products/schwing-pump.jpg',
+    features: [
+      'Rock valve technology for rapid valve shifting and wear resistance',
+      'Dual-circuit hydraulic system for smooth operation',
+      'Vector control system for optimal pumping performance',
+      'Remote diagnosis capability via modem connection',
+      'Multiple hopper configurations for different feeding methods'
+    ],
+    specifications: {
+      'Maximum Theoretical Output': '144 m³/h (188 yd³/h)',
+      'Maximum Pressure on Concrete': '231 bar (3,350 psi)',
+      'Maximum Horizontal Pumping Distance': '1,494 m (4,900 ft)',
+      'Maximum Vertical Pumping Distance': '457 m (1,500 ft)',
+      'Hydraulic System Pressure': '350 bar (5,075 psi)',
+      'Engine Power': '450 hp (336 kW)',
+      'Hopper Capacity': '0.76 m³ (1 yd³)',
+      'Weight': '10,900 kg (24,030 lbs)'
+    }
+  },
+  {
+    id: 'komatsu-bulldozer',
+    title: 'Komatsu D155AX-8 Crawler Dozer',
+    category: 'Civil Engineering',
+    description: 'Powerful crawler dozer for heavy-duty dozing operations in mining and large construction applications. Features Sigmadozer blade design and automatic transmission with lockup torque converter for increased production efficiency.',
+    image: '/images/products/komatsu-dozer.jpg',
+    features: [
+      'Komatsu SAA6D140E-7 engine with 354 hp (264 kW) output',
+      'Sigmadozer blade design for increased soil containment and reduced digging resistance',
+      'KOMTRAX remote monitoring system for machine health and performance data',
+      'Palm Command Control System (PCCS) for precise and ergonomic operation',
+      'Automatic transmission with lockup torque converter for reduced fuel consumption'
+    ],
+    specifications: {
+      'Operating Weight': '39,750 kg (87,600 lbs)',
+      'Blade Capacity': '9.4 m³ (12.3 yd³)',
+      'Blade Dimensions': '4,060 × 1,880 mm (13.3 × 6.2 ft)',
+      'Maximum Travel Speed': 'Forward 11.0 km/h (6.8 mph), Reverse 13.5 km/h (8.4 mph)',
+      'Track Gauge': '2,140 mm (7 ft)',
+      'Track Shoe Width': '610 mm (24 in) standard',
+      'Ground Pressure': '82 kPa (11.9 psi)',
+      'Fuel Capacity': '625 L (165 gal)'
+    }
+  },
+  {
+    id: 'volvo-articulated-hauler',
+    title: 'Volvo A60H Articulated Hauler',
+    category: 'Civil Engineering',
+    description: 'Large-capacity articulated hauler for moving massive amounts of material in severe off-road operations. Features hydro-mechanical steering and active suspension for operator comfort and improved productivity.',
+    image: '/images/products/volvo-hauler.jpg',
+    features: [
+      'Volvo D16F engine with 673 hp (502 kW) output',
+      'On-Board Weighing (OBW) system for optimal payload control',
+      'Automatic Traction Control (ATC) with 100% differential locks',
+      'Adaptive hydraulic retardation system for reduced brake wear',
+      'OptiShift technology for improved cycle times and fuel efficiency'
+    ],
+    specifications: {
+      'Payload Capacity': '55,000 kg (121,254 lbs)',
+      'Body Volume': '33.6 m³ (44 yd³) heaped',
+      'Maximum Speed': '54.9 km/h (34.1 mph)',
+      'Turning Radius': '9.5 m (31 ft 2 in)',
+      'Total Weight (Loaded)': '98,000 kg (216,053 lbs)',
+      'Ground Clearance': '560 mm (22 in)',
+      'Fuel Tank Capacity': '750 L (198 gal)',
+      'Dump Angle': '70 degrees'
+    }
+  },
+  {
+    id: 'liebherr-tower-crane',
+    title: 'Liebherr 542 HC-L 18/36 Tower Crane',
+    category: 'Civil Engineering',
+    description: 'High-capacity luffing jib tower crane for construction of high-rise buildings and structures in confined spaces. Features intelligent control system and high-performance drive units for precise load handling.',
+    image: '/images/products/liebherr-crane.jpg',
+    features: [
+      'Luffing jib design for operation in confined spaces with multiple cranes',
+      'Electronic monitoring system for all crane functions',
+      'Micromove fine positioning system for precise load placement',
+      'Level luffing function for horizontal load movement',
+      'Frequency-controlled drives for smooth operation'
+    ],
+    specifications: {
+      'Maximum Load Capacity': '36,000 kg (79,366 lbs)',
+      'Maximum Jib Length': '65 m (213 ft)',
+      'Maximum Hook Height': 'Over 80 m (standard configuration)',
+      'Hoist Speed': 'Up to 185 m/min (607 ft/min)',
+      'Luffing Speed': '0-100 m/min (0-328 ft/min)',
+      'Slewing Speed': '0.7 rpm',
+      'Power Requirement': '400 V / 50 Hz, 170 kVA',
+      'Wind Resistance': 'Service up to 14 m/s (31 mph)'
+    }
+  },
+  {
+    id: 'wirtgen-cold-milling',
+    title: 'Wirtgen W 250i Cold Milling Machine',
+    category: 'Civil Engineering',
+    description: 'Large cold milling machine for highly efficient removal of asphalt and concrete pavements. Features advanced cutting technology and automated control systems for precise milling results.',
+    image: '/images/products/wirtgen-milling.jpg',
+    features: [
+      'DUAL SHIFT powershift transmission for optimal milling performance in all applications',
+      'LEVEL PRO PLUS leveling system for precise milling depth control',
+      'WIDRIVE machine control system for automated functions',
+      'MILL ASSIST automatic mode for optimization of milling process',
+      'Vacuum Cutting System (VCS) for improved air quality'
+    ],
+    specifications: {
+      'Milling Width': '2,200 mm (86.6 in)',
+      'Milling Depth': 'Up to 350 mm (13.8 in)',
+      'Engine Power': '753 hp (562 kW)',
+      'Operating Weight': '42,300 kg (93,250 lbs)',
+      'Loading Capacity': 'Up to 800 t/h',
+      'Working Speed': 'Up to 88 m/min (289 ft/min)',
+      'Conveyor Swing Angle': '60 degrees left/right',
+      'Cutting Drum Speed': '1,600/1,800/1,900 rpm'
+    }
+  },
+  {
+    id: 'bomag-compactor',
+    title: 'BOMAG BW 226 DI-5 Single Drum Vibratory Roller',
+    category: 'Civil Engineering',
+    description: 'Heavy-duty single drum compactor for soil and rock compaction in road construction and civil engineering projects. Features intelligent compaction control system for optimized compaction results.',
+    image: '/images/products/bomag-roller.jpg',
+    features: [
+      'ECOMODE engine and hydraulic management system for reduced fuel consumption',
+      'VARIOCONTROL automatic amplitude and frequency adjustment',
+      'TERRAMETER compaction measurement and documentation system',
+      'ECONOMIZER soil stiffness indicator for compaction progress monitoring',
+      'Dual pump drive system for improved performance on gradients'
+    ],
+    specifications: {
+      'Operating Weight': '25,700 kg (56,658 lbs)',
+      'Drum Width': '2,130 mm (83.9 in)',
+      'Drum Diameter': '1,600 mm (63 in)',
+      'Centrifugal Force': '331/242 kN (high/low)',
+      'Engine Power': '153 kW (205 hp)',
+      'Gradeability': 'Up to 60%',
+      'Working Speed': '0-12 km/h (0-7.5 mph)',
+      'Vibration Frequency': '26/30 Hz (1,560/1,800 vpm)'
+    }
+  },
+  {
+    id: 'hamm-asphalt-compactor',
+    title: 'HAMM HD+ 140i VV-HF Tandem Roller',
+    category: 'Civil Engineering',
+    description: 'Articulated tandem roller for asphalt compaction featuring high-frequency vibration and oscillation technology. Designed for medium to large paving projects requiring high-quality surface finish.',
+    image: '/images/products/hamm-tandem.jpg',
+    features: [
+      'Dual vibration frequencies for optimal compaction across various materials',
+      '3-point articulation for improved driving stability and tracking',
+      'Panoramic cabin design with 360° visibility',
+      'Pivot steering system for versatile roll patterns',
+      'Automatic vibration system with smart compaction parameters'
+    ],
+    specifications: {
+      'Operating Weight': '14,060 kg (31,000 lbs)',
+      'Drum Width': '2 × 1,680 mm (2 × 66.1 in)',
+      'Drum Diameter': '1,140 mm (44.9 in)',
+      'Vibration Frequency': 'Up to p42/50 Hz (2,520/3,000 vpm)',
+      'Centrifugal Force': 'Up to 166 kN',
+      'Engine Power': '115 kW (154 hp)',
+      'Working Speed': '0-12 km/h (0-7.5 mph)',
+      'Water Spray System': '2 × 880 L (2 × 232 gal)'
+    }
+  },
+  {
+    id: 'vogele-asphalt-paver',
+    title: 'VÖGELE SUPER 2100-3i Tracked Paver',
+    category: 'Civil Engineering',
+    description: 'High-performance tracked asphalt paver for large-scale road construction projects. Features ErgoPlus 3 operating system and advanced material handling technology for superior paving quality.',
+    image: '/images/products/vogele-paver.jpg',
+    features: [
+      'ErgoPlus 3 intuitive operating concept for efficient machine control',
+      'AutoSet Plus function for automated repositioning and storing paving programs',
+      'PaveDock Assistant communication system for improved truck docking',
+      'Niveltronic Plus System for automated grade and slope control',
+      'Innovative material handling system with proportional paddle sensors'
+    ],
+    specifications: {
+      'Paving Width': '2.55 - 13.00 m (8.4 - 42.7 ft)',
+      'Laydown Rate': 'Up to 1,100 t/h (1,210 tons/h)',
+      'Transport Width': '2.55 m (8.4 ft)',
+      'Engine Power': '186 kW (249 hp)',
+      'Material Hopper Capacity': '14 tonnes',
+      'Undercarriage': 'Tracked with 325 mm wide track pads',
+      'Transport Length': '6.10 m (20 ft)',
+      'Paving Speed': 'Up to 25 m/min (82 ft/min)'
+    }
+  },
+  {
+    id: 'terex-concrete-mixer',
+    title: 'Terex Advance FD4000 Front Discharge Mixer Truck',
+    category: 'Civil Engineering',
+    description: 'Front discharge concrete mixer truck designed for efficient concrete delivery on construction sites. Features four-wheel drive capability and front discharge design for operator-controlled precise concrete placement.',
+    image: '/images/products/terex-mixer.jpg',
+    features: [
+      'Front discharge design for operator-controlled precise concrete placement',
+      'Four-wheel drive capability for difficult terrain operation',
+      'Remote pendant control for chute positioning',
+      'Electronic drum control system with mixing speed optimization',
+      'Pressurized water system for simplified drum cleaning'
+    ],
+    specifications: {
+      'Drum Capacity': '10.5 m³ (14 yd³)',
+      'Drum Speed': '0-16 rpm',
+      'Engine Power': '380 hp (283 kW)',
+      'Gross Vehicle Weight': '30,450 kg (67,125 lbs)',
+      'Water Tank Capacity': '757 L (200 gal)',
+      'Fuel Capacity': '378 L (100 gal)',
+      'Overall Length': '11.4 m (37.4 ft)',
+      'Overall Height': '3.9 m (12.8 ft)'
+    }
+  },
+  {
+    id: 'manitowoc-mobile-crane',
+    title: 'Manitowoc Grove GMK5250XL-1 All-Terrain Crane',
+    category: 'Civil Engineering',
+    description: 'Five-axle all-terrain mobile crane with exceptional lifting capacities and reach. Features MEGATRAK suspension system and TWIN-LOCK boom pinning system for versatile operation in various construction applications.',
+    image: '/images/products/manitowoc-crane.jpg',
+    features: [
+      'MEGATRAK independent suspension with hydraulic cylinder in each wheel',
+      'TWIN-LOCK boom pinning system for optimal boom strength',
+      'CraneSTAR asset management system for remote monitoring',
+      'MAXbase variable outrigger positioning for increased capacity and flexibility',
+      'Crane Control System (CCS) with boom configurator'
+    ],
+    specifications: {
+      'Maximum Capacity': '250 tonnes (275 US tons)',
+      'Main Boom Length': '21.3 - 78.5 m (70 - 257.5 ft)',
+      'Maximum Tip Height': '132 m (433 ft) with jib',
+      'Drive/Steer': '10 × 6 × 10',
+      'Maximum Travel Speed': '85 km/h (53 mph)',
+      'Outrigger Base': '8.45 × 8.3 m (27.7 × 27.2 ft)',
+      'Number of Axles': '5',
+      'Engine Power': 'Carrier: 505 hp (377 kW), Superstructure: 197 hp (147 kW)'
+    }
+  },
+  {
+    id: 'hitachi-wheel-loader',
+    title: 'Hitachi ZW370-6 Wheel Loader',
+    category: 'Civil Engineering',
+    description: 'Large wheel loader designed for high-volume loading applications in quarrying, aggregates, and infrastructure projects. Features active traction control and intelligent hydraulic system for improved efficiency.',
+    image: '/images/products/hitachi-loader.jpg',
+    features: [
+      'Active traction control system for optimal traction in all ground conditions',
+      'Quick power switch for instant power boost when needed',
+      'Ride control system for reduced material spillage during transport',
+      'Adjustable lift arm kickout and bucket auto-leveler',
+      'ConSite global e-service for remote monitoring and diagnostics'
+    ],
+    specifications: {
+      'Operating Weight': '34,460 kg (75,970 lbs)',
+      'Bucket Capacity': '4.8 - 6.2 m³ (6.3 - 8.1 yd³)',
+      'Breakout Force': '29,532 kgf (65,108 lbf)',
+      'Engine Power': '389 hp (290 kW)',
+      'Dump Clearance': '3,370 mm (11 ft) at 45° full height',
+      'Tipping Load': '24,400 kg (53,792 lbs) straight',
+      'Travel Speed': 'Up to 39.5 km/h (24.5 mph)',
+      'Hydraulic Cycle Time': '11.3 seconds (total)'
+    }
+  },
+  {
+    id: 'john-deere-motor-grader',
+    title: 'John Deere 872G Motor Grader',
+    category: 'Civil Engineering',
+    description: 'High-performance motor grader for road construction and maintenance, site development, and fine grading applications. Features advanced grade control technology and hydraulic system for precise blade control.',
+    image: '/images/products/jd-grader.jpg',
+    features: [
+      'Grade Control-Ready electrohydraulic (EH) controls for easy system integration',
+      'Dual-joystick controls with fingertip control of automated functions',
+      'Grade Pro (GP) package with cross-slope control',
+      'Event-based shifting transmission for smooth operation',
+      'Auto-differential lock/unlock for improved traction'
+    ],
+    specifications: {
+      'Operating Weight': '22,680 kg (50,000 lbs)',
+      'Blade Length': '4.27 m (14 ft)',
+      'Blade Height': '610 mm (24 in)',
+      'Engine Power': '275 hp (205 kW)',
+      'Moldboard Side Shift': 'Right: 686 mm (27 in), Left: 673 mm (26.5 in)',
+      'Ground Clearance': '394 mm (15.5 in)',
+      'Turning Radius': '7.21 m (23.6 ft)',
+      'Maximum Speed': 'Forward 44.3 km/h (27.5 mph), Reverse 30.9 km/h (19.2 mph)'
+    }
+  },
+  {
+    id: 'sandvik-drill-rig',
+    title: 'Sandvik DI650i Surface Drill Rig',
+    category: 'Civil Engineering',
+    description: 'Intelligent surface drill rig for quarrying, open pit mining, and large-scale construction projects. Features automated drilling and advanced control systems for maximum productivity and hole quality.',
+    image: '/images/products/sandvik-drill.jpg',
+    features: [
+      'Intelligent control system with automated drilling cycle',
+      'COPROD drilling system combining high penetration with straight holes',
+      'Pressurized cabin with HEPA filtration for operator comfort',
+      'Hole Navigation System (HNS) for accurate drilling location',
+      'iDrill automation for drilling parameter optimization'
+    ],
+    specifications: {
+      'Hole Diameter': '115-203 mm (4.5-8 in)',
+      'Hole Depth': 'Up to 54 m (177 ft)',
+      'Engine Power': '403 kW (540 hp)',
+      'Impact Power': '28 kW',
+      'Impact Rate': '47.5 Hz',
+      'Feed Force': '38 kN (8,543 lbf)',
+      'Operating Weight': '25,400 kg (56,000 lbs)',
+      'Compressor': '28.8 m³/min at 10.5 bar (1,017 cfm at 152 psi)'
+    }
+  },
+  {
+    id: 'terramac-crawler-carrier',
+    title: 'Terramac RT14 Crawler Carrier',
+    category: 'Civil Engineering',
+    description: 'Heavy-duty crawler carrier designed for transporting materials and equipment across challenging terrain and environmentally sensitive areas. Features rubber track design for minimal ground disturbance.',
+    image: '/images/products/terramac-carrier.jpg',
+    features: [
+      'Rubber track system for minimal ground pressure and environmental impact',
+      'Rotating upper frame for 360° material placement without repositioning',
+      'Hydrostatic drive system with independent track control',
+      'Multiple attachment capabilities for versatile applications',
+      'Remote monitoring system for machine diagnostics'
+    ],
+    specifications: {
+      'Payload Capacity': '12,700 kg (28,000 lbs)',
+      'Ground Pressure (Loaded)': '5.4 psi (37.2 kPa)',
+      'Overall Width': '2.59 m (8 ft 6 in)',
+      'Dump Bed Dimensions': '4.27 × 2.54 m (14 × 8 ft 4 in)',
+      'Engine Power': '246 hp (183 kW)',
+      'Maximum Speed': '11.3 km/h (7 mph)',
+      'Fuel Capacity': '341 L (90 gal)',
+      'Dumping Capability': '60° dump angle'
+    }
+  },
+  {
+    id: 'link-belt-excavator',
+    title: 'Link-Belt 350 X4 Excavator',
+    category: 'Civil Engineering',
+    description: 'Heavy-duty excavator designed for maximum productivity in demanding digging, trenching, and material handling applications. Features advanced hydraulic system and operator-friendly cab design.',
+    image: '/images/products/link-belt-excavator.jpg',
+    features: [
+      'Isuzu engine with electronic control and fuel optimization',
+      'Advanced hydraulic system with four work modes',
+      'RemoteCARE telematics system for machine monitoring',
+      'Wide-angle visual monitoring system with multiple cameras',
+      'Ergonomic cab design with standard air suspension seat'
+    ],
+    specifications: {
+      'Operating Weight': '38,400 kg (84,640 lbs)',
+      'Maximum Dig Depth': '7.46 m (24 ft 6 in)',
+      'Maximum Reach': '11.51 m (37 ft 9 in)',
+      'Bucket Force': '266.3 kN (59,862 lbf)',
+      'Arm Force': '200.5 kN (45,073 lbf)',
+      'Swing Speed': '10.0 rpm',
+      'Travel Speed': '5.6 km/h (3.5 mph) high, 3.4 km/h (2.1 mph) low',
+      'Fuel Capacity': '640 L (169 gal)'
+    }
+  },
+  {
+    id: 'soilmec-piling-rig',
+    title: 'Soilmec SR-95 Piling Rig',
+    category: 'Civil Engineering',
+    description: 'Advanced hydraulic piling rig for large-diameter foundation construction. Features high torque rotary system and innovative control technology for a wide range of drilling methods.',
+    image: '/images/products/soilmec-rig.jpg',
+    features: [
+      'DMS (Drilling Mate System) for real-time drilling parameter monitoring',
+      'Adaptive hydraulic control system for optimized performance',
+      'Automatic vertical alignment system',
+      'Cummins Stage V/Tier 4F engine for low emissions',
+      'Quick mast assembly system for rapid deployment'
+    ],
+    specifications: {
+      'Maximum Torque': '320 kNm',
+      'Maximum Drilling Diameter': '3,000 mm (118 in)',
+      'Maximum Drilling Depth': '91 m (298 ft)',
+      'Engine Power': '354 kW (474 hp)',
+      'Operating Weight': '96,500 kg (212,700 lbs)',
+      'Extraction Force': '1,450 kN (326,000 lbf)',
+      'Mast Height': '27.9 m (91.5 ft)',
+      'Transport Width': '3.5 m (11.5 ft)'
+    }
+  },
+  {
+    id: 'hyundai-breaker',
+    title: 'Hyundai HDB140 Hydraulic Breaker',
+    category: 'Civil Engineering',
+    description: 'Heavy-duty hydraulic breaker attachment for excavators, designed for demolition of concrete structures, rocks, and pavement. Features accumulated pressure control system for improved impact force and reduced noise.',
+    image: '/images/products/hyundai-breaker.jpg',
+    features: [
+      'Accumulated pressure control system for optimal impact energy',
+      'Anti-blank firing protection system to prevent dry firing',
+      'Two-way hydraulic damping system for vibration reduction',
+      'Auto-greasing system for reduced maintenance',
+      'Noise reduction technology for urban environment operation'
+    ],
+    specifications: {
+      'Carrier Weight Class': '20-30 tonnes',
+      'Impact Rate': '300-500 blows per minute',
+      'Operating Weight': '2,650 kg (5,842 lbs)',
+      'Tool Diameter': '140 mm (5.5 in)',
+      'Operating Pressure': '160-180 bar (2,320-2,610 psi)',
+      'Oil Flow Requirement': '160-200 L/min (42-53 gal/min)',
+      'Impact Energy Class': '8,000 joules',
+      'Sound Power Level': '125 dB(A)'
+    }
+  },
+  {
+    id: 'vermeer-trencher',
+    title: 'Vermeer RTX1250i2 Ride-On Trencher',
+    category: 'Civil Engineering',
+    description: 'Heavy-duty ride-on trencher for installation of utilities, drainage systems, and irrigation lines. Features hydrostatic transmission and multiple attachment options for versatile operation.',
+    image: '/images/products/vermeer-trencher.jpg',
+    features: [
+      'TEC Plus electronic control system with programmable controls',
+      'Four-wheel drive, four-wheel steer with crab steering mode',
+      'EcoIdle engine control system for fuel economy',
+      'Multiple attachment options (trencher, rockwheel, vibratory plow, backhoe)',
+      'Pressurized cab with climate control system'
+    ],
+    specifications: {
+      'Engine Power': '127 hp (95 kW)',
+      'Maximum Trench Depth': '1.8 m (72 in)',
+      'Maximum Trench Width': '71 cm (28 in)',
+      'Ground Drive Speed': '6.8 km/h (4.2 mph) forward, 4.2 km/h (2.6 mph) reverse',
+      'Ground Clearance': '35.6 cm (14 in)',
+      'Operating Weight': '7,257 kg (16,000 lbs)',
+      'Fuel Capacity': '132 L (35 gal)',
+      'Hydraulic System': '151 L (40 gal)'
+    }
+  },
+  {
+    id: 'metso-crusher',
+    title: 'Metso Nordtrack™ J127 Mobile Jaw Crusher',
+    category: 'Civil Engineering',
+    description: 'Track-mounted mobile crushing plant designed for aggregate production, recycling applications, and contract crushing. Features hydraulic crusher setting adjustment and advanced automation system.',
+    image: '/images/products/metso-crusher.jpg',
+    features: [
+      'Nordberg C127 jaw crusher with high reduction ratio',
+      'Automatic crusher setting adjustment with monitoring',
+      'IC process control system for optimal production settings',
+      'Bypass metal detector with contamination alarm',
+      'Direct drive crusher with hydraulic power transmission'
+    ],
+    specifications: {
+      'Feed Opening': '1,270 × 735 mm (50 × 29 in)',
+      'Crusher Drive': 'Direct drive with hydraulic wedge adjustment',
+      'Engine Power': '310 kW (415 hp)',
+      'Feed Hopper Capacity': '9 m³ (11.8 yd³)',
+      'Maximum Feed Size': '790 mm (31 in)',
+      'Production Capacity': 'Up to 750 tph',
+      'Transport Dimensions': '15.5 × 3.0 × 3.6 m (51 × 9.8 × 11.8 ft)',
+      'Weight': '56,500 kg (124,500 lbs)'
+    }
+  },
+  {
+    id: 'jcb-backhoe',
+    title: 'JCB 4CX-15 Super Backhoe Loader',
+    category: 'Civil Engineering',
+    description: 'Versatile backhoe loader with equal-sized wheels for improved maneuverability and performance. Features advanced hydraulic system and four-wheel steering for operation in confined spaces.',
+    image: '/images/products/jcb-backhoe.jpg',
+    features: [
+      'Four-wheel steering modes: 2WS, 4WS, and crab steer',
+      'Advanced EasyControl servo hydraulic system',
+      'EcoDig hydraulic system with three pumps for fuel savings',
+      'Side-shift backhoe with extendable dipper option',
+      'TorqueLock transmission feature for reduced fuel consumption during roading'
+    ],
+    specifications: {
+      'Operating Weight': '8,585 kg (18,926 lbs)',
+      'Maximum Engine Power': '109 hp (81 kW)',
+      'Maximum Dig Depth': '5.88 m (19 ft 3 in) with extendable dipper',
+      'Maximum Load Height': '4.73 m (15 ft 6 in)',
+      'Loader Bucket Capacity': '1.3 m³ (1.7 yd³)',
+      'Backhoe Bucket Capacity': '0.16-0.48 m³ (0.21-0.63 yd³)',
+      'Maximum Travel Speed': '39.5 km/h (24.5 mph)',
+      'Fuel Tank Capacity': '160 L (42.3 gal)'
+    }
+  },
+  {
+    id: 'ammann-compactor',
+    title: 'Ammann ARS 200 Soil Compactor',
+    category: 'Civil Engineering',
+    description: 'Single-drum soil compactor for efficient compaction in earthworks, road construction, and landfill applications. Features intelligent compaction system and ergonomic operation for improved productivity.',
+    image: '/images/products/ammann-compactor.jpg',
+    features: [
+      'Intelligent Compaction system with real-time compaction measurement',
+      'Three-point articulation for improved stability and traction',
+      'No-rear-axle concept for improved climbing ability',
+      'ACEforce compaction monitoring and documentation system',
+      'Dual frequency and amplitude for multiple application types'
+    ],
+    specifications: {
+      'Operating Weight': '19,750 kg (43,541 lbs)',
+      'Drum Width': '2,130 mm (83.9 in)',
+      'Static Linear Load': '58 kg/cm (325 lb/in)',
+      'Vibration Frequency': '23/28 Hz (1,380/1,680 vpm)',
+      'Centrifugal Force': '275/205 kN (61,822/46,084 lbf)',
+      'Engine Power': '160 kW (214 hp)',
+      'Gradeability': '65%',
+      'Working Speed': '0-6 km/h (0-3.7 mph)'
+    }
+  }
+    
   ];
   
   export const getProductsByCategory = (categoryId: string): Product[] => {
