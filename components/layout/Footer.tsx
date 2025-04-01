@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-xl font-bold">Benica East Africa</h3>
               <Link href="/">
-                <div className="text-primary text-2xl font-bold">BENICA EA</div>
+                <div className="text-primary text-2xl font-bold"></div>
               </Link>
             </div>
             <p className="mb-4 text-gray-400 text-sm">Your Trusted Partner in Precision Research and Quality Healthcare Supplies</p>
