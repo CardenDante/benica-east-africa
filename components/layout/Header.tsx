@@ -43,8 +43,7 @@ const Header = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Our Products', href: '/products' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Our Products', href: '/products' }
   ];
 
   const isActive = (path: string) => pathname === path;
