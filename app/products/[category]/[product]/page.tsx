@@ -15,7 +15,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   // Pass the params directly without trying to fetch the product here
   return {
-    title: `Product Details | Your Company Name`,
+    title: `Product Details | Benica`,
     description: 'View our product details',
   };
 }
