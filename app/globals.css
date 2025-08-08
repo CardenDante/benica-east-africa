@@ -296,8 +296,8 @@ img {
 
 /* Layout helpers */
 main {
-  min-height: calc(100vh - 70px); /* Account for header height */
-  padding-top: 70px; /* For fixed header */
+  min-height: calc(100vh - 110px); /* Account for topbanner + header height */
+  padding-top: 110px; /* For fixed topbanner + header */
 }
 
 /* Focus styles for accessibility */
@@ -308,7 +308,7 @@ main {
 
 /* Adjust the margin when anchor links are clicked to account for fixed header */
 :target {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 120px;
 }
 
 /* 

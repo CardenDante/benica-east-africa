@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '@/components/home/Hero';
 import ServiceHighlights from '@/components/home/ServiceHighlights';
 import InteractiveFeature from '@/components/home/InteractiveFeature';
+import RefrigeratorsSection from '@/components/home/RefrigeratorsSection'; // Add this import
 import SlidingPartners from '@/components/home/SlidingPartners';
 import TestimonialCarousel from '@/components/home/TestimonialCarousel';
 // import FeatureStrip from '@/components/home/FeatureStrip';
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <ServiceHighlights />
       <InteractiveFeature />
+      <RefrigeratorsSection /> {/* Add this line */}
       <SlidingPartners />
       <TestimonialCarousel />
       {/* <FeatureStrip /> */}
