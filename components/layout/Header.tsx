@@ -8,7 +8,30 @@ import Image from 'next/image';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [topBannerHeight, setTopBannerHeight] = useState(0);
   const pathname = usePathname();
+
+  useEffect(() => {
+    // Calculate TopBanner height dynamically
+    const calculateTopBannerHeight = () => {
+      const topBanner = document.querySelector('[data-top-banner]');
+      if (topBanner) {
+        setTopBannerHeight(topBanner.offsetHeight);
+      } else {
+        // Fallback heights based on screen size
+        if (window.innerWidth < 640) {
+          setTopBannerHeight(60); // Mobile height when stacked
+        } else {
+          setTopBannerHeight(40); // Desktop height when inline
+        }
+      }
+    };
+
+    calculateTopBannerHeight();
+    window.addEventListener('resize', calculateTopBannerHeight);
+    
+    return () => window.removeEventListener('resize', calculateTopBannerHeight);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,11 +73,14 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-10 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed left-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white shadow-md py-2' 
           : 'bg-white py-4'
       }`}
+      style={{ 
+        top: `${topBannerHeight}px`,
+      }}
     >
       <div className="container-custom flex justify-between items-center">
         <Link href="/" className="relative flex items-center z-10">
@@ -122,9 +148,12 @@ const Header = () => {
 
         {/* Mobile Menu Panel */}
         <div 
-          className={`md:hidden fixed top-0 right-0 bottom-0 w-4/5 max-w-sm bg-white z-50 shadow-xl transition-transform duration-500 ease-in-out transform ${
+          className={`md:hidden fixed right-0 bottom-0 w-4/5 max-w-sm bg-white z-50 shadow-xl transition-transform duration-500 ease-in-out transform ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
+          style={{ 
+            top: `${topBannerHeight + (isScrolled ? 60 : 80)}px` // Account for header height
+          }}
         >
           <div className="p-6 h-full flex flex-col">
             <div className="flex justify-between items-center border-b border-gray-200 pb-4 mb-8">
@@ -133,7 +162,7 @@ const Header = () => {
                   src="/images/banicaea-logo.png" 
                   alt="BENICA EA Logo" 
                   fill
-                  sizes="(max-width: 768px) 160px, 160px"  // Consistent sizes
+                  sizes="(max-width: 768px) 160px, 160px"
                   style={{ objectFit: 'contain' }}
                   priority
                 />
