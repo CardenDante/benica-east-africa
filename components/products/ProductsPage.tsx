@@ -62,7 +62,7 @@ const ProductsPage = () => {
         </defs>
         <rect fill="url(#lab-pattern)" width="100%" height="100%" strokeWidth={0} />
       </svg>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container-custom">
         <div className="mx-auto max-w-2xl gap-x-8 lg:mx-0 lg:flex lg:max-w-none lg:items-center lg:gap-x-14">
           <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
             <div className="flex items-center gap-2 mb-3 md:mb-4">
@@ -145,7 +145,7 @@ const ProductsPage = () => {
     </section>
       {/* Hospital Equipment Section */}
       <section className="overflow-hidden bg-gray-50 py-16 md:py-24 lg:py-32">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="container-custom">
           <div className="max-w-4xl">
             <div className="flex items-center gap-2 mb-3 md:mb-4">
               <Heart className="w-5 h-5 md:w-6 md:h-6 text-[#F16A23]" />
@@ -239,7 +239,7 @@ const ProductsPage = () => {
 
       {/* Mechanical Engineering Section */}
       <section className="bg-white py-16 md:py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 md:mb-4">
@@ -298,7 +298,7 @@ const ProductsPage = () => {
 
       {/* Agricultural Engineering Section */}
       <section className="bg-[#F16A23]/5 py-16 md:py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="container-custom">
           <div className="text-center mb-12 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-3 md:mb-4">
               <Tractor className="w-5 h-5 md:w-6 md:h-6 text-[#F16A23]" />
@@ -355,7 +355,7 @@ const ProductsPage = () => {
 
       {/* Civil Engineering Section */}
       <section className="bg-gray-900 text-white py-16 md:py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <div className="flex items-center gap-2 mb-3 md:mb-4">
@@ -406,7 +406,7 @@ const ProductsPage = () => {
 
       {/* Repair & Servicing Section */}
       <section className="bg-[#F16A23]/5 py-16 md:py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="container-custom">
           <div className="text-center mb-12 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-3 md:mb-4">
               <Settings className="w-5 h-5 md:w-6 md:h-6 text-[#F16A23]" />
@@ -481,7 +481,7 @@ const ProductsPage = () => {
 
       {/* Refrigerators & Freezers Section */}
       <section className="bg-white py-16 md:py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 md:mb-4">
