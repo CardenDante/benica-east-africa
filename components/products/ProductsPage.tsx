@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Users, Wrench, Award, ArrowRight, CheckCircle, Microscope, Heart, Cog, Tractor, Building, Settings, Snowflake } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Users, Wrench, Award, ArrowRight, CheckCircle, Microscope, Heart, Cog, Tractor, Building, Settings, Snowflake, Zap, BarChart3, Package } from 'lucide-react';
 
 const ProductsPage = () => {
   const [currentSlides, setCurrentSlides] = useState({});
@@ -23,10 +23,8 @@ const ProductsPage = () => {
           <img 
             src="/images/heroes/default-bg.jpeg" 
             alt="Products" 
-            className="w-full h-full object-cover opacity-20"
-            onError={(e) => {
-              e.target.src = "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=800&fit=crop&q=80";
-            }}
+            className="w-full h-full object-cover opacity-30"
+            
           />
         </div>
         <div className="container-custom relative z-10">
@@ -422,13 +420,31 @@ const ProductsPage = () => {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-8 md:mb-12">
             {[
-              { icon: "🔧", title: "Preventive Maintenance", desc: "Scheduled maintenance programs" },
-              { icon: "⚡", title: "Emergency Repairs", desc: "24/7 emergency response" },
-              { icon: "📊", title: "Equipment Calibration", desc: "Precision calibration services" },
-              { icon: "🛠️", title: "Spare Parts Supply", desc: "Genuine parts availability" }
+              { 
+                icon: Wrench, 
+                title: "Preventive Maintenance", 
+                desc: "Scheduled maintenance programs"
+              },
+              { 
+                icon: Zap, 
+                title: "Emergency Repairs", 
+                desc: "24/7 emergency response"
+              },
+              { 
+                icon: BarChart3, 
+                title: "Equipment Calibration", 
+                desc: "Precision calibration services"
+              },
+              { 
+                icon: Package, 
+                title: "Spare Parts Supply", 
+                desc: "Genuine parts availability"
+              }
             ].map((service, index) => (
-              <div key={index} className="bg-white p-4 md:p-6 rounded-xl shadow-lg text-center">
-                <div className="text-2xl md:text-4xl mb-3 md:mb-4">{service.icon}</div>
+              <div key={index} className="bg-white p-4 md:p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-3 md:mb-4 text-[#F16A23]">
+                  <service.icon className="w-8 h-8 md:w-12 md:h-12" />
+                </div>
                 <h3 className="text-sm md:text-lg font-bold text-gray-900 mb-1 md:mb-2">{service.title}</h3>
                 <p className="text-xs md:text-sm text-gray-600">{service.desc}</p>
               </div>

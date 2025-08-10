@@ -40,10 +40,10 @@ const ContactPage: React.FC = () => {
       <section className="relative pt-24 pb-16 md:pb-24 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/heroes/default-bg.jpeg" 
+            src="/images/products/Contact-Us-.jpg" 
             alt="Contact Us" 
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-30"
             priority
           />
         </div>

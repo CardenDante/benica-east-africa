@@ -22,7 +22,7 @@ const AboutPage = () => {
             src="/images/heroes/default-bg.jpeg" 
             alt="About Us Hero Background" 
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-30"
             priority
           />
         </div>
