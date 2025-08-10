@@ -84,7 +84,9 @@ const RefrigeratorsSection: React.FC = () => {
             </p>
 
             <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:transform hover:-translate-y-1 hover:shadow-lg">
-              Learn More
+            <a href="/products">
+              Explore Refrigerators
+            </a>
             </button>
           </div>
 
