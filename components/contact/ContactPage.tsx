@@ -43,7 +43,7 @@ const ContactPage: React.FC = () => {
             src="/images/products/Contact-Us-.jpg" 
             alt="Contact Us" 
             fill
-            className="object-cover opacity-30"
+            className="object-cover object-[50%_25%] w-full h-full opacity-30"
             priority
           />
         </div>
