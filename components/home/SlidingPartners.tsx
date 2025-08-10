@@ -65,7 +65,7 @@ const SlidingPartners: React.FC = () => {
   }, []);
   
   return (
-    <div className="w-full overflow-hidden bg-gray-50 py-12">
+    <div className="w-full overflow-hidden bg-white py-12">
       <div className="mb-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Trusted By Leading Institutions</h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
