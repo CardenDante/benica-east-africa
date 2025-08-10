@@ -102,7 +102,7 @@ const ProductsPage = () => {
               <div className="relative">
                 <img
                   alt="Laboratory Installation"
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&h=600&fit=crop&q=80"
+                  src="/images/products/centrifuge.png"
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                 />
               </div>
@@ -111,14 +111,14 @@ const ProductsPage = () => {
               <div className="relative">
                 <img
                   alt="Laboratory Training"
-                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=600&fit=crop&q=80"
+                  src="images/products/Autoclave.png"
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                 />
               </div>
               <div className="relative">
                 <img
                   alt="Lab Equipment"
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=600&fit=crop&q=80"
+                  src="/images/products/microscope.png"
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                 />
               </div>
@@ -127,14 +127,14 @@ const ProductsPage = () => {
               <div className="relative">
                 <img
                   alt="Happy Lab Client"
-                  src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=600&fit=crop&q=80"
+                  src="/images/products/Fume-Hood.png"
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                 />
               </div>
               <div className="relative">
                 <img
                   alt="Lab Service"
-                  src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=600&fit=crop&q=80"
+                  src="/images/products/Incubator.png"
                   className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                 />
               </div>
@@ -183,15 +183,15 @@ const ProductsPage = () => {
                 <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
                   <img
                     alt="Hospital Installation"
-                    src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=560&h=560&fit=crop&q=80"
+                    src="/images/products/MRI-Machine.png"
                     className="block size-full object-cover"
                   />
                 </div>
                 <div className="-mt-4 sm:-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
                   <img
                     alt="Medical Training"
-                    src="https://images.unsplash.com/photo-1584467735871-8e295d9bcf4e?w=560&h=560&fit=crop&q=80"
-                    className="block size-full object-cover"
+                    src="/images/products/Ventilator.png"
+                    className="block size-full object-contain"
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
