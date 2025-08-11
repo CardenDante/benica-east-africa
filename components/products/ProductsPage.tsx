@@ -4,7 +4,58 @@ import { ChevronLeft, ChevronRight, Users, Wrench, Award, ArrowRight, CheckCircl
 
 const ProductsPage = () => {
   const [currentSlides, setCurrentSlides] = useState({});
+  const [labCurrentSlide, setLabCurrentSlide] = useState(0);
+  const [isLabAutoPlaying, setIsLabAutoPlaying] = useState(true);
 
+  // Laboratory equipment images
+  const labImages = [
+    {
+      src: "/images/products/centrifuge.png",
+      alt: "Laboratory Centrifuge"
+    },
+    {
+      src: "/images/products/Autoclave.png", 
+      alt: "Laboratory Autoclave"
+    },
+    {
+      src: "/images/products/microscope.png",
+      alt: "Laboratory Microscope"
+    },
+    {
+      src: "/images/products/Fume-Hood.png",
+      alt: "Laboratory Fume Hood"
+    },
+    {
+      src: "/images/products/Incubator.png",
+      alt: "Laboratory Incubator"
+    }
+  ];
+
+  // Laboratory slider functions
+  const nextLabSlide = () => {
+    setLabCurrentSlide((prev) => (prev + 1) % labImages.length);
+  };
+
+  const prevLabSlide = () => {
+    setLabCurrentSlide((prev) => (prev - 1 + labImages.length) % labImages.length);
+  };
+
+  const goToLabSlide = (index) => {
+    setLabCurrentSlide(index);
+  };
+
+  // Auto-play for laboratory slider
+  useEffect(() => {
+    if (!isLabAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      nextLabSlide();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [labCurrentSlide, isLabAutoPlaying]);
+
+  // Refrigeration slider auto-play
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlides(prev => ({
@@ -14,6 +65,9 @@ const ProductsPage = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleLabMouseEnter = () => setIsLabAutoPlaying(false);
+  const handleLabMouseLeave = () => setIsLabAutoPlaying(true);
 
   return (
     <div className="min-h-screen bg-white">
@@ -27,7 +81,7 @@ const ProductsPage = () => {
             
           />
         </div>
-        <div className="container-custom relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Products</h1>
             <p className="text-xl opacity-90 mb-8">
@@ -42,110 +96,137 @@ const ProductsPage = () => {
         </div>
       </section>
 
-      {/* Laboratory Equipment Section */}
-       <section className="relative isolate overflow-hidden bg-white py-16 md:py-24 lg:py-32">
-      <svg
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 -z-10 h-[40rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
-      >
-        <defs>
-          <pattern
-            x="50%"
-            y={-1}
-            id="lab-pattern"
-            width={200}
-            height={200}
-            patternUnits="userSpaceOnUse"
-          >
-            <path d="M.5 200V.5H200" fill="none" />
-          </pattern>
-        </defs>
-        <rect fill="url(#lab-pattern)" width="100%" height="100%" strokeWidth={0} />
-      </svg>
-      <div className="container-custom">
-        <div className="mx-auto max-w-2xl gap-x-8 lg:mx-0 lg:flex lg:max-w-none lg:items-center lg:gap-x-14">
-          <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-            <div className="flex items-center gap-2 mb-3 md:mb-4">
-              <Microscope className="w-5 h-5 md:w-6 md:h-6 text-[#F16A23]" />
-              <span className="text-[#F16A23] font-semibold text-sm md:text-base">Precision Research</span>
+      {/* Laboratory Equipment Section with Slider */}
+      <section className="relative isolate overflow-hidden bg-white py-16 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl gap-x-8 lg:mx-0 lg:flex lg:max-w-none lg:items-center lg:gap-x-14">
+            <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
+              <div className="flex items-center gap-2 mb-3 md:mb-4">
+                <Microscope className="w-5 h-5 md:w-6 md:h-6 text-[#F16A23]" />
+                <span className="text-[#F16A23] font-semibold text-sm md:text-base">Precision Research</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900">
+                Laboratory Equipment
+              </h2>
+              <p className="mt-4 md:mt-6 text-base md:text-lg leading-7 md:leading-8 text-gray-600">
+                From basic analytical instruments to cutting-edge research equipment, we source and supply the complete spectrum of laboratory solutions. Our extensive network ensures access to leading global brands and specialized equipment for all research applications.
+              </p>
+              <div className="mt-6 md:mt-8 space-y-2 md:space-y-3">
+                {[
+                  'Analytical & Testing Instruments',
+                  'Microscopy & Imaging Systems', 
+                  'Sample Preparation Equipment',
+                  'Safety & Storage Solutions'
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-x-6">
+                <a href="/contact" className="w-full sm:w-auto rounded-md bg-[#F16A23] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#d85a19] transition-colors">
+                  Get Custom Quote
+                </a>
+                <a href="/contact" className="text-sm font-semibold text-gray-900 hover:text-[#F16A23] transition-colors">
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900">
-              Laboratory Equipment
-            </h2>
-            <p className="mt-4 md:mt-6 text-base md:text-lg leading-7 md:leading-8 text-gray-600">
-              From basic analytical instruments to cutting-edge research equipment, we source and supply the complete spectrum of laboratory solutions. Our extensive network ensures access to leading global brands and specialized equipment for all research applications.
-            </p>
-            <div className="mt-6 md:mt-8 space-y-2 md:space-y-3">
-              {[
-                'Analytical & Testing Instruments',
-                'Microscopy & Imaging Systems', 
-                'Sample Preparation Equipment',
-                'Safety & Storage Solutions'
-              ].map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-sm md:text-base text-gray-700">{item}</span>
+            
+            {/* Image Slider */}
+            <div className="mt-12 lg:mt-0 lg:flex-1 lg:max-w-lg">
+              <div 
+                className="relative bg-gray-50 rounded-2xl overflow-hidden shadow-xl"
+                onMouseEnter={handleLabMouseEnter}
+                onMouseLeave={handleLabMouseLeave}
+              >
+                {/* Main slider container */}
+                <div className="relative h-96 md:h-[500px] lg:h-[600px] overflow-hidden">
+                  <div 
+                    className="flex transition-transform duration-500 ease-in-out h-full"
+                    style={{ transform: `translateX(-${labCurrentSlide * 100}%)` }}
+                  >
+                    {labImages.map((image, index) => (
+                      <div key={index} className="w-full h-full flex-shrink-0 relative">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Navigation arrows */}
+                  <button
+                    onClick={prevLabSlide}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={nextLabSlide}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
+                    aria-label="Next image"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                  
+                  {/* Slide indicators */}
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    {labImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToLabSlide(index)}
+                        className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                          index === labCurrentSlide 
+                            ? 'bg-[#F16A23] scale-110' 
+                            : 'bg-white/70 hover:bg-white/90'
+                        }`}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
-            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-x-6">
-              <a href="/contact" className="w-full sm:w-auto rounded-md bg-[#F16A23] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#d85a19] transition-colors">
-                Get Custom Quote
-              </a>
-              <a href="/contact" className="text-sm font-semibold text-gray-900 hover:text-[#F16A23] transition-colors">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-          <div className="mt-12 sm:mt-14 flex justify-end gap-4 sm:gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-            <div className="ml-auto w-32 sm:w-44 flex-none space-y-4 sm:space-y-8 pt-20 sm:pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-              <div className="relative">
-                <img
-                  alt="Laboratory Installation"
-                  src="/images/products/centrifuge.png"
-                  className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                />
+                
+                {/* Image caption */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                  <h3 className="text-white font-semibold text-lg">
+                    {labImages[labCurrentSlide].alt}
+                  </h3>
+                </div>
               </div>
-            </div>
-            <div className="mr-auto w-32 sm:w-44 flex-none space-y-4 sm:space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-              <div className="relative">
-                <img
-                  alt="Laboratory Training"
-                  src="images/products/Autoclave.png"
-                  className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                />
-              </div>
-              <div className="relative">
-                <img
-                  alt="Lab Equipment"
-                  src="/images/products/microscope.png"
-                  className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                />
-              </div>
-            </div>
-            <div className="w-32 sm:w-44 flex-none space-y-4 sm:space-y-8 pt-20 sm:pt-32 sm:pt-0">
-              <div className="relative">
-                <img
-                  alt="Happy Lab Client"
-                  src="/images/products/Fume-Hood.png"
-                  className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                />
-              </div>
-              <div className="relative">
-                <img
-                  alt="Lab Service"
-                  src="/images/products/Incubator.png"
-                  className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
-                />
+              
+              {/* Thumbnail strip */}
+              <div className="mt-4 flex justify-center space-x-2 overflow-x-auto pb-2">
+                {labImages.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToLabSlide(index)}
+                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                      index === labCurrentSlide 
+                        ? 'border-[#F16A23] scale-105' 
+                        : 'border-gray-200 hover:border-gray-300'
+                    }`}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
       {/* Hospital Equipment Section */}
       <section className="overflow-hidden bg-gray-50 py-16 md:py-24 lg:py-32">
-        <div className="container-custom">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <div className="flex items-center gap-2 mb-3 md:mb-4">
               <Heart className="w-5 h-5 md:w-6 md:h-6 text-[#F16A23]" />
@@ -239,7 +320,7 @@ const ProductsPage = () => {
 
       {/* Mechanical Engineering Section */}
       <section className="bg-white py-16 md:py-24 lg:py-32">
-        <div className="container-custom">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 md:mb-4">
@@ -298,7 +379,7 @@ const ProductsPage = () => {
 
       {/* Agricultural Engineering Section */}
       <section className="bg-[#F16A23]/5 py-16 md:py-24 lg:py-32">
-        <div className="container-custom">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-3 md:mb-4">
               <Tractor className="w-5 h-5 md:w-6 md:h-6 text-[#F16A23]" />
@@ -355,7 +436,7 @@ const ProductsPage = () => {
 
       {/* Civil Engineering Section */}
       <section className="bg-gray-900 text-white py-16 md:py-24 lg:py-32">
-        <div className="container-custom">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <div className="flex items-center gap-2 mb-3 md:mb-4">
@@ -406,7 +487,7 @@ const ProductsPage = () => {
 
       {/* Repair & Servicing Section */}
       <section className="bg-[#F16A23]/5 py-16 md:py-24 lg:py-32">
-        <div className="container-custom">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <div className="flex items-center justify-center gap-2 mb-3 md:mb-4">
               <Settings className="w-5 h-5 md:w-6 md:h-6 text-[#F16A23]" />
@@ -481,7 +562,7 @@ const ProductsPage = () => {
 
       {/* Refrigerators & Freezers Section */}
       <section className="bg-white py-16 md:py-24 lg:py-32">
-        <div className="container-custom">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="flex items-center gap-2 mb-3 md:mb-4">
@@ -556,7 +637,7 @@ const ProductsPage = () => {
 
       {/* Call to Action */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-[#F16A23] to-[#d85a19] text-white">
-        <div className="container-custom text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
             End-to-End Support for Your Research and Healthcare Needs
           </h2>
