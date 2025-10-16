@@ -10,25 +10,25 @@ const AgriculturalEngineeringPage = () => {
       title: "Farm Machinery & Equipment",
       description: "Modern tractors, harvesters, and specialized farming equipment",
       features: ["Tractors & Implements", "Harvesting Equipment", "Planting Machinery", "Tillage Tools"],
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/tractor-agricultural-machine-cultivating-field.jpg"
     },
-    {
-      title: "Irrigation Systems",
-      description: "Smart water management and precision irrigation solutions",
-      features: ["Drip Irrigation", "Sprinkler Systems", "Water Pumps", "Control Systems"],
-      image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=600&fit=crop&q=80"
+     {
+      title: "Poultry Equipment",
+      description: "Complete poultry farming solutions for efficient chicken production",
+      features: ["Brooding Systems", "Feeding Equipment", "Climate Control", "Egg Collection"],
+      image: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&h=600&fit=crop&q=80"
     },
     {
       title: "Food Processing Equipment",
       description: "Complete processing solutions from farm to market",
       features: ["Cleaning Systems", "Grading Equipment", "Packaging Machines", "Storage Solutions"],
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/plant-picture-clean-room-equipment-stainless-steel-machines.jpg"
     },
     {
       title: "Livestock Management",
       description: "Automated milking, feeding, and monitoring systems",
       features: ["Milking Systems", "Feed Equipment", "Climate Control", "Health Monitoring"],
-      image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/single-milker-oil-type.png"
     }
   ];
 
@@ -61,7 +61,7 @@ const AgriculturalEngineeringPage = () => {
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1920&h=1080&fit=crop&q=80')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/images/products/close-up-seeder-attached-tractor-field.jpg')] bg-cover bg-center"></div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-900/50 to-green-900"></div>
         

@@ -10,13 +10,13 @@ const MechanicalEngineeringPage = () => {
       title: "CNC Machining Centers",
       description: "High-precision CNC machines for complex manufacturing operations",
       features: ["Multi-axis machining", "Automated tool changers", "High-speed spindles", "Precision controls"],
-      image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/cnc.jpg"
     },
     {
       title: "Industrial Automation",
       description: "Complete automation solutions for manufacturing efficiency",
       features: ["Robotic systems", "PLC integration", "SCADA systems", "Process optimization"],
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/mechanical.jpg"
     },
     {
       title: "Precision Tools",

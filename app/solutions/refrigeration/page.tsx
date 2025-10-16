@@ -10,25 +10,25 @@ const RefrigerationSystemsPage = () => {
       title: "Laboratory Refrigerators",
       description: "Precision temperature control for sample storage and preservation",
       features: ["±1°C Accuracy", "Digital Controls", "Alarm Systems", "Data Logging"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/refrigerator-1.jpg"
     },
     {
       title: "Ultra-Low Temperature Freezers",
       description: "Storage solutions from -40°C to -86°C for critical samples",
       features: ["-86°C Capability", "Backup Systems", "Sample Security", "Energy Efficient"],
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/refrigerator-2.jpg"
     },
     {
       title: "Medical Cold Storage",
       description: "Pharmaceutical-grade refrigeration for vaccines and medications",
       features: ["WHO Certified", "Temperature Validation", "Access Control", "Monitoring"],
-      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/refrigerator-3.jpg"
     },
     {
       title: "Cold Room Solutions",
       description: "Custom walk-in cold storage for large-scale requirements",
       features: ["Custom Sizes", "Multi-Zone", "Remote Monitoring", "Backup Power"],
-      image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/refrigerator-4.jpg"
     }
   ];
 
@@ -38,21 +38,21 @@ const RefrigerationSystemsPage = () => {
       client: "National Research Lab",
       solution: "15 ultra-low freezers with centralized monitoring",
       results: "Zero sample loss, 30% energy savings",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop&q=80"
+      image: "/images/products/refrigerator-1.jpg"
     },
     {
       title: "Hospital Pharmacy Refrigeration",
       client: "Regional Hospital",
       solution: "Medical-grade vaccine storage system",
       results: "100% WHO compliance maintained",
-      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&h=300&fit=crop&q=80"
+      image: "/images/products/refrigerator-3.jpg"
     },
     {
       title: "Food Processing Cold Chain",
       client: "Food Manufacturer",
       solution: "5000 sq ft multi-temperature cold room",
       results: "Extended product shelf life by 40%",
-      image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop&q=80"
+      image: "/images/products/refrigerator-5.jpg"
     }
   ];
 
@@ -61,7 +61,7 @@ const RefrigerationSystemsPage = () => {
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 bg-gradient-to-br from-cyan-900 via-blue-900 to-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1920&h=1080&fit=crop&q=80')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/images/products/refrigerator-4.jpg')] bg-cover bg-center"></div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/50 to-cyan-900"></div>
         
@@ -315,7 +315,7 @@ const RefrigerationSystemsPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {[
-                { icon: Phone, title: "Call Us", detail: "+254 723 526 211" },
+                { icon: Phone, title: "Call Us", detail: "+254 720 976 613" },
                 { icon: Mail, title: "Email Us", detail: "info@benicaea.com" },
                 { icon: MapPin, title: "Visit Us", detail: "Nairobi, Kenya" }
               ].map((contact, index) => (
@@ -332,7 +332,7 @@ const RefrigerationSystemsPage = () => {
                 Get Cold Storage Quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="tel:+254 723 526 211" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all font-semibold flex items-center justify-center gap-2">
+              <a href="tel:+254 720 976 613" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all font-semibold flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>

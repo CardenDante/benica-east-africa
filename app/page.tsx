@@ -5,6 +5,7 @@ import InteractiveFeature from '@/components/home/InteractiveFeature';
 import RefrigeratorsSection from '@/components/home/RefrigeratorsSection'; // Add this import
 import SlidingPartners from '@/components/home/SlidingPartners';
 import TestimonialCarousel from '@/components/home/TestimonialCarousel';
+import BlueRayBiotechProducts from '@/components/home/BlueRayBiotechProducts';
 // import FeatureStrip from '@/components/home/FeatureStrip';
 import CTASection from '@/components/home/CTASection';
 
@@ -20,8 +21,9 @@ export default function Home() {
       <ServiceHighlights />
       <InteractiveFeature />
       <RefrigeratorsSection /> {/* Add this line */}
+      <BlueRayBiotechProducts />
       <SlidingPartners />
-      <TestimonialCarousel />
+      {/* <TestimonialCarousel /> */}
       {/* <FeatureStrip /> */}
       <CTASection />
     </>

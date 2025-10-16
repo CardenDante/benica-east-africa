@@ -413,12 +413,16 @@ const ProductsPage = () => {
         </div>
       </section>
 
-      {/* Other Equipment Sections - Simplified Cards */}
-      <section className="bg-white py-24">
+      {/* Enhanced Equipment Solutions Section */}
+      <section className="bg-gradient-to-b from-white via-gray-50 to-white py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">More Solutions</h2>
-            <p className="text-xl text-gray-600">Comprehensive equipment across all industries</p>
+            <div className="inline-flex items-center gap-2 bg-[#F16A23]/10 px-4 py-2 rounded-full mb-6">
+              <Package className="w-5 h-5 text-[#F16A23]" />
+              <span className="text-[#F16A23] font-semibold">Complete Solutions</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Industry Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive equipment and services across all industries, backed by expert installation and support</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -426,51 +430,132 @@ const ProductsPage = () => {
               {
                 icon: Cog,
                 title: "Mechanical Engineering",
-                description: "CNC machines, precision tools, and automation systems",
-                color: "blue",
-                projects: "90+"
+                description: "CNC machines, precision tools, and automation systems for manufacturing excellence",
+                image: "/images/products/mechanical.jpg",
+                features: ["CNC Machining Centers", "Precision Tools", "Automation Systems", "Quality Control"],
+                projects: "90+",
+                gradient: "from-blue-500 to-blue-600",
+                link: "/solutions/mechanical"
               },
               {
                 icon: Tractor,
                 title: "Agricultural Engineering",
-                description: "Modern farming equipment and food processing machinery",
-                color: "green",
-                projects: "75+"
+                description: "Modern farming equipment and food processing machinery for efficient operations",
+                image: "/images/products/close-up-seeder-attached-tractor-field.jpg",
+                features: ["Farm Machinery", "Irrigation Systems", "Processing Equipment", "Storage Solutions"],
+                projects: "75+",
+                gradient: "from-green-500 to-green-600",
+                link: "/solutions/agricultural"
               },
               {
                 icon: Building,
                 title: "Civil Engineering",
-                description: "Construction machinery and surveying equipment",
-                color: "gray",
-                projects: "110+"
+                description: "Heavy-duty construction machinery and surveying equipment for infrastructure",
+                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop&q=80",
+                features: ["Construction Equipment", "Surveying Tools", "Testing Instruments", "Safety Systems"],
+                projects: "110+",
+                gradient: "from-gray-600 to-gray-800",
+                link: "/solutions/civil"
               },
               {
                 icon: Settings,
                 title: "Repair & Servicing",
-                description: "24/7 maintenance and calibration services",
-                color: "orange",
-                projects: "300+"
+                description: "24/7 maintenance, calibration, and emergency repair services",
+                image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop&q=80",
+                features: ["Preventive Maintenance", "Emergency Repairs", "Calibration Services", "Parts Supply"],
+                projects: "300+",
+                gradient: "from-orange-500 to-red-600",
+                link: "/solutions/repair"
               },
               {
                 icon: Snowflake,
-                title: "Refrigeration",
-                description: "Laboratory and medical-grade cold storage",
-                color: "cyan",
-                projects: "180+"
+                title: "Refrigeration Systems",
+                description: "Laboratory and medical-grade cold storage with precision temperature control",
+                image: "/images/products/refrigerator-2.jpg",
+                features: ["Ultra-Low Freezers", "Lab Refrigerators", "Cold Rooms", "Monitoring Systems"],
+                projects: "180+",
+                gradient: "from-cyan-500 to-blue-600",
+                link: "/solutions/refrigeration"
+              },
+              {
+                icon: Zap,
+                title: "Power & Energy",
+                description: "Backup power systems, generators, and energy management solutions",
+                image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&h=400&fit=crop&q=80",
+                features: ["Generators", "UPS Systems", "Solar Solutions", "Energy Management"],
+                projects: "65+",
+                gradient: "from-yellow-500 to-orange-600",
+                link: "/solutions/power"
               }
             ].map((item, index) => (
-              <div key={index} className="group bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#F16A23]/30 hover:-translate-y-2">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <item.icon className="w-8 h-8 text-white" />
+              <a 
+                key={index} 
+                href={item.link}
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-[#F16A23]/50 hover:-translate-y-2"
+              >
+                {/* Image Section */}
+                <div className="relative h-56 overflow-hidden bg-gray-900">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                  
+                  {/* Icon Badge */}
+                  <div className={`absolute top-4 left-4 w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+                    <item.icon className="w-7 h-7 text-white" />
+                  </div>
+                  
+                  {/* Project Count Badge */}
+                  <div className="absolute top-4 right-4 bg-[#F16A23] text-white px-3 py-1 rounded-full text-sm font-bold">
+                    {item.projects} Projects
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600 mb-4">{item.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[#F16A23] font-semibold text-sm">{item.projects} Projects</span>
-                  <ArrowRight className="w-5 h-5 text-[#F16A23] group-hover:translate-x-2 transition-transform" />
+
+                {/* Content Section */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#F16A23] transition-colors">
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+
+                  {/* Features List */}
+                  <div className="space-y-2 mb-4">
+                    {item.features.slice(0, 3).map((feature, fIndex) => (
+                      <div key={fIndex} className="flex items-center gap-2 text-sm text-gray-700">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#F16A23]"></div>
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Action Button */}
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <span className="text-sm font-semibold text-[#F16A23]">Learn More</span>
+                    <div className="w-8 h-8 rounded-full bg-[#F16A23]/10 flex items-center justify-center group-hover:bg-[#F16A23] transition-colors">
+                      <ArrowRight className="w-4 h-4 text-[#F16A23] group-hover:text-white group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex flex-col sm:flex-row gap-4">
+              <a href="/contact" className="group bg-[#F16A23] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#d85a19] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2">
+                Request a Quote
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a href="/contact" className="bg-gray-100 text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center gap-2">
+                Schedule Consultation
+              </a>
+            </div>
           </div>
         </div>
       </section>
