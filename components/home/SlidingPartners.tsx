@@ -82,15 +82,14 @@ const SlidingPartners: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden bg-white py-12">
-      <div className="mb-10 text-center px-4">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4">
+    <div className="w-full overflow-hidden bg-white py-8 sm:py-12">
+      <div className="mb-8 sm:mb-10 text-center px-4">
+        <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-3 sm:mb-4">
           Trusted By Leading Institutions
         </h2>
-        <div className="w-16 md:w-24 h-1 bg-[#F16A23] mx-auto mb-4"></div>
-        <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
-          We're proud to serve some of the top institutions across Eastern
-          Africa.
+        <div className="w-12 sm:w-16 md:w-24 h-1 bg-[#F16A23] mx-auto mb-3 sm:mb-4"></div>
+        <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
+          We're proud to serve some of the top institutions across Eastern Africa
         </p>
       </div>
 
@@ -101,28 +100,28 @@ const SlidingPartners: React.FC = () => {
               key={`${partner.name}-${index}`}
               // Assign ref to the first item only to measure width
               ref={index === 0 ? itemRef : null}
-              // RESPONSIVE SIZING: w-36 on mobile, w-48 on desktop
-              className="flex-shrink-0 w-36 md:w-48 h-32 md:h-40 mx-4 bg-white p-4 rounded-xl shadow-sm border border-gray-100
-                         flex flex-col items-center justify-between relative group hover:shadow-md transition-shadow duration-300"
+              // MUCH LARGER on mobile for visibility
+              className="flex-shrink-0 w-52 sm:w-56 md:w-60 lg:w-64 h-44 sm:h-48 md:h-52 mx-4 sm:mx-5 bg-white p-4 sm:p-5 md:p-6 rounded-2xl shadow-lg border border-gray-200
+                         flex flex-col items-center justify-center relative group hover:shadow-xl transition-all duration-300"
             >
-              {/* Logo Container - Takes up top portion */}
-              <div className="relative w-full h-16 md:h-20 flex items-center justify-center">
+              {/* Logo Container - Much bigger, takes most of card */}
+              <div className="relative w-full h-28 sm:h-32 md:h-36 flex items-center justify-center mb-3">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} logo`}
                   fill
-                  sizes="(max-width: 768px) 100px, 150px"
+                  sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, 240px"
                   style={{
                     objectFit: "contain",
                     objectPosition: "center",
                   }}
-                  className="filter-none opacity-90 group-hover:opacity-100 transition-all duration-300"
+                  className="filter-none opacity-100 group-hover:scale-105 transition-all duration-300"
                 />
               </div>
 
-              {/* Partner Name - Always Visible */}
-              <div className="w-full text-center mt-2 border-t border-gray-100 pt-2">
-                <p className="text-[#F16A23] text-xs md:text-sm font-bold truncate">
+              {/* Partner Name - Larger and more visible */}
+              <div className="w-full text-center border-t border-gray-200 pt-3">
+                <p className="text-[#F16A23] text-sm sm:text-base md:text-lg font-bold truncate">
                   {partner.name}
                 </p>
               </div>

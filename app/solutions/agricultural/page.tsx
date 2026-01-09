@@ -163,15 +163,15 @@ const AgriculturalEngineeringPage = () => {
 
             <div className="lg:sticky lg:top-24">
               <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl overflow-hidden shadow-2xl">
-                <div className="relative h-80">
+                <div className="relative h-80 bg-gray-900">
                   <img
                     src={services[selectedService].image}
                     alt={services[selectedService].title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2 drop-shadow-lg">
                       {services[selectedService].title}
                     </h3>
                   </div>
@@ -263,17 +263,17 @@ const AgriculturalEngineeringPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="group bg-gradient-to-b from-gray-50 to-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-56 overflow-hidden bg-gray-900">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
                 </div>
-                
+
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{project.title}</h3>
                   <p className="text-sm text-gray-600 mb-4">{project.client}</p>
                   
                   <div className="space-y-3 mb-4">

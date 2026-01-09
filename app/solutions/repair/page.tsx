@@ -163,15 +163,15 @@ const RepairServicingPage = () => {
 
             <div className="lg:sticky lg:top-24">
               <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl overflow-hidden shadow-2xl">
-                <div className="relative h-80">
+                <div className="relative h-80 bg-gray-900">
                   <img
                     src={services[selectedService].image}
                     alt={services[selectedService].title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2 drop-shadow-lg">
                       {services[selectedService].title}
                     </h3>
                   </div>
