@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '@/components/home/Hero';
 import ServiceHighlights from '@/components/home/ServiceHighlights';
 import InteractiveFeature from '@/components/home/InteractiveFeature';
-import RefrigeratorsSection from '@/components/home/RefrigeratorsSection'; // Add this import
+import IndustrySolutions from '@/components/products/IndustrySolutions';
 import SlidingPartners from '@/components/home/SlidingPartners';
 import TestimonialCarousel from '@/components/home/TestimonialCarousel';
 import BlueRayBiotechProducts from '@/components/home/BlueRayBiotechProducts';
@@ -20,7 +20,7 @@ export default function Home() {
       <Hero />
       <ServiceHighlights />
       <InteractiveFeature />
-      <RefrigeratorsSection /> {/* Add this line */}
+      <IndustrySolutions />
       <BlueRayBiotechProducts />
       <SlidingPartners />
       {/* <TestimonialCarousel /> */}

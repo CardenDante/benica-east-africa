@@ -10,25 +10,25 @@ const RepairServicingPage = () => {
       title: "Preventive Maintenance",
       description: "Scheduled maintenance programs to prevent equipment failures",
       features: ["Regular Inspections", "Lubrication Service", "Parts Replacement", "Performance Testing"],
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/microscope.png"
     },
     {
       title: "Emergency Repairs",
       description: "24/7 rapid response for critical equipment breakdowns",
       features: ["24/7 Availability", "On-site Repairs", "Emergency Parts", "Priority Response"],
-      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/centrifuge.png"
     },
     {
       title: "Equipment Calibration",
       description: "Precision calibration services for accurate measurements",
       features: ["ISO Standards", "Calibration Certificates", "Adjustment Services", "Documentation"],
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/Autoclave.png"
     },
     {
       title: "Parts & Components",
       description: "Genuine spare parts and components supply",
       features: ["Original Parts", "Fast Delivery", "Warranty Coverage", "Technical Support"],
-      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop&q=80"
+      image: "/images/products/Incubator.png"
     }
   ];
 
@@ -38,21 +38,21 @@ const RepairServicingPage = () => {
       client: "Major Medical Center",
       solution: "Annual maintenance contract for all medical equipment",
       results: "99.8% uptime, zero critical failures",
-      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop&q=80"
+      image: "/images/products/MRI-Machine.png"
     },
     {
       title: "Laboratory Fleet Maintenance",
       client: "Research Institute",
       solution: "Comprehensive service for 150+ lab instruments",
       results: "40% reduction in downtime",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop&q=80"
+      image: "/chemicals/lab-equipments.png"
     },
     {
       title: "Industrial Equipment Overhaul",
       client: "Manufacturing Plant",
       solution: "Complete rebuild and modernization program",
       results: "Extended equipment life by 10 years",
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop&q=80"
+      image: "/images/products/cnc.jpg"
     }
   ];
 
@@ -60,10 +60,10 @@ const RepairServicingPage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&h=1080&fit=crop&q=80')] bg-cover bg-center"></div>
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('/images/products/Autoclave.png')] bg-cover bg-center"></div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-900/50 to-orange-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-orange-900/60 via-orange-900/50 to-orange-900/70"></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">

@@ -1,105 +1,105 @@
 "use client";
 import React, { useState } from 'react';
-import { ChevronRight, CheckCircle, Building, Ruler, HardHat, Award, Users, Clock, ArrowRight, Phone, Mail, MapPin, Star, Package, BarChart3, Hammer } from 'lucide-react';
+import { ChevronRight, CheckCircle, Heart, Activity, Stethoscope, Award, Users, Clock, ArrowRight, Phone, Mail, MapPin, Star, Package, BarChart3, Bed } from 'lucide-react';
 
-const CivilEngineeringPage = () => {
+const HospitalEquipmentPage = () => {
   const [selectedService, setSelectedService] = useState(0);
 
   const services = [
     {
-      title: "Heavy Construction Equipment",
-      description: "Excavators, bulldozers, cranes, and earthmoving machinery",
-      features: ["Excavators & Loaders", "Concrete Equipment", "Compaction Machinery", "Material Handlers"],
-      image: "https://images.unsplash.com/photo-1581092795442-2f2e8b3e2e71?w=800&h=600&fit=crop&q=80"
+      title: "ICU & Critical Care Beds",
+      description: "Advanced 5-function electric beds with remote control and emergency features",
+      features: ["Trendelenburg/Reverse", "CPR Quick Release", "Side Rails Safety", "Weight Capacity 250kg"],
+      image: "/hostpital/D8d-CPR MULTIFUNCTIONAL ELECTRIC ICU BED.jpg"
     },
     {
-      title: "Surveying & Mapping",
-      description: "Advanced GPS and laser surveying equipment for precision",
-      features: ["Total Stations", "GPS Systems", "Laser Scanners", "Drone Mapping"],
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&q=80"
+      title: "Ward & Recovery Beds",
+      description: "Semi-Fowler and standard ward beds for comfortable patient recovery",
+      features: ["Manual/Electric Options", "Mattress Included", "IV Pole Attachment", "Easy Mobility"],
+      image: "/hostpital/C8c ELECTRIC ICU BED.jpg"
     },
     {
-      title: "Material Testing Equipment",
-      description: "Quality control and testing instruments for construction materials",
-      features: ["Concrete Testing", "Soil Analysis", "Compression Testing", "NDT Equipment"],
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80"
+      title: "Specialized Beds",
+      description: "Orthopedic traction beds and obstetric delivery beds for specialized care",
+      features: ["Traction Systems", "Delivery Positions", "Gynecology Features", "Pediatric Options"],
+      image: "/hostpital/CQ8k ELECTRIC CHILDREN BED.jpg"
     },
     {
-      title: "Road Construction Equipment",
-      description: "Specialized machinery for road building and maintenance",
-      features: ["Asphalt Pavers", "Road Rollers", "Milling Machines", "Line Markers"],
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop&q=80"
+      title: "Patient Monitoring",
+      description: "Complete vital signs monitoring and bedside equipment",
+      features: ["Multi-Parameter Monitors", "ECG Machines", "Pulse Oximeters", "Data Management"],
+      image: "/images/products/Ventilator.png"
     }
   ];
 
   const projects = [
     {
-      title: "Highway Construction Project",
-      client: "National Roads Authority",
-      solution: "Complete fleet of heavy equipment for 50km highway",
-      results: "Completed 6 months ahead of schedule",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop&q=80"
+      title: "Private Hospital ICU Setup",
+      client: "Regional Medical Center",
+      solution: "Complete ICU with 20 electric beds and monitoring systems",
+      results: "Enhanced critical care capacity by 200%",
+      image: "/hostpital/X9x ELECTRIC ICU BED.jpg"
     },
     {
-      title: "Commercial Building Complex",
-      client: "Real Estate Developer",
-      solution: "Tower cranes and concrete equipment package",
-      results: "Zero safety incidents, 20% cost savings",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop&q=80"
+      title: "Maternity Ward Upgrade",
+      client: "County Referral Hospital",
+      solution: "30 obstetric beds with delivery equipment",
+      results: "Safe delivery capacity increased 3x",
+      image: "/hostpital/X01 BABY CRIB.jpg"
     },
     {
-      title: "Bridge Infrastructure",
-      client: "Government Infrastructure",
-      solution: "Specialized heavy lifting and foundation equipment",
-      results: "Met all structural integrity standards",
-      image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400&h=300&fit=crop&q=80"
+      title: "General Ward Modernization",
+      client: "Mission Hospital",
+      solution: "100 semi-Fowler beds with patient monitoring",
+      results: "Improved patient comfort and care quality",
+      image: "/hostpital/C8c ELECTRIC ICU BED-folded.jpg"
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&fit=crop&q=80')] bg-cover bg-center"></div>
+      <section className="relative pt-24 pb-20 bg-gradient-to-br from-red-900 via-red-800 to-pink-900 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/hostpital/C8c ELECTRIC ICU BED.jpg" alt="Hospital ICU Bed" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900"></div>
-        
+        <div className="absolute inset-0 bg-gradient-to-b from-red-900/50 via-red-900/40 to-red-900/60"></div>
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full mb-6">
-              <Building className="w-5 h-5 text-orange-300" />
-              <span className="text-sm font-semibold">Infrastructure Development</span>
+              <Heart className="w-5 h-5 text-red-300" />
+              <span className="text-sm font-semibold">Healthcare Solutions</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Civil Engineering Solutions
+              Hospital Equipment Solutions
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl">
-              Heavy-duty construction equipment, surveying technology, and material testing for building the infrastructure of tomorrow
+              Premium patient recovery solutions ranging from critical care units to standard ward furniture
             </p>
-            
+
             <div className="flex flex-wrap gap-6 mb-8">
               {[
-                { icon: Award, text: "110+ Projects" },
-                { icon: Users, text: "65+ Contractors" },
-                { icon: Star, text: "100% Safety Record" }
+                { icon: Award, text: "90+ Projects" },
+                { icon: Users, text: "50+ Hospitals" },
+                { icon: Star, text: "ISO Certified" }
               ].map((stat, index) => (
                 <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <stat.icon className="w-5 h-5 text-orange-300" />
+                  <stat.icon className="w-5 h-5 text-red-300" />
                   <span className="font-semibold">{stat.text}</span>
                 </div>
               ))}
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="group bg-[#F16A23] text-white px-8 py-4 rounded-xl hover:bg-[#d85a19] transition-all font-semibold shadow-xl hover:scale-105 flex items-center justify-center gap-2">
                 Request Quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="#services" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all font-semibold flex items-center justify-center gap-2">
-                View Solutions
+                View Equipment
               </a>
             </div>
           </div>
@@ -113,10 +113,10 @@ const CivilEngineeringPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Civil Engineering Solutions
+              Our Hospital Equipment Range
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive equipment and technology for all construction and infrastructure projects
+              Complete patient care equipment for hospitals and healthcare facilities
             </p>
           </div>
 
@@ -128,7 +128,7 @@ const CivilEngineeringPage = () => {
                   onClick={() => setSelectedService(index)}
                   className={`w-full text-left p-6 rounded-2xl transition-all duration-300 ${
                     selectedService === index
-                      ? 'bg-gradient-to-r from-gray-800 to-gray-900 text-white shadow-xl scale-105'
+                      ? 'bg-gradient-to-r from-red-600 to-red-700 text-white shadow-xl scale-105'
                       : 'bg-gray-50 hover:bg-gray-100 text-gray-900'
                   }`}
                 >
@@ -176,22 +176,22 @@ const CivilEngineeringPage = () => {
                     </h3>
                   </div>
                 </div>
-                
+
                 <div className="p-8">
                   <h4 className="text-lg font-bold text-gray-900 mb-4">Key Features</h4>
                   <div className="space-y-3">
                     {services[selectedService].features.map((feature, index) => (
                       <div key={index} className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
-                          <CheckCircle className="w-5 h-5 text-orange-600" />
+                        <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-5 h-5 text-red-600" />
                         </div>
                         <span className="text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
-                  
+
                   <a href="#contact" className="mt-8 w-full bg-[#F16A23] text-white px-6 py-4 rounded-xl hover:bg-[#d85a19] transition-all font-semibold flex items-center justify-center gap-2 group">
-                    Get Started
+                    Request Equipment
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
@@ -206,38 +206,38 @@ const CivilEngineeringPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Benica for Civil Engineering?
+              Why Choose Benica for Hospital Equipment?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Industry expertise with complete project support from planning to completion
+              Quality certified equipment with complete installation and training support
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: HardHat,
-                title: "Safety First",
-                description: "Certified equipment with comprehensive safety features and training"
+                icon: Bed,
+                title: "Quality Certified",
+                description: "All equipment meets international medical standards and certifications"
               },
               {
-                icon: Ruler,
-                title: "Precision Tools",
-                description: "Advanced surveying and measurement technology for accuracy"
+                icon: Activity,
+                title: "Installation Service",
+                description: "Professional setup and configuration by trained technicians"
               },
               {
                 icon: Users,
-                title: "Expert Support",
-                description: "On-site technical assistance and project management support"
+                title: "Staff Training",
+                description: "Comprehensive training for medical staff on equipment operation"
               },
               {
                 icon: Clock,
-                title: "Fast Delivery",
-                description: "Quick equipment deployment to keep projects on schedule"
+                title: "Warranty Support",
+                description: "Extended warranty and maintenance programs available"
               }
             ].map((benefit, index) => (
               <div key={index} className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
@@ -248,17 +248,68 @@ const CivilEngineeringPage = () => {
         </div>
       </section>
 
+      {/* Case Studies */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Hospital Success Stories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real results from our hospital equipment installations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <div key={index} className="group bg-gradient-to-b from-gray-50 to-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{project.client}</p>
+
+                  <div className="space-y-3 mb-4">
+                    <div className="flex items-start gap-2">
+                      <Package className="w-5 h-5 text-[#F16A23] flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-xs font-semibold text-gray-500 uppercase">Solution</p>
+                        <p className="text-sm text-gray-900">{project.solution}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-2">
+                      <BarChart3 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-xs font-semibold text-gray-500 uppercase">Results</p>
+                        <p className="text-sm font-semibold text-green-600">{project.results}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 text-white">
+      <section id="contact" className="py-24 bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Ready to Start Your Project?
+                Ready to Upgrade Your Hospital Equipment?
               </h2>
               <p className="text-xl text-gray-300">
-                Connect with our civil engineering equipment specialists today
+                Get in touch with our healthcare equipment specialists
               </p>
             </div>
 
@@ -281,7 +332,7 @@ const CivilEngineeringPage = () => {
                 Request Equipment Quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="tel:+254 723 526 211" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all font-semibold flex items-center justify-center gap-2">
+              <a href="tel:+254723526211" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all font-semibold flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -305,4 +356,4 @@ const CivilEngineeringPage = () => {
   );
 };
 
-export default CivilEngineeringPage;
+export default HospitalEquipmentPage;

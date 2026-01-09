@@ -1,105 +1,110 @@
 "use client";
 import React, { useState } from 'react';
-import { ChevronRight, CheckCircle, Zap, Battery, Sun, Award, Users, Clock, ArrowRight, Phone, Mail, MapPin, Star, Package, BarChart3, Shield, Plug } from 'lucide-react';
+import { ChevronRight, CheckCircle, Cross, Activity, Container, Award, Users, Clock, ArrowRight, Phone, Mail, MapPin, Star, Package, BarChart3, Refrigerator } from 'lucide-react';
 
-const PowerEnergyPage = () => {
+const MorgueEquipmentPage = () => {
   const [selectedService, setSelectedService] = useState(0);
 
   const services = [
     {
-      title: "Backup Generators",
-      description: "Reliable diesel and gas generators for continuous power supply",
-      features: ["Automatic Transfer", "Remote Monitoring", "Fuel Efficiency", "Silent Operation"],
-      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop&q=80"
+      title: "Body Storage Cabinets",
+      description: "Temperature-controlled mortuary cabinets with multiple compartments",
+      features: ["2-6 Body Capacity", "Digital Controls", "Stainless Steel", "Independent Cooling"],
+      image: "/morgue/Cold chamber for nine bodies - 3 doors with front opening.jpg"
     },
     {
-      title: "UPS Systems",
-      description: "Uninterruptible power supply for critical equipment protection",
-      features: ["Instant Switchover", "Battery Backup", "Surge Protection", "Scalable Capacity"],
-      image: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&h=600&fit=crop&q=80"
+      title: "Autopsy Tables",
+      description: "Professional autopsy tables with integrated drainage and utilities",
+      features: ["Hydraulic Height", "Water Supply", "Drainage System", "Instrument Tray"],
+      image: "/morgue/Double Dissection Work Station.jpg"
     },
     {
-      title: "Solar Solutions",
-      description: "Clean energy systems for sustainable power generation",
-      features: ["Grid-Tied Systems", "Off-Grid Options", "Battery Storage", "Monitoring Apps"],
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop&q=80"
+      title: "Hydraulic Trolleys",
+      description: "Heavy-duty body transport trolleys with smooth operation",
+      features: ["500kg Capacity", "Height Adjustable", "Locking Wheels", "Easy Cleaning"],
+      image: "/morgue/Refrigirated-bed.jpg"
     },
     {
-      title: "Energy Management",
-      description: "Smart systems to optimize power consumption and reduce costs",
-      features: ["Load Monitoring", "Usage Analytics", "Automated Control", "Cost Reporting"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80"
+      title: "Embalming Stations",
+      description: "Complete embalming equipment and preparation facilities",
+      features: ["Chemical Storage", "Fluid Systems", "Ventilation", "Safety Features"],
+      image: "/morgue/Universal Block 1 body.jpg"
     }
   ];
 
   const projects = [
     {
-      title: "Hospital Power Backup",
-      client: "Regional Medical Center",
-      solution: "500kVA generator with automatic transfer switch",
-      results: "Zero downtime during 20+ power outages",
-      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=300&fit=crop&q=80"
+      title: "County Mortuary Setup",
+      client: "Regional Hospital",
+      solution: "Complete mortuary with 20-body capacity and autopsy suite",
+      results: "Professional forensic facility serving 5 counties",
+      image: "/morgue/Cold chamber for nine bodies - 9 doors with front opening.jpg"
     },
     {
-      title: "Manufacturing Solar Installation",
-      client: "Industrial Park",
-      solution: "800kW solar array with battery backup",
-      results: "60% reduction in electricity costs",
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop&q=80"
+      title: "Private Funeral Home",
+      client: "Memorial Services Ltd",
+      solution: "Embalming station and storage for 12 bodies",
+      results: "Enhanced service capacity by 300%",
+      image: "/morgue/One body cold rooms with lateral opening.jpg"
     },
     {
-      title: "Data Center UPS System",
-      client: "Tech Company",
-      solution: "Redundant UPS with 30-minute runtime",
-      results: "100% uptime maintained for 3 years",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop&q=80"
+      title: "University Teaching Facility",
+      client: "Medical School",
+      solution: "Teaching autopsy suite with viewing gallery",
+      results: "Trains 100+ medical students annually",
+      image: "/morgue/Cold chamber for one body with front opening.jpg"
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 bg-gradient-to-br from-yellow-900 via-orange-900 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&h=1080&fit=crop&q=80')] bg-cover bg-center"></div>
+      <section className="relative pt-24 pb-20 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 text-white overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src="/morgue/Cold chamber for nine bodies - 3 doors with front opening.jpg"
+            alt="Morgue Cold Chamber"
+            className="w-full h-full object-cover"
+            style={{ display: 'block' }}
+          />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-900/50 to-yellow-900"></div>
-        
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/35 to-slate-900/60"></div>
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full mb-6">
-              <Zap className="w-5 h-5 text-yellow-300" />
-              <span className="text-sm font-semibold">Reliable Power</span>
+              <Cross className="w-5 h-5 text-gray-300" />
+              <span className="text-sm font-semibold">Professional Solutions</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Power & Energy Solutions
+              Morgue Equipment Solutions
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl">
-              Comprehensive backup power, renewable energy, and energy management solutions to keep your operations running without interruption
+              Professional mortuary solutions including autopsy tables, body storage cabinets, and transport trolleys
             </p>
-            
+
             <div className="flex flex-wrap gap-6 mb-8">
               {[
-                { icon: Award, text: "65+ Installations" },
-                { icon: Users, text: "45+ Clients" },
-                { icon: Star, text: "99.5% Uptime" }
+                { icon: Award, text: "65+ Projects" },
+                { icon: Users, text: "40+ Facilities" },
+                { icon: Star, text: "Quality Certified" }
               ].map((stat, index) => (
                 <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <stat.icon className="w-5 h-5 text-yellow-300" />
+                  <stat.icon className="w-5 h-5 text-gray-300" />
                   <span className="font-semibold">{stat.text}</span>
                 </div>
               ))}
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="group bg-[#F16A23] text-white px-8 py-4 rounded-xl hover:bg-[#d85a19] transition-all font-semibold shadow-xl hover:scale-105 flex items-center justify-center gap-2">
                 Request Quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="#services" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all font-semibold flex items-center justify-center gap-2">
-                View Solutions
+                View Equipment
               </a>
             </div>
           </div>
@@ -113,10 +118,10 @@ const PowerEnergyPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Power Solutions
+              Our Mortuary Equipment Range
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Complete energy solutions from backup power to renewable energy systems
+              Complete mortuary solutions for hospitals, funeral homes, and forensic facilities
             </p>
           </div>
 
@@ -128,7 +133,7 @@ const PowerEnergyPage = () => {
                   onClick={() => setSelectedService(index)}
                   className={`w-full text-left p-6 rounded-2xl transition-all duration-300 ${
                     selectedService === index
-                      ? 'bg-gradient-to-r from-yellow-600 to-orange-600 text-white shadow-xl scale-105'
+                      ? 'bg-gradient-to-r from-slate-700 to-slate-800 text-white shadow-xl scale-105'
                       : 'bg-gray-50 hover:bg-gray-100 text-gray-900'
                   }`}
                 >
@@ -176,22 +181,22 @@ const PowerEnergyPage = () => {
                     </h3>
                   </div>
                 </div>
-                
+
                 <div className="p-8">
                   <h4 className="text-lg font-bold text-gray-900 mb-4">Key Features</h4>
                   <div className="space-y-3">
                     {services[selectedService].features.map((feature, index) => (
                       <div key={index} className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0">
-                          <CheckCircle className="w-5 h-5 text-yellow-600" />
+                        <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-5 h-5 text-slate-700" />
                         </div>
                         <span className="text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
-                  
+
                   <a href="#contact" className="mt-8 w-full bg-[#F16A23] text-white px-6 py-4 rounded-xl hover:bg-[#d85a19] transition-all font-semibold flex items-center justify-center gap-2 group">
-                    Get Started
+                    Request Equipment
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
@@ -206,38 +211,38 @@ const PowerEnergyPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Benica for Power Solutions?
+              Why Choose Benica for Mortuary Equipment?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Trusted expertise in power systems and energy management
+              Dignified solutions with professional installation and maintenance support
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: Plug,
-                title: "Seamless Integration",
-                description: "Professional installation with minimal disruption to operations"
+                icon: Refrigerator,
+                title: "Quality Equipment",
+                description: "Durable stainless steel construction meeting international standards"
               },
               {
-                icon: Battery,
-                title: "Smart Storage",
-                description: "Advanced battery systems for efficient energy management"
+                icon: Container,
+                title: "Complete Solutions",
+                description: "Full mortuary setup from storage to preparation facilities"
               },
               {
-                icon: Sun,
-                title: "Green Energy",
-                description: "Sustainable solar solutions that reduce carbon footprint"
+                icon: Activity,
+                title: "Installation Service",
+                description: "Professional installation by certified technical team"
               },
               {
-                icon: Shield,
-                title: "Reliable Backup",
-                description: "Proven backup systems that activate within milliseconds"
+                icon: Clock,
+                title: "Maintenance Support",
+                description: "Regular servicing and emergency repair availability"
               }
             ].map((benefit, index) => (
               <div key={index} className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
@@ -253,10 +258,10 @@ const PowerEnergyPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Power Success Stories
+              Installation Success Stories
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real-world results from our power and energy installations
+              Real results from our mortuary equipment installations
             </p>
           </div>
 
@@ -271,11 +276,11 @@ const PowerEnergyPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
                   <p className="text-sm text-gray-600 mb-4">{project.client}</p>
-                  
+
                   <div className="space-y-3 mb-4">
                     <div className="flex items-start gap-2">
                       <Package className="w-5 h-5 text-[#F16A23] flex-shrink-0 mt-0.5" />
@@ -284,7 +289,7 @@ const PowerEnergyPage = () => {
                         <p className="text-sm text-gray-900">{project.solution}</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start gap-2">
                       <BarChart3 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                       <div>
@@ -301,15 +306,15 @@ const PowerEnergyPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gradient-to-br from-gray-900 via-yellow-900 to-gray-900 text-white">
+      <section id="contact" className="py-24 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Power Your Business Reliably
+                Need Mortuary Equipment?
               </h2>
               <p className="text-xl text-gray-300">
-                Connect with our power solutions experts today
+                Contact our mortuary solutions specialists for a consultation
               </p>
             </div>
 
@@ -329,10 +334,10 @@ const PowerEnergyPage = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="group bg-[#F16A23] text-white px-8 py-4 rounded-xl hover:bg-[#d85a19] transition-all font-semibold shadow-xl hover:scale-105 flex items-center justify-center gap-2">
-                Get Power Assessment
+                Request Equipment Quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="tel:+254 723 526 211" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all font-semibold flex items-center justify-center gap-2">
+              <a href="tel:+254723526211" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all font-semibold flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -356,4 +361,4 @@ const PowerEnergyPage = () => {
   );
 };
 
-export default PowerEnergyPage;
+export default MorgueEquipmentPage;
