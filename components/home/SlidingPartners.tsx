@@ -9,12 +9,34 @@ const SlidingPartners: React.FC = () => {
   const itemRef = useRef<HTMLDivElement>(null);
 
   const partners = [
-    { name: "JKUAT", logo: "/images/partners/jkuat.png" },
+    { name: "CIAT", logo: "/images/partners/CIAT.png" },
+    { name: "ILRI", logo: "/images/partners/ilri.png" },
+    { name: "KEBS", logo: "/images/partners/kebs_logo.png" },
+    { name: "KEMRI", logo: "/images/partners/KEMRI.jpg" },
+    { name: "KEMSA", logo: "/images/partners/kemsa_logo.png" },
+    { name: "KenGen", logo: "/images/partners/KenGen.png" },
+    { name: "KEPHIS", logo: "/images/partners/Kephis.png" },
+    { name: "KALRO", logo: "/images/partners/kalro.png" },
+    { name: "NDA Uganda", logo: "/images/partners/NDA-Uganda.jpg" },
+    { name: "Neema Uhai", logo: "/images/partners/Neema-Uhai.png" },
     { name: "BIDCO", logo: "/images/partners/bidco.png" },
+    { name: "JKUAT", logo: "/images/partners/jkuat.png" },
     { name: "KIBABII UNIVERSITY", logo: "/images/partners/kibabi.png" },
     { name: "KNH", logo: "/images/partners/knh.png" },
     { name: "KU", logo: "/images/partners/ku.png" },
     { name: "MTRH", logo: "/images/partners/mtrh.png" },
+    { name: "Chuka University", logo: "/images/partners/Chuka University.jpg" },
+    { name: "DeKUT", logo: "/images/partners/DeKut logo.png" },
+    { name: "Egerton University", logo: "/images/partners/Egerton_University_logo.png" },
+    { name: "Maasai Mara University", logo: "/images/partners/Maasai Mara University.png" },
+    { name: "Machakos University", logo: "/images/partners/Machakos_University_Logo.png" },
+    { name: "Maseno University", logo: "/images/partners/Maseno-university logo.jpg" },
+    { name: "Meru University", logo: "/images/partners/Meru University.png" },
+    { name: "Moi University", logo: "/images/partners/Moi_University_logo.jpg" },
+    { name: "Rongo University", logo: "/images/partners/Rongo University.png" },
+    { name: "Seku University", logo: "/images/partners/Seku university logo.jpg" },
+    { name: "Taita Taveta University", logo: "/images/partners/Taita taveta University logo.jpg" },
+    { name: "USIU-Africa", logo: "/images/partners/usiu-logo.png" },
   ];
 
   // Create a continuous loop
@@ -49,7 +71,7 @@ const SlidingPartners: React.FC = () => {
     window.addEventListener("resize", handleResize);
 
     const animate = () => {
-      position -= 0.5; // Controls the speed
+      position -= 1.2; // Controls the speed (increased from 0.5 to 1.2 for faster sliding)
 
       // Reset position based on dynamic item width to prevent jumping
       if (position <= -itemWidth) {

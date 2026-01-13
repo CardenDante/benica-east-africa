@@ -85,6 +85,66 @@ const PartnersCarousel: React.FC = () => {
       name: 'MTRH',
       logo: '/images/partners/mtrh.png',
       description: 'Moi Teaching and Referral Hospital, a leading healthcare and research center.'
+    },
+    {
+      name: 'Chuka University',
+      logo: '/images/partners/Chuka University.jpg',
+      description: 'Chuka University, committed to excellence in teaching, research, and community service.'
+    },
+    {
+      name: 'DeKUT',
+      logo: '/images/partners/DeKut logo.png',
+      description: 'Dedan Kimathi University of Technology, fostering innovation and technological advancement.'
+    },
+    {
+      name: 'Egerton University',
+      logo: '/images/partners/Egerton_University_logo.png',
+      description: 'Egerton University, a leader in agricultural sciences and research excellence.'
+    },
+    {
+      name: 'Maasai Mara University',
+      logo: '/images/partners/Maasai Mara University.png',
+      description: 'Maasai Mara University, transforming lives through quality education and research.'
+    },
+    {
+      name: 'Machakos University',
+      logo: '/images/partners/Machakos_University_Logo.png',
+      description: 'Machakos University, providing transformative education for sustainable development.'
+    },
+    {
+      name: 'Maseno University',
+      logo: '/images/partners/Maseno-university logo.jpg',
+      description: 'Maseno University, a premier institution of higher learning in Western Kenya.'
+    },
+    {
+      name: 'Meru University',
+      logo: '/images/partners/Meru University.png',
+      description: 'Meru University of Science and Technology, driving innovation and research in Eastern Kenya.'
+    },
+    {
+      name: 'Moi University',
+      logo: '/images/partners/Moi_University_logo.jpg',
+      description: 'Moi University, providing world-class education and promoting research excellence.'
+    },
+    {
+      name: 'Rongo University',
+      logo: '/images/partners/Rongo University.png',
+      description: 'Rongo University, empowering communities through accessible quality education.'
+    },
+    {
+      name: 'Seku University',
+      logo: '/images/partners/Seku university logo.jpg',
+      description: 'South Eastern Kenya University, nurturing talent and promoting academic excellence.'
+    },
+    {
+      name: 'Taita Taveta University',
+      logo: '/images/partners/Taita taveta University logo.jpg',
+      description: 'Taita Taveta University, fostering innovation and sustainable development in coastal Kenya.'
+    },
+    {
+      name: 'USIU-Africa',
+      logo: '/images/partners/usiu-logo.png',
+      description: 'United States International University-Africa, offering world-class American-style education.'
     }
   ];
 
