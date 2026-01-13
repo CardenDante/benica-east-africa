@@ -6,33 +6,83 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const PartnersCarousel: React.FC = () => {
   const partners = [
-    { 
-      name: 'JKUAT', 
+    {
+      name: 'CIAT',
+      logo: '/images/partners/CIAT.png',
+      description: 'International Center for Tropical Agriculture, advancing agricultural research and innovation in East Africa.'
+    },
+    {
+      name: 'ILRI',
+      logo: '/images/partners/ilri.png',
+      description: 'International Livestock Research Institute, improving lives through innovative livestock research.'
+    },
+    {
+      name: 'KEBS',
+      logo: '/images/partners/kebs_logo.png',
+      description: 'Kenya Bureau of Standards, ensuring quality standards across all sectors in Kenya.'
+    },
+    {
+      name: 'KEMRI',
+      logo: '/images/partners/KEMRI.jpg',
+      description: 'Kenya Medical Research Institute, leading medical and health research in East Africa.'
+    },
+    {
+      name: 'KEMSA',
+      logo: '/images/partners/kemsa_logo.png',
+      description: 'Kenya Medical Supplies Authority, ensuring availability of essential medical supplies nationwide.'
+    },
+    {
+      name: 'KenGen',
+      logo: '/images/partners/KenGen.png',
+      description: 'Kenya Electricity Generating Company, powering Kenya through sustainable energy solutions.'
+    },
+    {
+      name: 'KEPHIS',
+      logo: '/images/partners/Kephis.png',
+      description: 'Kenya Plant Health Inspectorate Service, protecting plant health and promoting safe agricultural trade.'
+    },
+    {
+      name: 'KALRO',
+      logo: '/images/partners/kalro.png',
+      description: 'Kenya Agricultural and Livestock Research Organization, driving agricultural innovation and food security.'
+    },
+    {
+      name: 'NDA Uganda',
+      logo: '/images/partners/NDA-Uganda.jpg',
+      description: 'National Drug Authority Uganda, regulating and ensuring quality of pharmaceuticals in Uganda.'
+    },
+    {
+      name: 'Neema Uhai',
+      logo: '/images/partners/Neema-Uhai.png',
+      description: 'Neema Uhai Hospital, providing quality healthcare services with compassion and excellence.'
+    },
+    {
+      name: 'JKUAT',
       logo: '/images/partners/jkuat.png',
       description: 'Jomo Kenyatta University of Agriculture and Technology, a leading research institution in Kenya.'
     },
-    { 
-      name: 'BIDCO', 
+    {
+      name: 'BIDCO',
       logo: '/images/partners/bidco.png',
       description: 'BIDCO Africa, a prominent manufacturing company driving innovation in East Africa.'
     },
-    { 
-      name: 'KIBABII UNIVERSITY', 
-      logo: '/images/partners/kibabii.png',
+    {
+      name: 'KIBABII UNIVERSITY',
+      logo: '/images/partners/kibabi.png',
       description: 'Kibabii University, committed to academic excellence and research development.'
     },
-    { 
-      name: 'KNH', 
+    {
+      name: 'KNH',
       logo: '/images/partners/knh.png',
       description: 'Kenyatta National Hospital, a premier healthcare institution in East Africa.'
     },
-    { 
-      name: 'KU', 
+    {
+      name: 'KU',
       logo: '/images/partners/ku.png',
       description: 'University of Nairobi, a key contributor to higher education and research.'
     },
-    { 
-      name: 'MTRH', 
+    {
+      name: 'MTRH',
       logo: '/images/partners/mtrh.png',
       description: 'Moi Teaching and Referral Hospital, a leading healthcare and research center.'
     }
