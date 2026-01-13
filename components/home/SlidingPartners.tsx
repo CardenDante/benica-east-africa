@@ -39,8 +39,8 @@ const SlidingPartners: React.FC = () => {
     { name: "USIU-Africa", logo: "/images/partners/usiu-logo.png" },
   ];
 
-  // Create a continuous loop
-  const loopedPartners = [...partners, ...partners, ...partners, ...partners];
+  // Create a continuous loop - duplicate partners enough times for seamless scrolling
+  const loopedPartners = [...partners, ...partners];
 
   useEffect(() => {
     const slider = sliderRef.current;
@@ -59,49 +59,59 @@ const SlidingPartners: React.FC = () => {
         const marginRight = parseFloat(style.marginRight);
         return itemRef.current.offsetWidth + marginLeft + marginRight;
       }
-      return 240; // Fallback
+      return 280; // Fallback (larger to account for card + margins)
     };
 
-    let itemWidth = getSingleItemWidth();
+    // Wait a moment for DOM to fully render before measuring
+    setTimeout(() => {
+      let itemWidth = getSingleItemWidth();
+      // Calculate the total width of one complete set of partners (all 28)
+      let totalSetWidth = itemWidth * partners.length;
 
-    // Update width on resize
-    const handleResize = () => {
-      itemWidth = getSingleItemWidth();
-    };
-    window.addEventListener("resize", handleResize);
+      console.log('Item width:', itemWidth, 'Total partners:', partners.length, 'Total set width:', totalSetWidth);
 
-    const animate = () => {
-      position -= 1.2; // Controls the speed (increased from 0.5 to 1.2 for faster sliding)
+      // Update width on resize
+      const handleResize = () => {
+        itemWidth = getSingleItemWidth();
+        totalSetWidth = itemWidth * partners.length;
+      };
+      window.addEventListener("resize", handleResize);
 
-      // Reset position based on dynamic item width to prevent jumping
-      if (position <= -itemWidth) {
-        position = 0;
-      }
+      const animate = () => {
+        position -= 1.2; // Controls the speed (increased from 0.5 to 1.2 for faster sliding)
 
-      if (slider) {
-        slider.style.transform = `translateX(${position}px)`;
-      }
+        // Reset position when we've scrolled through one complete set of partners
+        // This creates a seamless loop without visible jumps
+        if (position <= -totalSetWidth) {
+          position = 0;
+        }
 
-      animationId = requestAnimationFrame(animate);
-    };
+        if (slider) {
+          slider.style.transform = `translateX(${position}px)`;
+        }
 
-    animate();
+        animationId = requestAnimationFrame(animate);
+      };
 
-    const handleMouseEnter = () => cancelAnimationFrame(animationId);
-    const handleMouseLeave = () => animate();
+      animate();
 
-    slider.addEventListener("mouseenter", handleMouseEnter);
-    slider.addEventListener("mouseleave", handleMouseLeave);
+      const handleMouseEnter = () => cancelAnimationFrame(animationId);
+      const handleMouseLeave = () => animate();
 
-    return () => {
-      cancelAnimationFrame(animationId);
-      window.removeEventListener("resize", handleResize);
-      if (slider) {
-        slider.removeEventListener("mouseenter", handleMouseEnter);
-        slider.removeEventListener("mouseleave", handleMouseLeave);
-      }
-    };
-  }, []);
+      slider.addEventListener("mouseenter", handleMouseEnter);
+      slider.addEventListener("mouseleave", handleMouseLeave);
+
+      // Cleanup function
+      return () => {
+        cancelAnimationFrame(animationId);
+        window.removeEventListener("resize", handleResize);
+        if (slider) {
+          slider.removeEventListener("mouseenter", handleMouseEnter);
+          slider.removeEventListener("mouseleave", handleMouseLeave);
+        }
+      };
+    }, 100);
+  }, [partners.length]);
 
   return (
     <div className="w-full overflow-hidden bg-white py-8 sm:py-12">
