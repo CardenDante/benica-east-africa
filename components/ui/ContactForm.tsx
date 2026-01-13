@@ -26,9 +26,7 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState('');
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -65,50 +63,47 @@ const ContactForm = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
-    
-    setIsSubmitting(true);
-    setSubmitError('');
-    
-    try {
-      // This is a mock API call - replace with your actual form submission
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      setSubmitSuccess(true);
+
+    // Create mailto link with form data
+    const mailtoEmail = 'info@benicaea.com';
+    const mailtoSubject = encodeURIComponent(formData.subject);
+    const mailtoBody = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}`
+    );
+
+    const mailtoLink = `mailto:${mailtoEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Show success message
+    setSubmitSuccess(true);
+
+    // Reset form after a short delay
+    setTimeout(() => {
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: '',
       });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    } catch (error) {
-      setSubmitError('Something went wrong. Please try again later.');
-    } finally {
-      setIsSubmitting(false);
-    }
+      setSubmitSuccess(false);
+    }, 3000);
   };
 
   return (
     <div className="w-full max-w-lg mx-auto">
       {submitSuccess && (
         <div className="mb-6 p-4 bg-green-100 text-green-800 rounded-md">
-          Thank you for your message! We'll get back to you soon.
-        </div>
-      )}
-      
-      {submitError && (
-        <div className="mb-6 p-4 bg-red-100 text-red-800 rounded-md">
-          {submitError}
+          Your email client should open shortly. If it doesn't, please email us directly at info@benicaea.com
         </div>
       )}
       
@@ -186,24 +181,13 @@ const ContactForm = () => {
         </div>
         
         <div>
-          <Button 
-            type="submit" 
-            variant="primary" 
-            size="lg" 
+          <Button
+            type="submit"
+            variant="primary"
+            size="lg"
             fullWidth
-            disabled={isSubmitting}
           >
-            {isSubmitting ? (
-              <span className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Sending...
-              </span>
-            ) : (
-              'Send Message'
-            )}
+            Send via Email
           </Button>
         </div>
       </form>
