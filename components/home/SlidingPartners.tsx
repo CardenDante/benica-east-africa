@@ -4,11 +4,11 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 
 const SlidingPartners: React.FC = () => {
-  const sliderRef = useRef<HTMLDivElement>(null);
-  // We need a ref for a single item to measure its width dynamically
+  const slider1Ref = useRef<HTMLDivElement>(null);
+  const slider2Ref = useRef<HTMLDivElement>(null);
   const itemRef = useRef<HTMLDivElement>(null);
 
-  const partners = [
+  const allPartners = [
     { name: "CIAT", logo: "/images/partners/CIAT.png" },
     { name: "ILRI", logo: "/images/partners/ilri.png" },
     { name: "KEBS", logo: "/images/partners/kebs_logo.png" },
@@ -39,79 +39,125 @@ const SlidingPartners: React.FC = () => {
     { name: "USIU-Africa", logo: "/images/partners/usiu-logo.png" },
   ];
 
-  // Create a continuous loop - duplicate partners enough times for seamless scrolling
-  const loopedPartners = [...partners, ...partners];
+  // Split partners into two rows
+  const row1Partners = allPartners.slice(0, 14);
+  const row2Partners = allPartners.slice(14, 28);
+
+  // Duplicate for seamless looping
+  const loopedRow1 = [...row1Partners, ...row1Partners];
+  const loopedRow2 = [...row2Partners, ...row2Partners];
 
   useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
+    const slider1 = slider1Ref.current;
+    const slider2 = slider2Ref.current;
+    if (!slider1 || !slider2) return;
 
-    let animationId: number;
-    let position = 0;
+    let animationId1: number;
+    let animationId2: number;
+    let position1 = 0;
+    let position2 = 0;
 
-    // Function to get the full width of one item including margins
     const getSingleItemWidth = () => {
       if (itemRef.current) {
-        // Get width + horizontal margin (mx-4 = 1rem left + 1rem right = 32px approx)
-        // Using computed style is safer for accuracy
         const style = window.getComputedStyle(itemRef.current);
         const marginLeft = parseFloat(style.marginLeft);
         const marginRight = parseFloat(style.marginRight);
         return itemRef.current.offsetWidth + marginLeft + marginRight;
       }
-      return 280; // Fallback (larger to account for card + margins)
+      return 280;
     };
 
-    // Wait a moment for DOM to fully render before measuring
     setTimeout(() => {
       let itemWidth = getSingleItemWidth();
-      // Calculate the total width of one complete set of partners (all 28)
-      let totalSetWidth = itemWidth * partners.length;
+      let totalSetWidth1 = itemWidth * row1Partners.length;
+      let totalSetWidth2 = itemWidth * row2Partners.length;
 
-      console.log('Item width:', itemWidth, 'Total partners:', partners.length, 'Total set width:', totalSetWidth);
-
-      // Update width on resize
       const handleResize = () => {
         itemWidth = getSingleItemWidth();
-        totalSetWidth = itemWidth * partners.length;
+        totalSetWidth1 = itemWidth * row1Partners.length;
+        totalSetWidth2 = itemWidth * row2Partners.length;
       };
       window.addEventListener("resize", handleResize);
 
-      const animate = () => {
-        position -= 1.2; // Controls the speed (increased from 0.5 to 1.2 for faster sliding)
-
-        // Reset position when we've scrolled through one complete set of partners
-        // This creates a seamless loop without visible jumps
-        if (position <= -totalSetWidth) {
-          position = 0;
+      // First row - slides left to right
+      const animate1 = () => {
+        position1 -= 1.2;
+        if (position1 <= -totalSetWidth1) {
+          position1 = 0;
         }
-
-        if (slider) {
-          slider.style.transform = `translateX(${position}px)`;
+        if (slider1) {
+          slider1.style.transform = `translateX(${position1}px)`;
         }
-
-        animationId = requestAnimationFrame(animate);
+        animationId1 = requestAnimationFrame(animate1);
       };
 
-      animate();
+      // Second row - slides right to left (opposite direction)
+      const animate2 = () => {
+        position2 += 1.2;
+        if (position2 >= totalSetWidth2) {
+          position2 = 0;
+        }
+        if (slider2) {
+          slider2.style.transform = `translateX(${-totalSetWidth2 + position2}px)`;
+        }
+        animationId2 = requestAnimationFrame(animate2);
+      };
 
-      const handleMouseEnter = () => cancelAnimationFrame(animationId);
-      const handleMouseLeave = () => animate();
+      animate1();
+      animate2();
 
-      slider.addEventListener("mouseenter", handleMouseEnter);
-      slider.addEventListener("mouseleave", handleMouseLeave);
+      const handleMouseEnter1 = () => cancelAnimationFrame(animationId1);
+      const handleMouseLeave1 = () => animate1();
+      const handleMouseEnter2 = () => cancelAnimationFrame(animationId2);
+      const handleMouseLeave2 = () => animate2();
 
-      // Cleanup function
+      slider1.addEventListener("mouseenter", handleMouseEnter1);
+      slider1.addEventListener("mouseleave", handleMouseLeave1);
+      slider2.addEventListener("mouseenter", handleMouseEnter2);
+      slider2.addEventListener("mouseleave", handleMouseLeave2);
+
       return () => {
-        cancelAnimationFrame(animationId);
+        cancelAnimationFrame(animationId1);
+        cancelAnimationFrame(animationId2);
         window.removeEventListener("resize", handleResize);
-        if (slider) {
-          slider.removeEventListener("mouseenter", handleMouseEnter);
-          slider.removeEventListener("mouseleave", handleMouseLeave);
+        if (slider1) {
+          slider1.removeEventListener("mouseenter", handleMouseEnter1);
+          slider1.removeEventListener("mouseleave", handleMouseLeave1);
+        }
+        if (slider2) {
+          slider2.removeEventListener("mouseenter", handleMouseEnter2);
+          slider2.removeEventListener("mouseleave", handleMouseLeave2);
         }
       };
     }, 100);
-  }, [partners.length]);
+  }, [row1Partners.length, row2Partners.length]);
+
+  const PartnerCard = ({ partner, index, isFirstRow }: { partner: { name: string; logo: string }; index: number; isFirstRow: boolean }) => (
+    <div
+      ref={isFirstRow && index === 0 ? itemRef : null}
+      className="flex-shrink-0 w-52 sm:w-56 md:w-60 lg:w-64 h-44 sm:h-48 md:h-52 mx-4 sm:mx-5 bg-white p-4 sm:p-5 md:p-6 rounded-2xl shadow-lg border border-gray-200
+                 flex flex-col items-center justify-center relative group hover:shadow-xl transition-all duration-300"
+    >
+      <div className="relative w-full h-28 sm:h-32 md:h-36 flex items-center justify-center mb-3">
+        <Image
+          src={partner.logo}
+          alt={`${partner.name} logo`}
+          fill
+          sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, 240px"
+          style={{
+            objectFit: "contain",
+            objectPosition: "center",
+          }}
+          className="filter-none opacity-100 group-hover:scale-105 transition-all duration-300"
+        />
+      </div>
+      <div className="w-full text-center border-t border-gray-200 pt-3">
+        <p className="text-[#F16A23] text-sm sm:text-base md:text-lg font-bold truncate">
+          {partner.name}
+        </p>
+      </div>
+    </div>
+  );
 
   return (
     <div className="w-full overflow-hidden bg-white py-8 sm:py-12">
@@ -125,40 +171,31 @@ const SlidingPartners: React.FC = () => {
         </p>
       </div>
 
-      <div className="relative w-full overflow-hidden py-4">
-        <div ref={sliderRef} className="inline-flex items-center">
-          {loopedPartners.map((partner, index) => (
-            <div
-              key={`${partner.name}-${index}`}
-              // Assign ref to the first item only to measure width
-              ref={index === 0 ? itemRef : null}
-              // MUCH LARGER on mobile for visibility
-              className="flex-shrink-0 w-52 sm:w-56 md:w-60 lg:w-64 h-44 sm:h-48 md:h-52 mx-4 sm:mx-5 bg-white p-4 sm:p-5 md:p-6 rounded-2xl shadow-lg border border-gray-200
-                         flex flex-col items-center justify-center relative group hover:shadow-xl transition-all duration-300"
-            >
-              {/* Logo Container - Much bigger, takes most of card */}
-              <div className="relative w-full h-28 sm:h-32 md:h-36 flex items-center justify-center mb-3">
-                <Image
-                  src={partner.logo}
-                  alt={`${partner.name} logo`}
-                  fill
-                  sizes="(max-width: 640px) 180px, (max-width: 768px) 200px, 240px"
-                  style={{
-                    objectFit: "contain",
-                    objectPosition: "center",
-                  }}
-                  className="filter-none opacity-100 group-hover:scale-105 transition-all duration-300"
-                />
-              </div>
+      <div className="relative space-y-6">
+        {/* First Row - Slides Left */}
+        <div className="relative w-full overflow-hidden py-4">
+          {/* Fade overlays */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
-              {/* Partner Name - Larger and more visible */}
-              <div className="w-full text-center border-t border-gray-200 pt-3">
-                <p className="text-[#F16A23] text-sm sm:text-base md:text-lg font-bold truncate">
-                  {partner.name}
-                </p>
-              </div>
-            </div>
-          ))}
+          <div ref={slider1Ref} className="inline-flex items-center">
+            {loopedRow1.map((partner, index) => (
+              <PartnerCard key={`row1-${partner.name}-${index}`} partner={partner} index={index} isFirstRow={true} />
+            ))}
+          </div>
+        </div>
+
+        {/* Second Row - Slides Right */}
+        <div className="relative w-full overflow-hidden py-4">
+          {/* Fade overlays */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+          <div ref={slider2Ref} className="inline-flex items-center">
+            {loopedRow2.map((partner, index) => (
+              <PartnerCard key={`row2-${partner.name}-${index}`} partner={partner} index={index} isFirstRow={false} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
